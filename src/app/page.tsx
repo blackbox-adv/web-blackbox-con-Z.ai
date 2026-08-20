@@ -8,7 +8,7 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Badge } from '@/components/ui/badge'
 import { FloatingWhatsApp } from '@/components/FloatingWhatsApp'
-import { ArrowRight, Menu, X, Target, TrendingUp, Users, Zap, BarChart3, Megaphone, Globe, Mail, Phone, MapPin, Instagram, Linkedin, Twitter, Play, CheckCircle2, Star, Quote, Send, Sparkles, ArrowUpRight, Layers, Lightbulb, Award, Clock, ChevronRight, Facebook, Youtube, ExternalLink, Volume2, VolumeX } from 'lucide-react'
+import { ArrowRight, Menu, X, Target, TrendingUp, Users, Zap, BarChart3, Megaphone, Globe, Mail, Phone, MapPin, Instagram, Linkedin, Twitter, Play, CheckCircle2, Star, Quote, Send, ArrowUpRight, Layers, Lightbulb, Award, Clock, ChevronRight, Facebook, Youtube, ExternalLink, Volume2, VolumeX, Video, Clapperboard } from 'lucide-react'
 
 // Función para obtener el thumbnail del video
 function getVideoThumbnail(project: any): string {
@@ -381,7 +381,7 @@ export default function Home() {
       role: 'Director Médico', 
       company: 'Clínica Avendaño (Lima)', 
       quote: 'La producción de reels y el enfoque médico especializado de Black Box nos ayudó a generar más de 280 consultas mensuales para nuestros programas de cirugía bariátrica. El contenido transmite total confianza.', 
-      image: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=300&auto=format&fit=crop&q=80', 
+      image: '/testimonials/doctor-luis-ramos.jpg', 
       rating: 5 
     },
     { 
@@ -390,7 +390,7 @@ export default function Home() {
       role: 'Gerente General', 
       company: 'Leomar Muebles (Perú)', 
       quote: 'El contenido audiovisual de nuestro catálogo multiplicó nuestros mensajes diarios de clientes cotizando salas y comedores por WhatsApp. Supieron plasmar la calidad de nuestros acabados a la perfección.', 
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop&q=80', 
+      image: '/testimonials/marco-mendoza.jpg', 
       rating: 5 
     },
     { 
@@ -399,7 +399,7 @@ export default function Home() {
       role: 'Jefe de Marketing B2B', 
       company: 'Distribución Makita Perú', 
       quote: 'Lograron que herramientas técnicas y de uso industrial capten la atención en formatos verticales dinámicos, conectando directamente con contratistas y talleres en todo el país.', 
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop&q=80', 
+      image: '/testimonials/jorge-quispe.jpg', 
       rating: 5 
     },
   ]
@@ -529,7 +529,7 @@ export default function Home() {
                   {config?.address || 'Lima, Perú'}
                 </Badge>
                 <Badge className="px-3.5 py-1.5 text-xs bg-purple-50 text-purple-900 rounded-full font-bold shadow-sm border border-purple-200/60">
-                  <Sparkles className="w-3.5 h-3.5 mr-1.5 text-purple-600" />
+                  <Video className="w-3.5 h-3.5 mr-1.5 text-purple-600" />
                   Agencia de Marketing & Productora
                 </Badge>
               </div>
@@ -860,7 +860,7 @@ export default function Home() {
             {/* Left Col: Features & Value Prop */}
             <div className="lg:col-span-7">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-xs font-bold uppercase tracking-wider text-purple-400 mb-6">
-                <Sparkles className="w-3.5 h-3.5" />
+                <Clapperboard className="w-3.5 h-3.5" />
                 Especialistas en Formato Vertical (9:16)
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 tracking-tight uppercase leading-tight">

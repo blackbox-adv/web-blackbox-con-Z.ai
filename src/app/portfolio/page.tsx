@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { FloatingWhatsApp } from '@/components/FloatingWhatsApp'
 import { 
-  ArrowLeft, Play, X, ExternalLink, Video, TrendingUp, Sparkles, Send
+  ArrowLeft, Play, X, ExternalLink, Video, TrendingUp, Target, Film, Send
 } from 'lucide-react'
 
 // Reuse the embed URL function
@@ -439,7 +439,7 @@ export default function PortfolioPage() {
                 {/* Impact Note */}
                 {project.impact && (
                   <div className="mb-4 text-xs text-purple-900 bg-purple-50/80 border border-purple-100 rounded-xl p-3 flex items-start gap-2">
-                    <Sparkles className="w-4 h-4 text-purple-600 shrink-0 mt-0.5" />
+                    <Target className="w-4 h-4 text-purple-600 shrink-0 mt-0.5" />
                     <span><strong className="text-purple-950 font-bold">Impacto:</strong> {project.impact}</span>
                   </div>
                 )}
@@ -507,7 +507,7 @@ export default function PortfolioPage() {
         
         {filteredProjects.length === 0 && (
           <div className="text-center py-24 text-gray-400">
-            <Sparkles className="w-16 h-16 mx-auto mb-4 text-gray-300" />
+            <Film className="w-16 h-16 mx-auto mb-4 text-gray-300" />
             <h3 className="text-2xl font-black uppercase text-gray-700">Próximamente</h3>
             <p className="text-sm mt-1">Estamos actualizando nuevos proyectos en esta categoría.</p>
           </div>

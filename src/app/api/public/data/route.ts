@@ -124,9 +124,45 @@ const CURATED_PROJECTS = [
   },
 ]
 
+const CURATED_TESTIMONIALS = [
+  {
+    id: 't1',
+    name: 'Dr. Luis Ramos',
+    role: 'Director Médico',
+    company: 'Clínica Avendaño (Lima)',
+    quote: 'La producción de reels y el enfoque médico especializado de Black Box nos ayudó a generar más de 280 consultas mensuales para nuestros programas de cirugía bariátrica. El contenido transmite total confianza.',
+    image: '/testimonials/doctor-luis-ramos.jpg',
+    rating: 5,
+    order: 1,
+    active: true,
+  },
+  {
+    id: 't2',
+    name: 'Marco Mendoza',
+    role: 'Gerente General',
+    company: 'Leomar Muebles (Perú)',
+    quote: 'El contenido audiovisual de nuestro catálogo multiplicó nuestros mensajes diarios de clientes cotizando salas y comedores por WhatsApp. Supieron plasmar la calidad de nuestros acabados a la perfección.',
+    image: '/testimonials/marco-mendoza.jpg',
+    rating: 5,
+    order: 2,
+    active: true,
+  },
+  {
+    id: 't3',
+    name: 'Ing. Jorge Quispe',
+    role: 'Jefe de Marketing B2B',
+    company: 'Distribución Makita Perú',
+    quote: 'Lograron que herramientas técnicas y de uso industrial capten la atención en formatos verticales dinámicos, conectando directamente con contratistas y talleres en todo el país.',
+    image: '/testimonials/jorge-quispe.jpg',
+    rating: 5,
+    order: 3,
+    active: true,
+  },
+]
+
 export async function GET() {
   try {
-    const [config, rawProjects, brands, testimonials, services] = await Promise.all([
+    const [config, rawProjects, brands, rawTestimonials, services] = await Promise.all([
       db.siteConfig.findFirst(),
       db.project.findMany({
         where: { active: true },
@@ -146,6 +182,24 @@ export async function GET() {
         orderBy: { order: 'asc' }
       }),
     ])
+
+    // Check if database testimonials have missing/empty images or need initial realistic seeding
+    let testimonials = rawTestimonials || []
+    const needsTestimonialUpdate = testimonials.length === 0 || testimonials.some((t: any) => 
+      !t.image || t.name === 'Carlos Rodríguez' || t.name === 'Laura Torres' || t.name === 'Diego Galván' || t.image.includes('unsplash.com')
+    )
+
+    if (needsTestimonialUpdate) {
+      try {
+        await db.testimonial.deleteMany({})
+        for (const test of CURATED_TESTIMONIALS) {
+          await db.testimonial.create({ data: test })
+        }
+        testimonials = CURATED_TESTIMONIALS
+      } catch (e) {
+        testimonials = CURATED_TESTIMONIALS
+      }
+    }
 
     // Check if database has old legacy placeholder projects (e.g. image starting with /portfolio/ or generic names with drive.google.com/folders)
     let projects = rawProjects || []
