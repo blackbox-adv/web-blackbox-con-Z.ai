@@ -27,7 +27,7 @@ const INITIAL_SITE_CONFIG = {
   heroClients: '150+',
   heroProjects: '500+',
   heroYears: '8+',
-  heroReelUrl: 'https://youtube.com/shorts/nzdbM36oEKQ',
+  heroReelUrl: 'https://youtube.com/shorts/Su_JcYkeyLw',
   heroReelTitle: 'Showreel 2026 | Recopilatorio de Trabajos',
   ogImage: '/og-image.png',
   primaryColor: '#9333ea',
@@ -59,8 +59,8 @@ const INITIAL_PROJECTS = [
     title: 'Clínica Avendaño', 
     description: 'Campañas de video vertical de alta especialidad para la clínica bariátrica líder en Lima.', 
     category: 'Salud & Bariátrica', 
-    imageUrl: 'https://img.youtube.com/vi/nzdbM36oEKQ/hqdefault.jpg', 
-    driveUrl: 'https://youtube.com/shorts/nzdbM36oEKQ', 
+    imageUrl: 'https://img.youtube.com/vi/Su_JcYkeyLw/hqdefault.jpg', 
+    driveUrl: 'https://youtube.com/shorts/Su_JcYkeyLw', 
     gradient: 'from-purple-500 to-blue-500', 
     result: '+280% Pacientes', 
     order: 1, 
@@ -68,7 +68,7 @@ const INITIAL_PROJECTS = [
     createdAt: new Date(), 
     updatedAt: new Date(), 
     videos: [
-      { id: 'v_p1', projectId: 'p1', title: 'Clínica Avendaño | Cirugía Bariátrica', platform: 'youtube', url: 'https://youtube.com/shorts/nzdbM36oEKQ', embedUrl: 'https://www.youtube.com/embed/nzdbM36oEKQ', thumbnail: 'https://img.youtube.com/vi/nzdbM36oEKQ/hqdefault.jpg', order: 1, active: true }
+      { id: 'v_p1', projectId: 'p1', title: 'Clínica Avendaño | Cirugía Bariátrica', platform: 'youtube', url: 'https://youtube.com/shorts/Su_JcYkeyLw', embedUrl: 'https://www.youtube.com/embed/Su_JcYkeyLw', thumbnail: 'https://img.youtube.com/vi/Su_JcYkeyLw/hqdefault.jpg', order: 1, active: true }
     ] 
   },
   { 

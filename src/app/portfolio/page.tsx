@@ -35,7 +35,7 @@ function getVideoThumbnail(project: any): string {
 
   // Mapeo inteligente por nombre o categoría de cliente si viene de un registro legado
   const key = `${project?.title || ''} ${project?.category || ''}`.toLowerCase()
-  if (key.includes('avendaño') || key.includes('clínica') || key.includes('salud') || key.includes('bariátrica')) return 'https://img.youtube.com/vi/nzdbM36oEKQ/hqdefault.jpg'
+  if (key.includes('avendaño') || key.includes('clínica') || key.includes('salud') || key.includes('bariátrica')) return 'https://img.youtube.com/vi/Su_JcYkeyLw/hqdefault.jpg'
   if (key.includes('makita') || key.includes('herramienta') || key.includes('industrial') || key.includes('b2b')) return 'https://img.youtube.com/vi/BaKc_hx3NwM/hqdefault.jpg'
   if (key.includes('leomar') || key.includes('mueble') || key.includes('hogar') || key.includes('retail')) return 'https://img.youtube.com/vi/gixZWO9xOes/hqdefault.jpg'
   if (key.includes('lap') || key.includes('custom') || key.includes('auto') || key.includes('cuero')) return 'https://img.youtube.com/vi/Poh1SGWA_Mg/hqdefault.jpg'
@@ -44,7 +44,7 @@ function getVideoThumbnail(project: any): string {
   if (key.includes('checor') || key.includes('inmobil') || key.includes('edificio') || key.includes('departamento')) return 'https://img.youtube.com/vi/eGqahelD7yo/hqdefault.jpg'
   if (key.includes('chalqui') || key.includes('personal') || key.includes('publicidad') || key.includes('comercial')) return 'https://img.youtube.com/vi/eDVSSoWJwWg/hqdefault.jpg'
 
-  return project?.imageUrl || 'https://img.youtube.com/vi/nzdbM36oEKQ/hqdefault.jpg'
+  return project?.imageUrl || 'https://img.youtube.com/vi/Su_JcYkeyLw/hqdefault.jpg'
 }
 
 function getEmbedUrl(url: string, platform: string, isAutoplay: boolean = true): string | null {
@@ -88,14 +88,14 @@ const DEFAULT_PROJECTS = [
     category: 'Salud & Bariátrica', 
     format: 'Video Vertical 9:16',
     description: 'Estrategia integral de videos educativos y testimoniales para la clínica bariátrica líder de Lima, posicionando al especialista y derribando mitos sobre la cirugía.', 
-    imageUrl: 'https://img.youtube.com/vi/nzdbM36oEKQ/hqdefault.jpg', 
-    driveUrl: 'https://youtube.com/shorts/nzdbM36oEKQ', 
+    imageUrl: 'https://img.youtube.com/vi/Su_JcYkeyLw/hqdefault.jpg', 
+    driveUrl: 'https://youtube.com/shorts/Su_JcYkeyLw', 
     result: '+280 Citas / Mes', 
     impact: 'Multiplicó la agenda de evaluación quirúrgica con pacientes 100% calificados.',
     tags: ['Guion Médico', 'Grabación en Clínica', 'Subtítulos Dinámicos', 'Publicidad en Salud'],
     order: 1,
     videos: [
-      { id: 'v_p1', title: 'Clínica Avendaño | Cirugía Bariátrica & Salud', platform: 'youtube', url: 'https://youtube.com/shorts/nzdbM36oEKQ', embedUrl: 'https://www.youtube.com/embed/nzdbM36oEKQ' }
+      { id: 'v_p1', title: 'Clínica Avendaño | Cirugía Bariátrica & Salud', platform: 'youtube', url: 'https://youtube.com/shorts/Su_JcYkeyLw', embedUrl: 'https://www.youtube.com/embed/Su_JcYkeyLw' }
     ]
   },
   { 

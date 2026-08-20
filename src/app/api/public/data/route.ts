@@ -7,14 +7,14 @@ const CURATED_PROJECTS = [
     title: 'Clínica Avendaño', 
     description: 'Estrategia integral de videos educativos y testimoniales para la clínica bariátrica líder de Lima, posicionando al especialista y derribando mitos sobre la cirugía.', 
     category: 'Salud & Bariátrica', 
-    imageUrl: 'https://img.youtube.com/vi/nzdbM36oEKQ/hqdefault.jpg', 
-    driveUrl: 'https://youtube.com/shorts/nzdbM36oEKQ', 
+    imageUrl: 'https://img.youtube.com/vi/Su_JcYkeyLw/hqdefault.jpg', 
+    driveUrl: 'https://youtube.com/shorts/Su_JcYkeyLw', 
     gradient: 'from-purple-500 to-blue-500', 
     result: '+280 Citas / Mes', 
     order: 1,
     active: true,
     videos: [
-      { id: 'v_p1', title: 'Clínica Avendaño | Cirugía Bariátrica & Salud', platform: 'youtube', url: 'https://youtube.com/shorts/nzdbM36oEKQ', embedUrl: 'https://www.youtube.com/embed/nzdbM36oEKQ', thumbnail: 'https://img.youtube.com/vi/nzdbM36oEKQ/hqdefault.jpg', order: 1, active: true }
+      { id: 'v_p1', title: 'Clínica Avendaño | Cirugía Bariátrica & Salud', platform: 'youtube', url: 'https://youtube.com/shorts/Su_JcYkeyLw', embedUrl: 'https://www.youtube.com/embed/Su_JcYkeyLw', thumbnail: 'https://img.youtube.com/vi/Su_JcYkeyLw/hqdefault.jpg', order: 1, active: true }
     ] 
   },
   { 
