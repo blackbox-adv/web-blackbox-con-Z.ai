@@ -285,14 +285,14 @@ export default function PortfolioPage() {
     : allProjects.filter((p: any) => p.category === activeCategory)
 
   const config = data?.config
-  const displayLogo = config?.brandLogo || cachedLogo || '/logo-white.svg'
+  const displayLogo = config?.brandLogo || cachedLogo || '/logo.svg'
   const cleanWhatsappNumber = (config?.whatsapp || config?.phone || '51958297236').replace(/\D/g, '') || '51958297236'
   const whatsappUrl = `https://wa.me/${cleanWhatsappNumber}?text=${encodeURIComponent('Hola Black Box, estuve revisando su portafolio de proyectos y me gustaría cotizar una producción para mi marca.')}`
 
   return (
-    <main className="min-h-screen bg-[#0a0a0c] text-white selection:bg-purple-500/30">
-      {/* Header / Nav */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+    <main className="min-h-screen bg-slate-50 text-gray-900 selection:bg-purple-500 selection:text-white">
+      {/* Header / Nav - Barra fija blanca idéntica a la página principal */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-22 lg:h-24 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 group py-1.5">
             <img 
@@ -302,8 +302,8 @@ export default function PortfolioPage() {
               style={{ maxHeight: '80px', maxWidth: '420px', width: 'auto' }}
               onError={(e) => {
                 const target = e.currentTarget
-                if (target.src !== '/logo-white.svg') {
-                  target.src = '/logo-white.svg'
+                if (target.src !== '/logo.svg') {
+                  target.src = '/logo.svg'
                 }
               }}
             />
@@ -311,13 +311,13 @@ export default function PortfolioPage() {
           <div className="flex items-center gap-3">
             <Link 
               href="/"
-              className="inline-flex items-center text-white/80 hover:text-white hover:bg-white/10 rounded-full px-4 py-2 text-xs font-semibold transition-colors"
+              className="inline-flex items-center text-gray-700 hover:text-black hover:bg-gray-100 rounded-full px-4 py-2 text-xs font-bold transition-colors"
             >
               <ArrowLeft className="w-4 h-4 mr-2" /> Volver al Inicio
             </Link>
             <Button
               onClick={() => window.open(whatsappUrl, '_blank')}
-              className="hidden sm:inline-flex bg-purple-600 hover:bg-purple-700 text-white rounded-full px-4 py-2 text-xs font-bold gap-1.5 shadow-lg shadow-purple-600/30 cursor-pointer"
+              className="hidden sm:inline-flex bg-black hover:bg-zinc-800 text-white rounded-full px-5 py-2 text-xs font-bold gap-1.5 shadow-md hover:scale-105 transition-all cursor-pointer"
             >
               <Send className="w-3.5 h-3.5" /> Cotizar Proyecto
             </Button>
@@ -326,31 +326,33 @@ export default function PortfolioPage() {
       </nav>
 
       {/* Hero Section */}
-      <header className="pt-24 lg:pt-32 pb-8 px-4 text-center relative overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-purple-600/10 blur-[120px] rounded-full -z-10"></div>
-        <div className="inline-flex mb-6 px-4 py-1.5 bg-purple-500/10 border border-purple-500/20 rounded-full">
-            <Badge variant="outline" className="text-purple-400 border-0 p-0 font-bold uppercase tracking-widest text-[10px]">Galería de Trabajos & Casos Reales</Badge>
+      <header className="pt-28 lg:pt-36 pb-10 px-4 text-center relative overflow-hidden bg-white border-b border-gray-100">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[350px] bg-purple-500/5 blur-[100px] rounded-full -z-10"></div>
+        <div className="inline-flex mb-4 px-4 py-1.5 bg-purple-50 border border-purple-200/80 rounded-full shadow-xs">
+          <Badge variant="outline" className="text-purple-700 border-0 p-0 font-bold uppercase tracking-widest text-[11px]">
+            Galería de Trabajos & Casos Reales
+          </Badge>
         </div>
-        <h1 className="text-4xl lg:text-7xl font-black mb-6 tracking-tighter uppercase italic">
-          Contenido de <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-400 to-white/70">Alto Impacto</span>
+        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black mb-5 tracking-tight text-gray-900 uppercase">
+          Contenido de <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Alto Impacto</span>
         </h1>
-        <p className="max-w-2xl mx-auto text-gray-400 text-base lg:text-lg leading-relaxed font-medium mb-8">
+        <p className="max-w-2xl mx-auto text-gray-600 text-base lg:text-lg leading-relaxed font-medium">
           Explora nuestras producciones audiovisuales en formato vertical 9:16 y spots publicitarios. Cada pieza está creada con guion persuasivo, calidad cinematográfica y enfoque en ventas.
         </p>
       </header>
 
       {/* Filters */}
-      <div className="sticky top-12 lg:top-16 z-40 bg-[#0a0a0c]/90 backdrop-blur-xl border-y border-white/5">
-        <div className="max-w-7xl mx-auto px-4 overflow-x-auto no-scrollbar py-4 lg:py-6">
-          <div className="flex gap-2 min-w-max lg:justify-center px-4">
+      <div className="sticky top-20 sm:top-22 lg:top-24 z-40 bg-white/95 backdrop-blur-xl border-b border-gray-200/80 shadow-xs">
+        <div className="max-w-7xl mx-auto px-4 overflow-x-auto no-scrollbar py-3.5 sm:py-4">
+          <div className="flex gap-2 min-w-max lg:justify-center px-2">
             {categories.map((cat: any) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`flex-none rounded-full px-5 py-2.5 text-xs lg:text-sm font-bold uppercase tracking-wider transition-all duration-300 border ${
+                className={`flex-none rounded-full px-5 py-2 text-xs lg:text-sm font-bold uppercase tracking-wider transition-all duration-200 border cursor-pointer ${
                   activeCategory === cat 
-                  ? 'bg-white text-black border-white shadow-[0_0_20px_rgba(255,255,255,0.2)]' 
-                  : 'bg-white/5 text-white/50 border-white/5 hover:border-white/20 hover:text-white'
+                  ? 'bg-black text-white border-black shadow-md' 
+                  : 'bg-white text-gray-600 border-gray-200 hover:border-gray-400 hover:text-black'
                 }`}
               >
                 {cat}
@@ -361,12 +363,12 @@ export default function PortfolioPage() {
       </div>
 
       {/* Grid */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {filteredProjects.map((project: any) => (
             <div 
               key={project.id} 
-              className="group relative bg-[#111113] rounded-[2rem] overflow-hidden border border-white/5 hover:border-purple-500/40 transition-all duration-500 shadow-2xl flex flex-col h-full"
+              className="group relative bg-white rounded-3xl overflow-hidden border border-gray-200/80 hover:border-purple-400/80 transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col h-full"
             >
               {/* Thumbnail Container */}
               <div 
@@ -385,13 +387,13 @@ export default function PortfolioPage() {
                     }
                   }
                 }}
-                className="aspect-video relative overflow-hidden flex items-center justify-center bg-zinc-900 cursor-pointer"
+                className="aspect-video relative overflow-hidden flex items-center justify-center bg-black cursor-pointer"
               >
                 <div className="w-full h-full relative group/thumb">
                   <img 
                     src={getVideoThumbnail(project)} 
                     alt={project.title} 
-                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105" 
+                    className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105" 
                     onError={(e) => {
                       const ytId = (project.driveUrl || '').split('/shorts/')[1] || (project.driveUrl || '').split('youtu.be/')[1]
                       if (ytId) {
@@ -401,44 +403,44 @@ export default function PortfolioPage() {
                       }
                     }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/10 group-hover:via-black/10 transition-colors flex items-center justify-center">
-                    <div className="w-14 lg:w-16 h-14 lg:h-16 rounded-full bg-purple-600/90 backdrop-blur-xl border border-white/20 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 shadow-2xl">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:via-black/10 transition-colors flex items-center justify-center">
+                    <div className="w-14 lg:w-16 h-14 lg:h-16 rounded-full bg-purple-600 text-white flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 shadow-xl border-2 border-white/40">
                       <Play className="w-6 h-6 text-white fill-white ml-0.5" />
                     </div>
                   </div>
                 </div>
                 
                 {/* Overlay Badges */}
-                <div className="absolute top-4 left-4 right-4 z-10 flex items-center justify-between gap-2">
-                  <span className="bg-black/80 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest border border-white/15 text-white shadow-md">
+                <div className="absolute top-3.5 left-3.5 right-3.5 z-10 flex items-center justify-between gap-2">
+                  <span className="bg-black/80 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest border border-white/20 text-white shadow-md">
                     {project.category}
                   </span>
-                  <span className="bg-purple-600/80 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider text-purple-100 border border-purple-400/30 shadow-md">
+                  <span className="bg-purple-600 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider text-white shadow-md">
                     {project.format || '9:16 Vertical'}
                   </span>
                 </div>
               </div>
 
               {/* Content */}
-              <div className="p-6 lg:p-8 flex-1 flex flex-col">
-                <div className="flex items-center gap-2 text-emerald-400 text-xs font-black uppercase tracking-wider mb-2 bg-emerald-500/10 px-3 py-1.5 rounded-xl border border-emerald-500/20 w-fit">
-                  <TrendingUp className="w-3.5 h-3.5 text-emerald-400" />
+              <div className="p-6 lg:p-7 flex-1 flex flex-col bg-white">
+                <div className="flex items-center gap-2 text-emerald-800 text-xs font-black uppercase tracking-wider mb-2.5 bg-emerald-50 px-3 py-1.5 rounded-xl border border-emerald-200 w-fit">
+                  <TrendingUp className="w-3.5 h-3.5 text-emerald-600" />
                   {project.result || 'Caso de Éxito'}
                 </div>
                 
-                <h3 className="text-xl lg:text-2xl font-black mb-3 group-hover:text-purple-400 transition-colors leading-tight italic uppercase">
+                <h3 className="text-xl font-black mb-2 text-gray-900 group-hover:text-purple-600 transition-colors leading-tight uppercase">
                   {project.title}
                 </h3>
                 
-                <p className="text-gray-300 text-sm mb-4 leading-relaxed font-normal">
+                <p className="text-gray-600 text-sm mb-4 leading-relaxed font-normal">
                   {project.description || 'Estrategia y producción audiovisual de alto impacto desarrollada para este cliente.'}
                 </p>
 
                 {/* Impact Note */}
                 {project.impact && (
-                  <div className="mb-4 text-xs text-purple-300/90 bg-purple-950/40 border border-purple-800/40 rounded-xl p-3 flex items-start gap-2">
-                    <Sparkles className="w-4 h-4 text-purple-400 shrink-0 mt-0.5" />
-                    <span><strong className="text-purple-200">Impacto:</strong> {project.impact}</span>
+                  <div className="mb-4 text-xs text-purple-900 bg-purple-50/80 border border-purple-100 rounded-xl p-3 flex items-start gap-2">
+                    <Sparkles className="w-4 h-4 text-purple-600 shrink-0 mt-0.5" />
+                    <span><strong className="text-purple-950 font-bold">Impacto:</strong> {project.impact}</span>
                   </div>
                 )}
 
@@ -446,7 +448,7 @@ export default function PortfolioPage() {
                 {project.tags && project.tags.length > 0 && (
                   <div className="flex flex-wrap gap-1.5 mb-6">
                     {project.tags.map((tag: string, tIdx: number) => (
-                      <span key={tIdx} className="text-[11px] font-medium bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-lg border border-zinc-700/50">
+                      <span key={tIdx} className="text-[11px] font-medium bg-gray-100 text-gray-700 px-2.5 py-1 rounded-lg border border-gray-200">
                         #{tag}
                       </span>
                     ))}
@@ -454,7 +456,7 @@ export default function PortfolioPage() {
                 )}
                 
                 {/* Actions */}
-                <div className="mt-auto space-y-2 pt-2 border-t border-zinc-800/60">
+                <div className="mt-auto space-y-2 pt-4 border-t border-gray-100">
                   {(project.videos && project.videos.length > 0) || project.driveUrl ? (
                     <Button 
                       onClick={() => {
@@ -472,16 +474,16 @@ export default function PortfolioPage() {
                           }
                         }
                       }}
-                      className="w-full bg-white text-black hover:bg-zinc-200 rounded-xl font-black uppercase tracking-widest h-12 cursor-pointer text-xs flex items-center justify-center gap-2 shadow-lg"
+                      className="w-full bg-black text-white hover:bg-gray-800 rounded-xl font-bold uppercase tracking-wider h-11 cursor-pointer text-xs flex items-center justify-center gap-2 shadow-md hover:scale-[1.02] transition-all"
                     >
-                      <Play className="w-4 h-4 fill-black" />
+                      <Play className="w-4 h-4 fill-white" />
                       {project.driveUrl && project.driveUrl.includes('/folders/') ? 'Ver Carpeta de Proyectos' : 'Reproducir Muestra'}
                     </Button>
                   ) : (
                     <Button 
                       variant="outline"
                       disabled
-                      className="w-full border-white/10 text-white/30 rounded-xl font-black uppercase tracking-widest h-12 text-xs"
+                      className="w-full border-gray-200 text-gray-400 rounded-xl font-bold uppercase tracking-wider h-11 text-xs"
                     >
                       Sin Video Disponible
                     </Button>
@@ -493,7 +495,7 @@ export default function PortfolioPage() {
                       const msg = `Hola Black Box, vi el caso de ${project.title} en su portafolio y quisiera cotizar una producción audiovisual similar para mi marca.`
                       window.open(`https://wa.me/${cleanWhatsappNumber}?text=${encodeURIComponent(msg)}`, '_blank')
                     }}
-                    className="w-full text-zinc-400 hover:text-white hover:bg-white/5 rounded-xl text-xs font-semibold h-9 flex items-center justify-center gap-1.5 cursor-pointer"
+                    className="w-full text-gray-500 hover:text-black hover:bg-gray-50 rounded-xl text-xs font-semibold h-9 flex items-center justify-center gap-1.5 cursor-pointer"
                   >
                     <Send className="w-3 h-3" /> Cotizar video similar por WhatsApp
                   </Button>
@@ -504,9 +506,10 @@ export default function PortfolioPage() {
         </div>
         
         {filteredProjects.length === 0 && (
-          <div className="text-center py-32 opacity-20">
-            <Sparkles className="w-20 h-20 mx-auto mb-6" />
-            <h3 className="text-3xl font-black uppercase italic tracking-tighter">Próximamente</h3>
+          <div className="text-center py-24 text-gray-400">
+            <Sparkles className="w-16 h-16 mx-auto mb-4 text-gray-300" />
+            <h3 className="text-2xl font-black uppercase text-gray-700">Próximamente</h3>
+            <p className="text-sm mt-1">Estamos actualizando nuevos proyectos en esta categoría.</p>
           </div>
         )}
       </section>
@@ -521,22 +524,22 @@ export default function PortfolioPage() {
 
         return (
           <div 
-            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/95 backdrop-blur-md"
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/90 backdrop-blur-md"
             onClick={() => setSelectedVideo(null)}
           >
             <div 
-              className={`relative w-full ${isVertical ? 'max-w-md' : 'max-w-5xl'} shadow-[0_0_100px_rgba(168,85,247,0.15)] bg-zinc-950 border border-zinc-800 rounded-3xl overflow-hidden`}
+              className={`relative w-full ${isVertical ? 'max-w-md' : 'max-w-5xl'} shadow-2xl bg-zinc-950 border border-zinc-800 rounded-3xl overflow-hidden`}
               onClick={(e) => e.stopPropagation()}
             >
               {/* Header / Info */}
-              <div className="flex items-center justify-between p-4 border-b border-zinc-800 bg-zinc-900/60">
+              <div className="flex items-center justify-between p-4 border-b border-zinc-800 bg-zinc-900/80">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-purple-600/30 border border-purple-500/30 flex items-center justify-center">
-                    <Play className="w-4 h-4 text-purple-400 fill-purple-400" />
+                  <div className="w-10 h-10 rounded-xl bg-purple-600 flex items-center justify-center shadow-md">
+                    <Play className="w-4 h-4 text-white fill-white ml-0.5" />
                   </div>
                   <div>
                     <h3 className="text-sm font-black uppercase tracking-tight text-white line-clamp-1">{selectedVideo.title || 'Muestra de Video'}</h3>
-                    <p className="text-white/40 text-[10px] font-bold uppercase tracking-wider">{isVertical ? 'Formato Vertical (9:16)' : selectedVideo.platform}</p>
+                    <p className="text-white/50 text-[10px] font-bold uppercase tracking-wider">{isVertical ? 'Formato Vertical (9:16)' : selectedVideo.platform}</p>
                   </div>
                 </div>
 
@@ -570,14 +573,14 @@ export default function PortfolioPage() {
                   />
                 ) : (
                   <div className="text-center p-8 lg:p-16 bg-gradient-to-br from-[#111] to-black w-full h-full flex flex-col items-center justify-center">
-                    <div className="w-20 h-20 bg-purple-600/10 rounded-full flex items-center justify-center mb-6 border border-purple-500/20">
-                      <Video className="w-8 h-8 text-purple-500" />
+                    <div className="w-20 h-20 bg-purple-600/20 rounded-full flex items-center justify-center mb-6 border border-purple-500/30">
+                      <Video className="w-8 h-8 text-purple-400" />
                     </div>
-                    <h4 className="text-2xl lg:text-3xl font-black mb-4 uppercase italic">Reproductor Externo</h4>
+                    <h4 className="text-2xl lg:text-3xl font-black mb-4 uppercase text-white">Reproductor Externo</h4>
                     <p className="text-gray-400 mb-8 max-w-md mx-auto text-sm">Para ver este contenido en máxima calidad, abre el enlace oficial de {selectedVideo.platform}.</p>
                     <Button 
                       size="lg"
-                      className="bg-white text-black hover:bg-white/80 rounded-full px-8 py-6 text-sm font-black uppercase tracking-widest shadow-2xl transition-transform hover:scale-105"
+                      className="bg-white text-black hover:bg-gray-100 rounded-full px-8 py-6 text-sm font-black uppercase tracking-widest shadow-2xl transition-transform hover:scale-105"
                       onClick={() => window.open(selectedVideo.url, '_blank')}
                     >
                       Ver en {selectedVideo.platform} <ExternalLink className="w-4 h-4 ml-2" />
@@ -587,8 +590,8 @@ export default function PortfolioPage() {
               </div>
               
               {/* Bottom Quick Bar */}
-              <div className="p-3 bg-zinc-900 border-t border-zinc-800 flex items-center justify-between gap-3">
-                <span className="text-xs text-zinc-400 truncate">
+              <div className="p-3.5 bg-zinc-900 border-t border-zinc-800 flex items-center justify-between gap-3">
+                <span className="text-xs text-zinc-300 truncate">
                   ¿Quieres un video con esta calidad para tu marca?
                 </span>
                 <Button 
@@ -605,28 +608,29 @@ export default function PortfolioPage() {
       })()}
 
       {/* Final Section */}
-      <section className="py-24 lg:py-32 px-4 relative overflow-hidden">
-        <div className="absolute bottom-0 right-1/2 translate-x-1/2 w-full h-[300px] bg-purple-600/5 blur-[120px] rounded-full -z-10"></div>
-        <div className="max-w-4xl mx-auto text-center border border-white/5 bg-white/[0.02] backdrop-blur-2xl p-12 lg:p-24 rounded-[3rem]">
-          <h2 className="text-4xl lg:text-7xl font-black mb-8 leading-none tracking-tighter uppercase italic">
-            ¿Listo para potenciar tu <span className="text-purple-500">marca</span>?
+      <section className="py-20 lg:py-28 px-4 relative overflow-hidden bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto text-center bg-gradient-to-br from-purple-50 via-indigo-50/40 to-white border border-purple-100 p-10 lg:p-20 rounded-[2.5rem] shadow-sm">
+          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-black mb-6 leading-tight tracking-tight text-gray-900 uppercase">
+            ¿Listo para potenciar tu <span className="text-purple-600">marca</span>?
           </h2>
-          <p className="text-gray-400 mb-10 text-lg lg:text-xl font-medium">Escríbenos y conversemos sobre la estrategia visual para tus próximos videos.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <p className="text-gray-600 mb-8 text-base lg:text-lg font-medium max-w-xl mx-auto">
+            Escríbenos y conversemos sobre la estrategia visual y el paquete de videos verticales ideales para tu negocio.
+          </p>
+          <div className="flex justify-center">
             <Button 
-                size="lg" 
-                onClick={() => window.open(whatsappUrl, '_blank')}
-                className="bg-white text-black hover:bg-white/90 rounded-full px-12 py-8 text-base font-black uppercase tracking-widest shadow-2xl transition-all hover:scale-105 cursor-pointer"
+              size="lg" 
+              onClick={() => window.open(whatsappUrl, '_blank')}
+              className="bg-black text-white hover:bg-zinc-800 rounded-full px-10 py-7 text-sm font-bold uppercase tracking-wider shadow-xl transition-all hover:scale-105 cursor-pointer"
             >
-                Contactar por WhatsApp <Send className="w-5 h-5 ml-2" />
+              Contactar por WhatsApp <Send className="w-4 h-4 ml-2" />
             </Button>
           </div>
         </div>
       </section>
 
       {/* Simple Footer */}
-      <footer className="py-12 border-t border-white/5 text-center px-4">
-        <p className="text-gray-600 text-[10px] font-black uppercase tracking-[0.3em]">
+      <footer className="py-8 bg-slate-50 border-t border-gray-200/80 text-center px-4">
+        <p className="text-gray-500 text-xs font-semibold">
           © {new Date().getFullYear()} Black Box Agency • Lima, Perú • Todos los derechos reservados
         </p>
       </footer>
