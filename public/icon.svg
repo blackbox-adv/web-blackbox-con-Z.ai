@@ -1,17 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <!-- Rounded container background with dark gradient -->
-  <rect width="64" height="64" rx="14" fill="#09090B" />
-  <rect x="1" y="1" width="62" height="62" rx="13" stroke="#27272A" stroke-width="1.5" />
-  
-  <!-- Isometric 3D Black Box Icon in pure white & purple accent -->
-  <g transform="translate(11, 10) scale(0.26)">
-    <!-- Top Floating Lid -->
-    <polygon points="78,14 140,48 100,72 38,38" fill="#A855F7" />
-    <!-- Left Main Face -->
-    <polygon points="30,52 96,88 96,148 30,112" fill="#FFFFFF" />
-    <!-- Right Slit Wall -->
-    <polygon points="96,88 134,66 134,100 96,122" fill="#E4E4E7" />
-    <!-- Right Outer Wall -->
-    <polygon points="112,96 142,78 142,134 112,148" fill="#C084FC" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <!-- Clean dark backdrop with subtle border for universal visibility on light and dark browser tabs & Google search -->
+  <rect width="512" height="512" rx="112" fill="#09090b" />
+  <rect x="8" y="8" width="496" height="496" rx="104" stroke="#27272a" stroke-width="12" />
+
+  <!-- 3D Isometric Black Box Icon -->
+  <g transform="translate(256, 260) scale(2.05) translate(-118, -110)">
+    <!-- Top Floating Angled Lid -->
+    <polygon points="100,28 178,74 136,104 58,58" fill="#a855f7" />
+    
+    <!-- Left Main Outer Face -->
+    <polygon points="58,74 122,111 122,192 58,155" fill="#ffffff" />
+    
+    <!-- Right Wall Outer Face -->
+    <polygon points="125,116 172,90 172,168 125,193" fill="#c084fc" />
+    
+    <!-- Inner Dark Shadow Block inside the slit -->
+    <polygon points="122,111 170,83 170,118 122,146" fill="#e4e4e7" />
   </g>
 </svg>

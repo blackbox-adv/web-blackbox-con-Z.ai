@@ -264,6 +264,11 @@ export default function PortfolioPage() {
               localStorage.setItem('blackbox_cached_logo', res.config.brandLogo)
             } catch (e) {}
           }
+          if (res.config?.brandIcon) {
+            try {
+              localStorage.setItem('blackbox_cached_icon', res.config.brandIcon)
+            } catch (e) {}
+          }
         }
       })
       .catch((err) => {

@@ -313,6 +313,11 @@ export default function Home() {
             localStorage.setItem('blackbox_cached_config', JSON.stringify(res.config))
           } catch {}
         }
+        if (res?.config?.brandIcon) {
+          try {
+            localStorage.setItem('blackbox_cached_icon', res.config.brandIcon)
+          } catch {}
+        }
       })
       .catch(console.error)
 

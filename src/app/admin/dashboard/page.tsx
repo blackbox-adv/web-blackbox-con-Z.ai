@@ -326,6 +326,11 @@ export default function AdminDashboard() {
             } else {
               localStorage.removeItem('blackbox_cached_logo')
             }
+            if (configToSave.brandIcon) {
+              localStorage.setItem('blackbox_cached_icon', configToSave.brandIcon)
+            } else {
+              localStorage.removeItem('blackbox_cached_icon')
+            }
           } catch (e) {}
         }
         setMessage({ type: 'success', text: 'Configuración guardada' })

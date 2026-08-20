@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
+import { DynamicFavicon } from "@/components/DynamicFavicon";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -183,6 +184,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-gray-900 selection:bg-purple-500 selection:text-white`}
       >
+        <DynamicFavicon />
         {children}
         <Toaster />
       </body>
