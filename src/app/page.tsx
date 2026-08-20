@@ -553,7 +553,7 @@ export default function Home() {
                   variant="outline" 
                   onClick={() => setSelectedVideo({
                     title: config?.heroReelTitle || 'Showreel Black Box | Recopilatorio de Trabajos',
-                    url: config?.heroReelUrl || 'https://youtube.com/shorts/Su_JcYkeyLw',
+                    url: config?.heroReelUrl || 'https://youtube.com/shorts/nzdbM36oEKQ',
                     platform: 'youtube'
                   })}
                   className="gap-2 text-base px-6 py-6 border-2 border-purple-600 text-purple-700 bg-purple-50/50 hover:bg-purple-100/80 rounded-full font-bold group cursor-pointer shadow-md shadow-purple-500/10"
@@ -606,7 +606,7 @@ export default function Home() {
                   {/* YouTube Embed Player */}
                   <iframe
                     key={isHeroAudioActive ? 'hero-audio-on' : 'hero-audio-off'}
-                    src={getEmbedUrl(config?.heroReelUrl || 'https://youtube.com/shorts/Su_JcYkeyLw', 'youtube', !isHeroAudioActive) || ''}
+                    src={getEmbedUrl(config?.heroReelUrl || 'https://youtube.com/shorts/nzdbM36oEKQ', 'youtube', !isHeroAudioActive) || ''}
                     className="w-full h-full object-cover border-0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
@@ -650,7 +650,7 @@ export default function Home() {
                     <button
                       onClick={() => setSelectedVideo({
                         title: config?.heroReelTitle || 'Producción Destacada Black Box',
-                        url: config?.heroReelUrl || 'https://youtube.com/shorts/Su_JcYkeyLw',
+                        url: config?.heroReelUrl || 'https://youtube.com/shorts/nzdbM36oEKQ',
                         platform: 'youtube'
                       })}
                       className="py-2 px-3 bg-zinc-800/90 hover:bg-zinc-700 text-white text-xs font-bold rounded-xl border border-white/10 transition-colors flex items-center justify-center shadow-xl cursor-pointer"
@@ -912,7 +912,7 @@ export default function Home() {
                   variant="outline"
                   onClick={() => setSelectedVideo({
                     title: config?.heroReelTitle || 'Showreel Black Box | Recopilatorio de Trabajos',
-                    url: config?.heroReelUrl || 'https://youtube.com/shorts/Su_JcYkeyLw',
+                    url: config?.heroReelUrl || 'https://youtube.com/shorts/nzdbM36oEKQ',
                     platform: 'youtube'
                   })}
                   className="border-white/20 text-white hover:bg-white/10 rounded-full px-6 py-6 font-semibold gap-2 cursor-pointer"
@@ -939,7 +939,7 @@ export default function Home() {
                   {/* 9:16 Video Container */}
                   <div className="relative aspect-[9/16] w-full rounded-2xl overflow-hidden bg-black shadow-inner">
                     <iframe
-                      src={getEmbedUrl(config?.heroReelUrl || 'https://youtube.com/shorts/Su_JcYkeyLw', 'youtube') || ''}
+                      src={getEmbedUrl(config?.heroReelUrl || 'https://youtube.com/shorts/nzdbM36oEKQ', 'youtube') || ''}
                       className="w-full h-full object-cover border-0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
@@ -951,7 +951,7 @@ export default function Home() {
                       <button
                         onClick={() => setSelectedVideo({
                           title: config?.heroReelTitle || 'Showreel Black Box | Recopilatorio',
-                          url: config?.heroReelUrl || 'https://youtube.com/shorts/Su_JcYkeyLw',
+                          url: config?.heroReelUrl || 'https://youtube.com/shorts/nzdbM36oEKQ',
                           platform: 'youtube'
                         })}
                         className="flex-1 py-2 px-3 bg-white text-black font-bold text-xs rounded-xl shadow-lg hover:bg-zinc-200 transition-colors flex items-center justify-center gap-1.5 cursor-pointer"

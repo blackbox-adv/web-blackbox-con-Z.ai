@@ -27,7 +27,7 @@ const INITIAL_SITE_CONFIG = {
   heroClients: '150+',
   heroProjects: '500+',
   heroYears: '8+',
-  heroReelUrl: 'https://youtube.com/shorts/Su_JcYkeyLw',
+  heroReelUrl: 'https://youtube.com/shorts/nzdbM36oEKQ',
   heroReelTitle: 'Showreel 2026 | Recopilatorio de Trabajos',
   ogImage: '/og-image.png',
   primaryColor: '#9333ea',
