@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" fill="none">
+  <rect width="180" height="50" rx="8" fill="#18181B" />
+  <circle cx="28" cy="25" r="14" fill="#2563EB" />
+  <path d="M22 28 L25 18 L31 18 L34 28 Z" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linejoin="round" />
+  <text x="50" y="27" font-family="'Montserrat', sans-serif" font-size="15" font-weight="900" fill="#FFFFFF" letter-spacing="1">LAP CUSTOM</text>
+  <text x="50" y="39" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#60A5FA" letter-spacing="0.5">TAPIZADO &amp; CUERO AUTOMOTRIZ</text>
+</svg>

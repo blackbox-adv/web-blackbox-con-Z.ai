@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" fill="none">
+  <rect width="180" height="50" rx="8" fill="#18181B" />
+  <circle cx="28" cy="25" r="14" fill="#EC4899" />
+  <path d="M22 20 L34 20 L28 27 L28 32 L25 32 L25 34 L31 34" stroke="#FFFFFF" stroke-width="1.8" fill="none" stroke-linecap="round" />
+  <text x="50" y="27" font-family="'Montserrat', sans-serif" font-size="15" font-weight="900" fill="#FFFFFF" letter-spacing="1">SHAKING</text>
+  <text x="50" y="39" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#F472B6" letter-spacing="0.5">ARTÍCULOS PARA BAR &amp; COCTELERÍA</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 240" fill="none">
+  <!-- Black Box 3D Isometric Icon -->
+  <g fill="#000000">
+    <!-- Top Floating Angled Lid -->
+    <polygon points="100,28 178,74 136,104 58,58" />
+    
+    <!-- Left Main Outer Face -->
+    <polygon points="58,74 122,111 122,192 58,155" />
+    
+    <!-- Right Wall Outer Face -->
+    <polygon points="125,116 172,90 172,168 125,193" />
+    
+    <!-- Inner Dark Shadow Block inside the slit -->
+    <polygon points="122,111 170,83 170,118 122,146" />
+  </g>
+
+  <!-- Typography: BLACK BOX -->
+  <!-- Line 1: BLACK -->
+  <text x="200" y="112" font-family="'Montserrat', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="62" font-weight="900" letter-spacing="-0.02em" fill="#000000">BLACK</text>
+  <!-- Line 2: BOX -->
+  <text x="200" y="184" font-family="'Montserrat', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="68" font-weight="900" letter-spacing="0.01em" fill="#000000">BOX</text>
+</svg>

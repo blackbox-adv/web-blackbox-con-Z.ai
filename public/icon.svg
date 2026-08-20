@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Rounded container background with dark gradient -->
+  <rect width="64" height="64" rx="14" fill="#09090B" />
+  <rect x="1" y="1" width="62" height="62" rx="13" stroke="#27272A" stroke-width="1.5" />
+  
+  <!-- Isometric 3D Black Box Icon in pure white & purple accent -->
+  <g transform="translate(11, 10) scale(0.26)">
+    <!-- Top Floating Lid -->
+    <polygon points="78,14 140,48 100,72 38,38" fill="#A855F7" />
+    <!-- Left Main Face -->
+    <polygon points="30,52 96,88 96,148 30,112" fill="#FFFFFF" />
+    <!-- Right Slit Wall -->
+    <polygon points="96,88 134,66 134,100 96,122" fill="#E4E4E7" />
+    <!-- Right Outer Wall -->
+    <polygon points="112,96 142,78 142,134 112,148" fill="#C084FC" />
+  </g>
+</svg>

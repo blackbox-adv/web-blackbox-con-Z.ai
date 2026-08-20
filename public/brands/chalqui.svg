@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" fill="none">
+  <rect width="180" height="50" rx="8" fill="#18181B" />
+  <circle cx="28" cy="25" r="14" fill="#9333EA" />
+  <text x="28" y="31" font-family="'Montserrat', sans-serif" font-size="14" font-weight="900" fill="#FFFFFF" text-anchor="middle">CH</text>
+  <text x="50" y="27" font-family="'Montserrat', sans-serif" font-size="15" font-weight="900" fill="#FFFFFF" letter-spacing="1">CHALQUI</text>
+  <text x="50" y="39" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#C084FC" letter-spacing="0.5">PRODUCCIÓN &amp; COMERCIAL</text>
+</svg>

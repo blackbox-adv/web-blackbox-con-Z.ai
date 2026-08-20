@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" fill="none">
+  <!-- Exact Stampitas Logo: "stampita" + black circle with "s" -->
+  <g transform="translate(10, 0)">
+    <text x="0" y="34" font-family="'Inter', 'Helvetica Neue', 'Arial Black', sans-serif" font-size="28" font-weight="900" fill="#111827" letter-spacing="-0.5">stampita</text>
+    <!-- Black circle badge with "s" -->
+    <circle cx="152" cy="24" r="14" fill="#111827" />
+    <text x="152" y="32" font-family="'Inter', 'Helvetica Neue', sans-serif" font-size="20" font-weight="800" fill="#FFFFFF" text-anchor="middle">s</text>
+  </g>
+</svg>

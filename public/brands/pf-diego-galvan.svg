@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" fill="none">
+  <!-- Dynamic Fitness DG Badge -->
+  <g transform="translate(10, 8)">
+    <circle cx="17" cy="17" r="17" fill="#09090B" />
+    <path d="M10 10H18C21.3137 10 24 12.6863 24 16C24 19.3137 21.3137 22 18 22H14V24" stroke="#F97316" stroke-width="3" stroke-linecap="round" />
+    <path d="M14 10V24" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+    <circle cx="21" cy="20" r="2" fill="#F97316" />
+  </g>
+  <!-- Typography -->
+  <text x="50" y="24" font-family="'Arial Black', sans-serif" font-size="14" font-weight="900" fill="#09090B" letter-spacing="0.8">DIEGO GALVÁN</text>
+  <text x="50" y="37" font-family="'Montserrat', sans-serif" font-size="9" font-weight="700" fill="#F97316" letter-spacing="2">PRO FITNESS & ATHLETE</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" fill="none">
+  <rect width="180" height="50" rx="8" fill="#18181B" />
+  <circle cx="28" cy="25" r="14" fill="#059669" />
+  <path d="M20 32 L20 22 L28 17 L36 22 L36 32 Z" stroke="#FFFFFF" stroke-width="1.8" fill="none" stroke-linejoin="round" />
+  <rect x="25" y="24" width="6" height="8" fill="#FFFFFF" />
+  <text x="50" y="27" font-family="'Montserrat', sans-serif" font-size="15" font-weight="900" fill="#FFFFFF" letter-spacing="1">CHECOR</text>
+  <text x="50" y="39" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#34D399" letter-spacing="0.5">EDIFICIOS &amp; INMOBILIARIA</text>
+</svg>

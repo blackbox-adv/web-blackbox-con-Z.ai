@@ -1,0 +1,6 @@
+{
+  "name": "Blackbox - Agencia de Marketing Digital",
+  "description": "Sitio web oficial y panel de administración de Blackbox: productora audiovisual y agencia digital con showreel vertical 9:16, portafolio de proyectos y gestión de contenidos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

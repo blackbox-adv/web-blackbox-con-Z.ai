@@ -1,0 +1,130 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "rhel-openssl-1.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model SiteConfig {
+  id              String   @id @default(cuid())
+  phone           String   @default("+51 958 297 236")
+  email           String   @default("hola@blackbox.agency")
+  address         String   @default("Lima, Perú")
+  whatsapp        String   @default("51958297236")
+  facebook        String?
+  instagram       String?
+  twitter         String?
+  linkedin        String?
+  tiktok          String?
+  youtube         String?
+  brandIcon       String?
+  brandLogo       String?
+  brandName       String   @default("Blackbox")
+  heroAwards      String   @default("50+")
+  heroClients     String   @default("150+")
+  heroProjects    String   @default("500+")
+  heroYears       String   @default("8+")
+  ogImage         String?
+  primaryColor    String   @default("#9333ea")
+  secondaryColor  String   @default("#f97316")
+  siteDescription String   @default("Transformamos tu presencia digital con estrategias de marketing que generan resultados reales.")
+  siteKeywords    String   @default("marketing digital, SEO, publicidad, redes sociales, agencia digital, Lima, Perú")
+  siteTitle       String   @default("Blackbox - Agencia de Marketing Digital")
+  updatedAt       DateTime @updatedAt
+}
+
+model Testimonial {
+  id        String   @id @default(cuid())
+  name      String
+  role      String
+  company   String
+  quote     String
+  image     String?
+  rating    Int      @default(5)
+  order     Int      @default(0)
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Project {
+  id          String   @id @default(cuid())
+  title       String
+  category    String
+  result      String   @default("")
+  description String?  @db.Text
+  gradient    String   @default("from-purple-500 to-blue-500")
+  order       Int      @default(0)
+  active      Boolean  @default(true)
+  driveUrl    String   @default("")
+  imageUrl    String   @default("")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  videos      Video[]
+}
+
+model Video {
+  id          String   @id @default(cuid())
+  projectId   String
+  project     Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  title       String?
+  platform    String   // 'youtube', 'vimeo', etc.
+  url         String
+  embedUrl    String?
+  thumbnail   String?
+  order       Int      @default(0)
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Brand {
+  id        String   @id @default(cuid())
+  name      String
+  logo      String?
+  color     String   @default("bg-purple-500")
+  website   String?
+  order     Int      @default(0)
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Admin {
+  id           String         @id @default(cuid()) @map("id")
+  username     String         @unique @map("username")
+  createdAt    DateTime       @default(now()) @map("createdat")
+  passwordHash String         @map("passwordhash")
+  updatedAt    DateTime       @updatedAt @map("updatedat")
+  sessions     AdminSession[]
+
+  @@map("Admin")
+}
+
+model AdminSession {
+  id        String   @id @default(cuid()) @map("id")
+  token     String   @unique @map("token")
+  adminId   String   @map("adminId")
+  createdAt DateTime @default(now()) @map("createdat")
+  expiresAt DateTime @map("expiresat")
+  admin     Admin    @relation(fields: [adminId], references: [id], onDelete: Cascade)
+
+  @@map("AdminSession")
+}
+
+model Service {
+  id          String   @id
+  title       String
+  description String
+  icon        String   @default("Target")
+  features    String
+  order       Int      @default(0)
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  iconBg      String   @default("bg-purple-100")
+  iconColor   String   @default("text-purple-600")
+  updatedAt   DateTime
+}

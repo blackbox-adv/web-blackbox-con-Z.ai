@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 50" fill="none">
+  <!-- Copper Bronze SF Monogram -->
+  <g transform="translate(10, 6)">
+    <!-- Elegant Serif SF Interlocking Monogram -->
+    <text x="0" y="27" font-family="'Didot', 'Playfair Display', 'Cinzel', 'Times New Roman', serif" font-size="28" font-weight="700" fill="#8C5338">S</text>
+    <text x="14" y="32" font-family="'Didot', 'Playfair Display', 'Cinzel', 'Times New Roman', serif" font-size="28" font-weight="700" fill="#8C5338">F</text>
+  </g>
+  
+  <!-- Right Stacked Typography -->
+  <g transform="translate(48, 0)">
+    <text x="0" y="18" font-family="'Montserrat', 'Century Gothic', sans-serif" font-size="12" font-weight="700" fill="#8C5338" letter-spacing="4">SALA</text>
+    <text x="0" y="30" font-family="'Montserrat', 'Century Gothic', sans-serif" font-size="12" font-weight="700" fill="#8C5338" letter-spacing="4">FABULOSA</text>
+    <text x="0" y="40" font-family="'Montserrat', 'Century Gothic', sans-serif" font-size="7.5" font-weight="600" fill="#A86E53" letter-spacing="3">MARKETPLACE</text>
+  </g>
+</svg>

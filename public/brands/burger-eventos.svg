@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" fill="none">
+  <rect width="180" height="50" rx="8" fill="#09090B" />
+  <path d="M20 32 C20 22, 28 20, 36 20 C44 20, 52 22, 52 32 Z" fill="#DC2626" />
+  <rect x="18" y="32" width="36" height="4" rx="2" fill="#EAB308" />
+  <text x="62" y="27" font-family="'Impact', 'Arial Black', sans-serif" font-size="14" font-weight="900" fill="#FFFFFF" letter-spacing="1">BURGER &amp; EVENTOS</text>
+  <text x="62" y="39" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#F87171" letter-spacing="1">CATERING GOURMET</text>
+</svg>

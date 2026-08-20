@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 50" fill="none">
+  <!-- Nexa Modern Geometric Mark -->
+  <g transform="translate(10, 10)">
+    <path d="M0 15L15 0L30 15L15 30L0 15Z" fill="#0052CC" />
+    <path d="M15 6L24 15L15 24L6 15L15 6Z" fill="#2684FF" />
+    <circle cx="15" cy="15" r="4" fill="#FFFFFF" />
+  </g>
+  <!-- Typography -->
+  <text x="48" y="32" font-family="'Helvetica Neue', Arial, sans-serif" font-size="24" font-weight="700" fill="#0052CC" letter-spacing="-0.5">nexa</text>
+</svg>

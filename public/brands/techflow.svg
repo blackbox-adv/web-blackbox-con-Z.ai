@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 50" fill="none">
+  <!-- Dynamic Waves -->
+  <g transform="translate(10, 9)">
+    <path d="M2 24C8 12 14 12 20 24C26 36 32 36 38 24" stroke="#6366F1" stroke-width="4" stroke-linecap="round" />
+    <path d="M2 14C8 2 14 2 20 14C26 26 32 26 38 14" stroke="#818CF8" stroke-width="3" stroke-linecap="round" opacity="0.6" />
+  </g>
+  <!-- Typography -->
+  <text x="54" y="31" font-family="'Montserrat', sans-serif" font-size="18" font-weight="800" fill="#1E1B4B" letter-spacing="-0.5">TechFlow</text>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" fill="none">
+  <rect width="180" height="50" rx="8" fill="#18181B" />
+  <circle cx="28" cy="25" r="14" fill="#D97706" />
+  <path d="M22 25 L28 19 L34 25 L32 25 L32 30 L24 30 L24 25 Z" fill="#FFFFFF" />
+  <text x="50" y="31" font-family="'Montserrat', 'Inter', sans-serif" font-size="16" font-weight="900" fill="#FFFFFF" letter-spacing="1">LEOMAR</text>
+  <text x="135" y="31" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#FBBF24" letter-spacing="0.5">MUEBLES</text>
+</svg>

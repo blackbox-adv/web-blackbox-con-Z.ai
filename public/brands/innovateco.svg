@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 50" fill="none">
+  <!-- Modern Tech Hexagon -->
+  <g transform="translate(10, 9)">
+    <path d="M16 2L29 9.5V24.5L16 32L3 24.5V9.5L16 2Z" stroke="#7C3AED" stroke-width="3" fill="#EDE9FE" />
+    <circle cx="16" cy="17" r="4" fill="#7C3AED" />
+  </g>
+  <!-- Typography -->
+  <text x="48" y="31" font-family="'Montserrat', sans-serif" font-size="18" font-weight="800" fill="#1E1B4B" letter-spacing="-0.5">Innovateco</text>
+</svg>

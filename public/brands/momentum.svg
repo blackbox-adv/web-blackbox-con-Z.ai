@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 50" fill="none">
+  <!-- Kinetic Forward Chevrons -->
+  <g transform="translate(10, 11)">
+    <path d="M4 4L14 14L4 24" stroke="#DC2626" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M14 4L24 14L14 24" stroke="#0F172A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <!-- Typography -->
+  <text x="44" y="32" font-family="'Arial Black', sans-serif" font-size="16" font-weight="900" fill="#0F172A" letter-spacing="2">MOMENTUM</text>
+</svg>

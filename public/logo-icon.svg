@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
+  <!-- 3D Isometric Black Box Icon -->
+  <g fill="#000000">
+    <polygon points="78,14 140,48 100,72 38,38" />
+    <polygon points="30,52 96,88 96,148 30,112" />
+    <polygon points="96,88 134,66 134,100 96,122" />
+    <polygon points="112,96 142,78 142,134 112,148" />
+  </g>
+</svg>
