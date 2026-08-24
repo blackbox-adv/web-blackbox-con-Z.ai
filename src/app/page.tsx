@@ -341,6 +341,7 @@ export default function Home() {
     { name: 'Inicio', href: '#inicio' },
     { name: 'Servicios', href: '#servicios' },
     { name: 'Casos de Éxito', href: '#portfolio' },
+    { name: 'Videoclips', href: '/videoclips' },
     { name: 'Nosotros', href: '#nosotros' },
     { name: 'Portfolio', href: '/portfolio' },
     { name: 'Contacto', href: '#contacto' },
