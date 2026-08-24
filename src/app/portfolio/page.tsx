@@ -630,9 +630,13 @@ export default function PortfolioPage() {
 
       {/* Simple Footer */}
       <footer className="py-8 bg-slate-50 border-t border-gray-200/80 text-center px-4">
-        <p className="text-gray-500 text-xs font-semibold">
-          © {new Date().getFullYear()} Black Box Agency • Lima, Perú • Todos los derechos reservados
-        </p>
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500 font-semibold">
+          <p>© {new Date().getFullYear()} Black Box Agency • Lima, Perú • Todos los derechos reservados</p>
+          <div className="flex items-center gap-4">
+            <Link href="/" className="hover:text-black transition-colors">Inicio</Link>
+            <Link href="/videoclips" className="text-purple-600 hover:text-purple-800 transition-colors">Videoclips & Films Musicales 🎬</Link>
+          </div>
+        </div>
       </footer>
 
       {/* Floating WhatsApp Widget */}

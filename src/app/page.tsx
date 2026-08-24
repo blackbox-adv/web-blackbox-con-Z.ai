@@ -1353,6 +1353,7 @@ export default function Home() {
               <ul className="space-y-3">
                 <li><a href="#nosotros" className="text-gray-600 hover:text-gray-950 text-sm transition-colors font-medium">Sobre Nosotros</a></li>
                 <li><Link href="/portfolio" className="text-gray-600 hover:text-gray-950 text-sm transition-colors font-medium">Portfolio de Proyectos</Link></li>
+                <li><Link href="/videoclips" className="text-gray-600 hover:text-gray-950 text-sm transition-colors font-medium">Videoclips & Films Musicales</Link></li>
                 <li><a href="#contacto" className="text-gray-600 hover:text-gray-950 text-sm transition-colors font-medium">Contacto</a></li>
                 <li><Link href="/admin" className="text-zinc-400 hover:text-zinc-700 text-xs transition-colors">Panel Admin</Link></li>
               </ul>
