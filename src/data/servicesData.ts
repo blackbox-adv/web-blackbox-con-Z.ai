@@ -363,5 +363,242 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       }
     ],
     relatedProjects: ['Clínica Avendaño']
+  },
+
+  'productora-audiovisual-lima': {
+    slug: 'productora-audiovisual-lima',
+    title: 'Productora Audiovisual en Lima',
+    shortTitle: 'Productora Audiovisual Lima',
+    seoTitle: 'Productora Audiovisual en Lima | Black Box Peru',
+    seoDescription: 'Productora audiovisual en Lima especializada en contenido vertical, spots comerciales y marketing digital para e-commerce y gastronomia.',
+    heroBadge: 'Producción Audiovisual 4K/6K en Lima',
+    heroHeadline: 'Productora Audiovisual en Lima',
+    heroSubheadline: 'Spots comerciales, videos corporativos y contenido publicitario de alto impacto en resolución 4K y 6K para marcas en Lima, Perú.',
+    icon: 'Video',
+    gradient: 'from-blue-600 via-indigo-600 to-purple-800',
+    accentColor: 'text-blue-500',
+    problems: [
+      {
+        title: 'Falta de calidad cinematográfica en tus videos',
+        desc: 'Videos grabados sin iluminación profesional ni dirección de arte perjudican la credibilidad de tu negocio.'
+      },
+      {
+        title: 'Bajo enganche en redes y pauta publicitaria',
+        desc: 'Tu público objetivo ignora videos que no capturan su atención en los primeros 3 segundos.'
+      },
+      {
+        title: 'Ausencia de guion estratégico orientado a ventas',
+        desc: 'Se requiere storytelling y llamados a la acción claros para convertir espectadores en clientes reales.'
+      }
+    ],
+    solutions: [
+      {
+        title: 'Cámaras de Cine 4K/6K e Iluminación de Estudio',
+        desc: 'Equipamiento cinematográfico con ópticas fijas y esquemas de iluminación diseñados a medida.',
+        icon: 'Camera'
+      },
+      {
+        title: 'Guion Publicitario y Dirección en Set',
+        desc: 'Estructuración de narrativas visuales dinámicas con teleprompter y dirección de escena profesional.',
+        icon: 'FileText'
+      },
+      {
+        title: 'Color Grading y Diseño Sonoro',
+        desc: 'Postproducción avanzada con corrección de color cinematográfica y masterización de audio.',
+        icon: 'Sparkles'
+      }
+    ],
+    processSteps: [
+      { step: '01', title: 'Briefing & Guion', desc: 'Definición del mensaje central y elaboración del guion técnico publicitario.' },
+      { step: '02', title: 'Rodaje Profesional', desc: 'Jornada de filmación en set o locación con equipamiento de cine.' },
+      { step: '03', title: 'Edición & Color', desc: 'Cortes dinámicos, gradación de color y musicalización licenciada.' },
+      { step: '04', title: 'Entrega Multi-Formato', desc: 'Versiones 16:9 y verticales 9:16 listas para web y pauta.' }
+    ],
+    deliverables: [
+      'Master comercial en 4K UHD para pantallas y web',
+      'Versiones verticales (9:16) optimizadas para Reels y TikTok',
+      'Guion publicitario estructurado',
+      'Derechos de uso comercial'
+    ],
+    metrics: [
+      { value: '4K/6K', label: 'Resolución' },
+      { value: 'Lima, PE', label: 'Cobertura' },
+      { value: '100%', label: 'Calidad Cine' }
+    ],
+    targetIndustries: [
+      'Empresas Corporativas e Industriales',
+      'Clínicas y Salud',
+      'E-commerce y Retail',
+      'Gastronomía y Restaurantes'
+    ],
+    faqs: [
+      {
+        question: '¿Dónde opera la productora audiovisual en Lima?',
+        answer: 'Black Box Peru opera como empresa de servicios en Lima, con cobertura técnica y logística en todos los distritos de Lima Metropolitana y a nivel nacional.'
+      },
+      {
+        question: '¿Qué tipo de producciones realizan en Lima?',
+        answer: 'Realizamos spots comerciales, videos corporativos, contenido para e-commerce, gastronomía y videos verticales para redes sociales.'
+      }
+    ],
+    relatedProjects: ['Makita', 'Checor', 'Clínica Avendaño']
+  },
+
+  'agencia-marketing-digital-lima': {
+    slug: 'agencia-marketing-digital-lima',
+    title: 'Agencia de Marketing Digital en Lima',
+    shortTitle: 'Agencia Marketing Digital Lima',
+    seoTitle: 'Agencia de Marketing Digital en Lima | Black Box Peru',
+    seoDescription: 'Productora audiovisual en Lima especializada en contenido vertical, spots comerciales y marketing digital para e-commerce y gastronomia.',
+    heroBadge: 'Marketing Digital & Meta Ads en Lima',
+    heroHeadline: 'Agencia de Marketing Digital en Lima',
+    heroSubheadline: 'Campañas de publicidad digital con creativos en video de alto impacto, Meta Ads, TikTok Ads y generación de contactos calificados.',
+    icon: 'TrendingUp',
+    gradient: 'from-emerald-600 via-teal-600 to-cyan-800',
+    accentColor: 'text-emerald-500',
+    problems: [
+      {
+        title: 'Inversión publicitaria sin retorno comercial claro',
+        desc: 'Promocionar publicaciones sin estrategia ni embudos genera gastos sin ventas.'
+      },
+      {
+        title: 'Creativos estáticos que no convierten',
+        desc: 'Las imágenes genéricas pasan desapercibidas en el feed de los usuarios.'
+      },
+      {
+        title: 'Falta de seguimiento en contactos y leads',
+        desc: 'Se necesitan canales directos hacia WhatsApp para cerrar cotizaciones ágilmente.'
+      }
+    ],
+    solutions: [
+      {
+        title: 'Anuncios en Video Cinematográfico',
+        desc: 'Creativos publicitarios grabados profesionalmente que detienen el scroll y generan deseo.',
+        icon: 'Video'
+      },
+      {
+        title: 'Segmentación Avanzada y Pauta Digital',
+        desc: 'Gestión técnica en Meta Ads y TikTok Ads con optimización continua del costo por adquisición.',
+        icon: 'Target'
+      },
+      {
+        title: 'Embudos Directos hacia WhatsApp',
+        desc: 'Rutas de conversión diseñadas para recibir clientes potenciales listos para cotizar.',
+        icon: 'MessageSquare'
+      }
+    ],
+    processSteps: [
+      { step: '01', title: 'Auditoría & Estrategia', desc: 'Diagnóstico comercial y definición de audiencias clave en Lima.' },
+      { step: '02', title: 'Producción de Creativos', desc: 'Grabación y edición de videos publicitarios de alta conversión.' },
+      { step: '03', title: 'Activación de Campañas', desc: 'Lanzamiento en Meta Ads y TikTok Ads con segmentación precisa.' },
+      { step: '04', title: 'Optimización & Reportes', desc: 'Medición periódica y escalamiento de los anuncios más rentables.' }
+    ],
+    deliverables: [
+      'Gestión integral de campañas en Meta Ads y TikTok Ads',
+      'Creativos audiovisuales y piezas en video optimizadas',
+      'Configuración de píxeles y eventos de conversión',
+      'Reportes periódicos de rendimiento y leads'
+    ],
+    metrics: [
+      { value: 'Meta & TikTok', label: 'Plataformas' },
+      { value: 'Lima, PE', label: 'Cobertura' },
+      { value: 'ROAS', label: 'Enfoque en Ventas' }
+    ],
+    targetIndustries: [
+      'Clínicas y Consultorios Médicos',
+      'Marcas de E-commerce y Moda',
+      'Restaurantes y Bares',
+      'Empresas de Servicios y B2B'
+    ],
+    faqs: [
+      {
+        question: '¿Qué servicios ofrece su agencia de marketing digital en Lima?',
+        answer: 'Ofrecemos gestión de publicidad en Meta Ads y TikTok Ads, producción de creativos en video, diseño de embudos hacia WhatsApp y optimización continua de campañas.'
+      },
+      {
+        question: '¿Cómo se integran los videos con el marketing digital?',
+        answer: 'Grabamos piezas audiovisuales pensadas específicamente para los formatos de pauta, logrando mayor retención y mejores costos por lead.'
+      }
+    ],
+    relatedProjects: ['Clínica Avendaño', 'Leomar Muebles', 'Chalqui']
+  },
+
+  'videos-ecommerce-gastronomia': {
+    slug: 'videos-ecommerce-gastronomia',
+    title: 'Produccion de Videos para E-commerce y Gastronomia en Lima',
+    shortTitle: 'Videos E-commerce & Gastronomía',
+    seoTitle: 'Producción de Videos para E-commerce y Gastronomía en Lima | Black Box Peru',
+    seoDescription: 'Productora audiovisual en Lima especializada en contenido vertical, spots comerciales y marketing digital para e-commerce y gastronomia.',
+    heroBadge: 'Food Styling & E-commerce en Lima',
+    heroHeadline: 'Produccion de Videos para E-commerce y Gastronomia en Lima',
+    heroSubheadline: 'Videos de producto, unboxings, food styling y tomas macro en 4K diseñados para despertar el apetito y multiplicar las ventas online.',
+    icon: 'Smartphone',
+    gradient: 'from-amber-600 via-orange-600 to-red-600',
+    accentColor: 'text-amber-500',
+    problems: [
+      {
+        title: 'Fotos y videos planos que no reflejan la calidad del plato o producto',
+        desc: 'Los clientes no sienten deseo de compra si la presentación visual es descuidada.'
+      },
+      {
+        title: 'Baja conversión en tiendas online y catálogos',
+        desc: 'El comprador digital necesita ver texturas, dimensiones y uso real para decidirse.'
+      },
+      {
+        title: 'Dificultad para destacar en TikTok e Instagram',
+        desc: 'Se requieren formatos verticales con ritmo rápido y audio envolvente.'
+      }
+    ],
+    solutions: [
+      {
+        title: 'Food Styling y Tomas Macro en Alta Definición',
+        desc: 'Iluminación cálida, cámara lenta y planos cerrados que resaltan el brillo y frescura de los alimentos.',
+        icon: 'Sparkles'
+      },
+      {
+        title: 'Videos Demostrativos y Unboxing para E-commerce',
+        desc: 'Presentación clara de características, materiales y modo de uso para acelerar la compra.',
+        icon: 'Camera'
+      },
+      {
+        title: 'Creativos 9:16 Listos para Pauta Publicitaria',
+        desc: 'Contenidos verticales adaptados para anuncios que generan pedidos directos por WhatsApp.',
+        icon: 'Zap'
+      }
+    ],
+    processSteps: [
+      { step: '01', title: 'Plan de Rodaje & Styling', desc: 'Selección de platos o productos prioritarios y diseño de tomas.' },
+      { step: '02', title: 'Grabación en Set / Restaurante', desc: 'Jornada de rodaje con iluminación de producto y ópticas macro.' },
+      { step: '03', title: 'Edición & Diseño Sonoro', desc: 'Postproducción con efectos de sonido crujientes y color vibrante.' },
+      { step: '04', title: 'Entrega para Web y Redes', desc: 'Videos en alta resolución para tienda virtual y pauta.' }
+    ],
+    deliverables: [
+      'Videos gastronómicos y de producto en 4K UHD',
+      'Reels y TikToks verticales (9:16) con edición dinámica',
+      'Tomas en cámara lenta y planos macro de detalle',
+      'Archivos optimizados para web y redes'
+    ],
+    metrics: [
+      { value: '4K Macro', label: 'Detalle Visual' },
+      { value: '9:16', label: 'Formato Reels' },
+      { value: 'Lima', label: 'Cobertura' }
+    ],
+    targetIndustries: [
+      'Restaurantes, Franquicias y Bares',
+      'Tiendas Virtuales y E-commerce',
+      'Marcas de Moda, Calzado y Accesorios',
+      'Mueblerías y Artículos para el Hogar'
+    ],
+    faqs: [
+      {
+        question: '¿Dónde se realizan las grabaciones gastronómicas?',
+        answer: 'Grabamos directamente en la cocina o salón de tu restaurante, o en nuestro set adaptado con iluminación y mesas de producto.'
+      },
+      {
+        question: '¿En qué formatos se entregan los videos para e-commerce?',
+        answer: 'Entregamos en formato horizontal (16:9) y vertical (9:16) con compresión optimizada para carga ultra rápida en sitios web.'
+      }
+    ],
+    relatedProjects: ['Burger & Eventos', 'Shaking', 'Leomar Muebles']
   }
 }

@@ -15,34 +15,32 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.blackboxperu.com"),
-  title: "Black Box | Productora Audiovisual & Agencia de Marketing en Lima, Perú",
-  description: "Productora audiovisual y agencia de marketing digital líder en Lima, Perú. Especialistas en videos de alto impacto para marcas: E-commerce, Gastronomía, Spots Publicitarios y Contenido Vertical 9:16 para TikTok y Reels.",
+  metadataBase: new URL("https://blackboxperu.com"),
+  title: "Black Box Peru | Productora Audiovisual y Agencia de Marketing Digital en Lima",
+  description: "Productora audiovisual en Lima especializada en contenido vertical, spots comerciales y marketing digital para e-commerce y gastronomia.",
   keywords: [
     "Productora audiovisual Lima",
-    "Productora audiovisual Perú",
     "Agencia de marketing digital Lima",
-    "Videos corporativos Perú",
-    "Videos gastronómicos Lima",
-    "Videos para E-commerce",
-    "Creación de reels y tiktok marcas",
-    "Comerciales publicitarios Perú",
-    "Black Box",
-    "Black Box Perú"
+    "Videos para marcas",
+    "Videos para e-commerce Lima",
+    "Videos gastronomia Lima",
+    "Spots comerciales Lima",
+    "Black Box Peru",
+    "Black Box"
   ],
-  authors: [{ name: "Black Box Team", url: "https://www.blackboxperu.com" }],
-  creator: "Black Box",
-  publisher: "Black Box",
+  authors: [{ name: "Black Box Peru S.A.C.", url: "https://blackboxperu.com" }],
+  creator: "Black Box Peru",
+  publisher: "Black Box Peru S.A.C.",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   alternates: {
-    canonical: "https://www.blackboxperu.com",
+    canonical: "https://blackboxperu.com",
     languages: {
-      "es-PE": "https://www.blackboxperu.com",
-      "es": "https://www.blackboxperu.com",
+      "es-PE": "https://blackboxperu.com",
+      "es": "https://blackboxperu.com",
     },
   },
   icons: {
@@ -61,10 +59,10 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Black Box | Productora Audiovisual & Marketing Digital",
-    description: "Impulsamos tu marca con contenido audiovisual de alto impacto. Producción 4K/6K en Lima, Perú para E-commerce, Gastronomía y Campañas Digitales.",
-    url: "https://www.blackboxperu.com",
-    siteName: "Black Box Perú",
+    title: "Black Box Peru | Productora Audiovisual y Agencia de Marketing Digital en Lima",
+    description: "Productora audiovisual en Lima especializada en contenido vertical, spots comerciales y marketing digital para e-commerce y gastronomia.",
+    url: "https://blackboxperu.com",
+    siteName: "Black Box Peru",
     locale: "es_PE",
     type: "website",
     images: [
@@ -72,14 +70,14 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Black Box - Productora Audiovisual y Agencia Digital",
+        alt: "Black Box Peru - Productora Audiovisual y Agencia de Marketing Digital",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Black Box | Productora Audiovisual en Lima, Perú",
-    description: "Contenido audiovisual que vende y posiciona tu marca. Videos comerciales, gastronómicos, e-commerce y corporativos.",
+    title: "Black Box Peru | Productora Audiovisual y Agencia de Marketing Digital en Lima",
+    description: "Productora audiovisual en Lima especializada en contenido vertical, spots comerciales y marketing digital para e-commerce y gastronomia.",
     images: ["/og-image.png"],
     creator: "@blackbox_pe",
   },
@@ -101,84 +99,22 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Schema.org Structured Data for Google Rich Snippets (LocalBusiness + Organization)
-  const structuredData = {
+  const localBusinessJsonLd = {
     "@context": "https://schema.org",
-    "@type": ["ProfessionalService", "LocalBusiness", "Organization"],
-    name: "Black Box",
-    alternateName: ["Black Box Perú", "Blackbox Agencia", "Black Box Productora Audiovisual"],
-    url: "https://www.blackboxperu.com",
-    logo: "https://www.blackboxperu.com/logo-blackbox-exact.svg",
-    image: "https://www.blackboxperu.com/og-image.png",
-    description: "Productora audiovisual y agencia de marketing digital en Lima, Perú especializada en videos comerciales, gastronómicos, e-commerce y contenido publicitario de alta conversión.",
-    telephone: "+51958297236",
-    email: "contacto@blackboxperu.com",
-    priceRange: "$$",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Lima",
-      addressRegion: "Lima",
-      addressCountry: "PE"
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: -12.046374,
-      longitude: -77.042793
-    },
-    openingHoursSpecification: {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      opens: "09:00",
-      closes: "19:00"
-    },
-    sameAs: [
-      "https://instagram.com/blackbox_pe",
-      "https://tiktok.com/@blackbox_pe",
-      "https://facebook.com",
-      "https://youtube.com"
-    ],
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Servicios de Producción y Marketing",
-      itemListElement: [
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Producción Audiovisual Comercial y Publicitaria"
-          }
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Contenido Vertical 9:16 para Reels y TikTok"
-          }
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Estrategias de Marketing Digital y Pauta Publicitaria"
-          }
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Videos Gastronómicos, E-commerce e Inmobiliarios"
-          }
-        }
-      ]
-    }
+    "@type": "LocalBusiness",
+    "name": "Black Box Peru S.A.C.",
+    "url": "https://blackboxperu.com",
+    "areaServed": "Lima, Perú",
+    "description": "Productora audiovisual y agencia de marketing digital en Lima"
   };
 
   return (
     <html lang="es-PE" className="scroll-smooth" suppressHydrationWarning>
       <head>
+        <link rel="canonical" href="https://blackboxperu.com" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
         />
       </head>
       <body

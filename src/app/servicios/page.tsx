@@ -16,15 +16,15 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Servicios de Producción Audiovisual y Marketing Digital en Lima | Black Box',
-  description: 'Descubre nuestros servicios especializados: Producción Audiovisual 4K, Creación de Reels y TikToks, Meta Ads y Pauta Digital, y Marketing Médico para Clínicas en Lima, Perú.',
+  title: 'Servicios de Producción Audiovisual y Marketing Digital en Lima | Black Box Peru',
+  description: 'Productora audiovisual en Lima especializada en contenido vertical, spots comerciales y marketing digital para e-commerce y gastronomia.',
   alternates: {
-    canonical: 'https://www.blackboxperu.com/servicios',
+    canonical: 'https://blackboxperu.com/servicios',
   },
   openGraph: {
-    title: 'Servicios de Producción Audiovisual & Marketing Digital | Black Box Perú',
-    description: 'Soluciones audiovisuales y estratégicas para marcas y empresas en Lima, Perú.',
-    url: 'https://www.blackboxperu.com/servicios',
+    title: 'Servicios de Producción Audiovisual & Marketing Digital | Black Box Peru',
+    description: 'Productora audiovisual en Lima especializada en contenido vertical, spots comerciales y marketing digital para e-commerce y gastronomia.',
+    url: 'https://blackboxperu.com/servicios',
   }
 }
 

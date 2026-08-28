@@ -49,29 +49,29 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     }
   }
 
-  const url = `https://www.blackboxperu.com/servicios/${service.slug}`
+  const url = `https://blackboxperu.com/servicios/${service.slug}`
 
   return {
-    title: `${service.seoTitle} | Black Box`,
+    title: `${service.seoTitle} | Black Box Peru`,
     description: service.seoDescription,
     keywords: [
       service.title,
       service.shortTitle,
       'Productora audiovisual Lima',
-      'Agencia de marketing digital Perú',
-      'Videos corporativos',
-      'Publicidad en redes Perú',
-      'Black Box Perú'
+      'Agencia de marketing digital Lima',
+      'Videos corporativos Lima',
+      'Publicidad en redes Peru',
+      'Black Box Peru'
     ],
     alternates: {
       canonical: url,
     },
     openGraph: {
-      title: `${service.title} | Black Box Perú`,
+      title: `${service.title} | Black Box Peru`,
       description: service.seoDescription,
       url,
       type: 'article',
-      siteName: 'Black Box Perú',
+      siteName: 'Black Box Peru',
       locale: 'es_PE',
       images: [
         {
@@ -84,7 +84,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${service.title} | Black Box`,
+      title: `${service.title} | Black Box Peru`,
       description: service.seoDescription,
       images: ['/og-image.png'],
     },
@@ -100,7 +100,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
   }
 
   const cleanPhone = '51958297236'
-  const waUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(`Hola Black Box, estoy interesado en el servicio de ${service.title}. Me gustaría recibir información y cotización.`)}`
+  const waUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(`Hola Black Box Peru, estoy interesado en el servicio de ${service.title}. Me gustaría recibir información y cotización.`)}`
 
   // Schema.org Structured Data for Google (Service + FAQPage + BreadcrumbList)
   const schemaOrgData = {
@@ -112,15 +112,10 @@ export default async function ServicePage({ params }: ServicePageProps) {
         'description': service.seoDescription,
         'provider': {
           '@type': 'LocalBusiness',
-          'name': 'Black Box Perú',
-          'image': 'https://www.blackboxperu.com/logo-icon.svg',
+          'name': 'Black Box Peru S.A.C.',
+          'image': 'https://blackboxperu.com/logo-icon.svg',
           'telephone': '+51 958 297 236',
-          'address': {
-            '@type': 'PostalAddress',
-            'addressLocality': 'Lima',
-            'addressRegion': 'Lima',
-            'addressCountry': 'PE'
-          },
+          'areaServed': 'Lima, Perú',
           'priceRange': '$$'
         },
         'areaServed': {
@@ -135,19 +130,19 @@ export default async function ServicePage({ params }: ServicePageProps) {
             '@type': 'ListItem',
             'position': 1,
             'name': 'Inicio',
-            'item': 'https://www.blackboxperu.com'
+            'item': 'https://blackboxperu.com'
           },
           {
             '@type': 'ListItem',
             'position': 2,
             'name': 'Servicios',
-            'item': 'https://www.blackboxperu.com/servicios'
+            'item': 'https://blackboxperu.com/servicios'
           },
           {
             '@type': 'ListItem',
             'position': 3,
             'name': service.shortTitle,
-            'item': `https://www.blackboxperu.com/servicios/${service.slug}`
+            'item': `https://blackboxperu.com/servicios/${service.slug}`
           }
         ]
       },

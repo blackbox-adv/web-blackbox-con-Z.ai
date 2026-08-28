@@ -1,16 +1,8 @@
 import { MetadataRoute } from 'next'
-import { SERVICES_DATA } from '@/data/servicesData'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.blackboxperu.com'
+  const baseUrl = 'https://blackboxperu.com'
   const lastModified = new Date()
-
-  const serviceUrls = Object.keys(SERVICES_DATA).map((slug) => ({
-    url: `${baseUrl}/servicios/${slug}`,
-    lastModified,
-    changeFrequency: 'weekly' as const,
-    priority: 0.85,
-  }))
 
   return [
     {
@@ -20,18 +12,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/portfolio`,
+      url: `${baseUrl}/servicios/productora-audiovisual-lima`,
       lastModified,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/servicios`,
+      url: `${baseUrl}/servicios/agencia-marketing-digital-lima`,
       lastModified,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
-    ...serviceUrls,
+    {
+      url: `${baseUrl}/servicios/videos-ecommerce-gastronomia`,
+      lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/portafolio`,
+      lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/contacto`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
   ]
 }
-
