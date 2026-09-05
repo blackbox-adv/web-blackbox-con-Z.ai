@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Badge } from '@/components/ui/badge'
 import { FloatingWhatsApp } from '@/components/FloatingWhatsApp'
+import { BrandLogo } from '@/components/BrandLogo'
 import { ArrowRight, Menu, X, Target, TrendingUp, Users, Zap, BarChart3, Megaphone, Globe, Mail, Phone, MapPin, Instagram, Linkedin, Twitter, Play, CheckCircle2, Star, Quote, Send, ArrowUpRight, Layers, Lightbulb, Award, Clock, ChevronRight, Facebook, Youtube, ExternalLink, Volume2, VolumeX, Video, Clapperboard } from 'lucide-react'
 
 // Función para obtener el thumbnail del video
@@ -418,20 +419,7 @@ export default function Home() {
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/98 backdrop-blur-md shadow-md border-b border-gray-200' : 'bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-xs'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20 sm:h-22 lg:h-24">
-            <a href="#inicio" className="flex items-center gap-3 group py-1.5">
-              <img 
-                src={displayLogo} 
-                alt={config?.brandName || 'Black Box'} 
-                className="h-14 sm:h-16 lg:h-20 w-auto object-contain max-w-[280px] sm:max-w-[340px] lg:max-w-[420px] transition-transform group-hover:scale-105" 
-                style={{ maxHeight: '80px', maxWidth: '420px', width: 'auto' }}
-                onError={(e) => {
-                  const target = e.currentTarget
-                  if (target.src !== '/logo.svg') {
-                    target.src = '/logo.svg'
-                  }
-                }}
-              />
-            </a>
+            <BrandLogo href="#inicio" />
             <div className="hidden lg:flex items-center gap-8">
               {navLinks.map((link) => (
                 link.href.startsWith('/') ? (
@@ -1310,20 +1298,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
             <div className="col-span-2 md:col-span-1">
-              <a href="#inicio" className="flex items-center gap-3 mb-4 group inline-block">
-                <img 
-                  src={displayLogo} 
-                  alt={config?.brandName || 'Black Box'} 
-                  className="h-14 sm:h-16 w-auto object-contain max-w-[320px]" 
-                  style={{ maxHeight: '68px', maxWidth: '320px', width: 'auto' }}
-                  onError={(e) => {
-                    const target = e.currentTarget
-                    if (target.src !== '/logo.svg') {
-                      target.src = '/logo.svg'
-                    }
-                  }}
-                />
-              </a>
+              <div className="mb-4">
+                <BrandLogo href="#inicio" className="h-14 sm:h-16 w-auto object-contain max-w-[320px]" style={{ maxHeight: '68px', maxWidth: '320px', width: 'auto' }} />
+              </div>
               <p className="text-gray-600 text-sm mb-4 leading-relaxed">
                 Elevamos marcas a través de estrategias de marketing digital y producción audiovisual de alto impacto.
               </p>

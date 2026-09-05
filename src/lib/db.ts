@@ -29,6 +29,8 @@ const INITIAL_SITE_CONFIG = {
   heroYears: '8+',
   heroReelUrl: 'https://youtube.com/shorts/nzdbM36oEKQ',
   heroReelTitle: 'Showreel 2026 | Recopilatorio de Trabajos',
+  musicVideoUrl: 'https://youtu.be/bhgJlSKKv50',
+  musicVideoTitle: 'Blackbox Music | Producción Musical & Videoclips',
   ogImage: '/og-image.png',
   primaryColor: '#9333ea',
   secondaryColor: '#f97316',

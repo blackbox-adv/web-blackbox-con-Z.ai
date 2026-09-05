@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { FloatingWhatsApp } from '@/components/FloatingWhatsApp'
+import { SubpageNavbar } from '@/components/SubpageNavbar'
 import { Phone, MapPin, Clock, MessageSquare, ChevronRight } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -16,38 +17,8 @@ export default function ContactoPage() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-gray-900 selection:bg-purple-500 selection:text-white">
-      {/* Top Navbar Claro */}
-      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200/80 shadow-xs">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-22 lg:h-24 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 group py-1.5">
-            <img 
-              src="/logo.svg" 
-              alt="Black Box Peru" 
-              className="h-14 sm:h-16 lg:h-20 w-auto object-contain max-w-[280px] sm:max-w-[340px] lg:max-w-[420px] transition-transform group-hover:scale-105" 
-              style={{ maxHeight: '80px', maxWidth: '420px', width: 'auto' }}
-            />
-          </Link>
-
-          <nav className="hidden md:flex items-center gap-6 text-sm font-semibold">
-            <Link href="/" className="text-gray-600 hover:text-black transition-colors">Inicio</Link>
-            <Link href="/servicios" className="text-gray-600 hover:text-black transition-colors">Servicios</Link>
-            <Link href="/portafolio" className="text-gray-600 hover:text-black transition-colors">Portafolio</Link>
-            <Link href="/contacto" className="text-purple-700 font-bold">Contacto</Link>
-          </nav>
-
-          <div className="flex items-center gap-3">
-            <a
-              href={waUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-black hover:bg-zinc-800 text-white text-xs sm:text-sm font-bold px-5 py-2.5 rounded-full transition-all hover:scale-105 shadow-sm"
-            >
-              <Phone className="w-3.5 h-3.5" />
-              WhatsApp Directo
-            </a>
-          </div>
-        </div>
-      </header>
+      {/* Top Navbar Dinámico con Logo de Admin */}
+      <SubpageNavbar activePage="contacto" ctaText="WhatsApp Directo" defaultMessage="¡Hola Black Box! Vengo de su web y me gustaría cotizar un proyecto para mi marca." />
 
       {/* Breadcrumbs */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">

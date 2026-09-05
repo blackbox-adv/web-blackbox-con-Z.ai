@@ -16,6 +16,7 @@ import {
   MessageSquare, Star, Loader2, CheckCircle, AlertCircle, Instagram, Linkedin, 
   Twitter, Facebook, Youtube, Play, Upload, X, RefreshCw
 } from 'lucide-react'
+import { BrandLogo } from '@/components/BrandLogo'
 
 interface SiteConfig {
   id: string
@@ -45,6 +46,8 @@ interface SiteConfig {
   // Hero & Reels
   heroReelUrl?: string | null
   heroReelTitle?: string | null
+  musicVideoUrl?: string | null
+  musicVideoTitle?: string | null
   heroClients?: string | null
   heroProjects?: string | null
   heroYears?: string | null
@@ -323,8 +326,17 @@ export default function AdminDashboard() {
           try {
             if (configToSave.brandLogo) {
               localStorage.setItem('blackbox_cached_logo', configToSave.brandLogo)
+              localStorage.setItem('blackbox_brand_logo', configToSave.brandLogo)
+              window.dispatchEvent(new CustomEvent('blackbox_logo_updated', { detail: configToSave.brandLogo }))
+              try {
+                const bc = new BroadcastChannel('blackbox_sync')
+                bc.postMessage({ type: 'logo_updated', logo: configToSave.brandLogo })
+                bc.close()
+              } catch {}
             } else {
               localStorage.removeItem('blackbox_cached_logo')
+              localStorage.removeItem('blackbox_brand_logo')
+              window.dispatchEvent(new CustomEvent('blackbox_logo_updated', { detail: null }))
             }
             if (configToSave.brandIcon) {
               localStorage.setItem('blackbox_cached_icon', configToSave.brandIcon)
@@ -333,7 +345,7 @@ export default function AdminDashboard() {
             }
           } catch (e) {}
         }
-        setMessage({ type: 'success', text: 'Configuración guardada' })
+        setMessage({ type: 'success', text: 'Configuración guardada exitosamente' })
       } else {
         setMessage({ type: 'error', text: 'Error al guardar' })
       }
@@ -495,15 +507,7 @@ export default function AdminDashboard() {
       <header className="bg-white shadow-sm border-b sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img 
-              src="/logo.svg" 
-              alt="Black Box" 
-              className="h-9 w-auto object-contain max-w-[170px]" 
-              onError={(e) => {
-                const target = e.currentTarget
-                target.src = '/logo.svg'
-              }}
-            />
+            <BrandLogo href="/" className="h-9 w-auto object-contain max-w-[170px]" />
             <div className="border-l border-gray-300 pl-3">
               <span className="text-[10px] font-bold text-gray-500 uppercase tracking-wider block">Panel de Control</span>
               <span className="text-xs text-gray-700 font-semibold">Administración</span>
@@ -777,6 +781,38 @@ export default function AdminDashboard() {
                       >
                         Botón Secundario
                       </Button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Videos y Showreels */}
+                <div className="space-y-4 border-t pt-4">
+                  <h3 className="font-semibold text-gray-700 border-b pb-2">Videos Destacados del Sitio</h3>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <Label className="flex items-center gap-2">
+                        <Video className="w-4 h-4 text-purple-600" />
+                        Videoclip de Música (YouTube 16:9 Horizontal)
+                      </Label>
+                      <Input 
+                        value={config?.musicVideoUrl || ''} 
+                        onChange={(e) => setConfig(prev => prev ? {...prev, musicVideoUrl: e.target.value} : null)} 
+                        placeholder="https://youtu.be/bhgJlSKKv50" 
+                      />
+                      <p className="text-xs text-gray-500">Se proyecta en el Visor de Cine 16:9 de la página de Videoclips (/videoclips).</p>
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label className="flex items-center gap-2">
+                        <Video className="w-4 h-4 text-blue-600" />
+                        Showreel Vertical (YouTube Shorts 9:16)
+                      </Label>
+                      <Input 
+                        value={config?.heroReelUrl || ''} 
+                        onChange={(e) => setConfig(prev => prev ? {...prev, heroReelUrl: e.target.value} : null)} 
+                        placeholder="https://youtube.com/shorts/nzdbM36oEKQ" 
+                      />
+                      <p className="text-xs text-gray-500">Se proyecta en el smartphone interactivo del Hero de Inicio (/portfolio).</p>
                     </div>
                   </div>
                 </div>

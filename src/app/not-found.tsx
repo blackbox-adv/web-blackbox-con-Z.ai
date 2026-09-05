@@ -1,13 +1,12 @@
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
+import { BrandLogo } from '@/components/BrandLogo'
 
 export default function NotFound() {
   return (
     <div className="min-h-screen bg-slate-50 text-gray-900 flex flex-col items-center justify-center text-center px-4">
-      <div className="max-w-md w-full mx-auto bg-white border border-gray-200 p-8 sm:p-10 rounded-3xl shadow-xs space-y-6">
-        <Link href="/" className="inline-block">
-          <img src="/logo.svg" alt="Black Box Peru" className="h-12 w-auto mx-auto object-contain" />
-        </Link>
+      <div className="max-w-md w-full mx-auto bg-white border border-gray-200 p-8 sm:p-10 rounded-3xl shadow-xs space-y-6 flex flex-col items-center">
+        <BrandLogo href="/" className="h-12 w-auto mx-auto object-contain max-w-[240px]" style={{ maxHeight: '60px', width: 'auto' }} />
         <span className="text-xs font-bold text-gray-400 tracking-widest uppercase block">Error 404</span>
         <h1 className="text-2xl sm:text-3xl font-black uppercase tracking-tight text-gray-950">
           Página no encontrada

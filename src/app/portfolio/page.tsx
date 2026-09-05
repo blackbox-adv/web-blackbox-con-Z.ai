@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { FloatingWhatsApp } from '@/components/FloatingWhatsApp'
+import { BrandLogo } from '@/components/BrandLogo'
 import { 
   ArrowLeft, Play, X, ExternalLink, Video, TrendingUp, Target, Film, Send
 } from 'lucide-react'
@@ -294,26 +295,25 @@ export default function PortfolioPage() {
       {/* Header / Nav - Barra fija blanca idéntica a la página principal */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-22 lg:h-24 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 group py-1.5">
-            <img 
-              src={displayLogo} 
-              alt={config?.brandName || 'Black Box'} 
-              className="h-14 sm:h-16 lg:h-20 w-auto object-contain max-w-[280px] sm:max-w-[340px] lg:max-w-[420px] transition-transform group-hover:scale-105" 
-              style={{ maxHeight: '80px', maxWidth: '420px', width: 'auto' }}
-              onError={(e) => {
-                const target = e.currentTarget
-                if (target.src !== '/logo.svg') {
-                  target.src = '/logo.svg'
-                }
-              }}
-            />
-          </Link>
-          <div className="flex items-center gap-3">
+          <BrandLogo href="/" />
+          <div className="flex items-center gap-2 sm:gap-3">
             <Link 
               href="/"
-              className="inline-flex items-center text-gray-700 hover:text-black hover:bg-gray-100 rounded-full px-4 py-2 text-xs font-bold transition-colors"
+              className="inline-flex items-center text-gray-700 hover:text-black hover:bg-gray-100 rounded-full px-3 py-2 text-xs font-bold transition-colors"
             >
-              <ArrowLeft className="w-4 h-4 mr-2" /> Volver al Inicio
+              <ArrowLeft className="w-4 h-4 mr-1.5" /> <span className="hidden sm:inline">Volver al</span> Inicio
+            </Link>
+            <Link 
+              href="/servicios"
+              className="hidden md:inline-flex items-center text-gray-700 hover:text-black hover:bg-gray-100 rounded-full px-3.5 py-2 text-xs font-bold transition-colors"
+            >
+              Servicios
+            </Link>
+            <Link 
+              href="/contacto"
+              className="hidden md:inline-flex items-center text-gray-700 hover:text-black hover:bg-gray-100 rounded-full px-3.5 py-2 text-xs font-bold transition-colors"
+            >
+              Contacto
             </Link>
             <Button
               onClick={() => window.open(whatsappUrl, '_blank')}

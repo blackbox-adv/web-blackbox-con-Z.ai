@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { Label } from '@/components/ui/label'
 import { Lock, User, AlertCircle, CheckCircle, Loader2 } from 'lucide-react'
+import { BrandLogo } from '@/components/BrandLogo'
 
 export default function AdminPage() {
   const router = useRouter()
@@ -116,15 +117,7 @@ export default function AdminPage() {
       <Card className="w-full max-w-md shadow-2xl border-0">
         <CardHeader className="text-center pb-2">
           <div className="mx-auto mb-4 flex items-center justify-center p-2">
-            <img 
-              src="/logo.svg" 
-              alt="Black Box" 
-              className="h-16 w-auto object-contain max-w-[240px]" 
-              onError={(e) => {
-                const target = e.currentTarget
-                target.src = '/logo.svg'
-              }}
-            />
+            <BrandLogo href="/" className="h-16 w-auto object-contain max-w-[240px]" />
           </div>
           <CardTitle className="text-xl font-bold text-gray-900">
             Panel de Control

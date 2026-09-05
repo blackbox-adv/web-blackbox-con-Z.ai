@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { FloatingWhatsApp } from '@/components/FloatingWhatsApp'
+import { BrandLogo } from '@/components/BrandLogo'
 import { 
   ArrowLeft, Play, X, ExternalLink, Video, Target, Film, Send, Clapperboard,
   Music, CheckCircle2, Flame, Award, Camera, Radio, Disc, ArrowUpRight, Volume2, VolumeX
@@ -27,12 +28,24 @@ interface MusicVideo {
 // Muestras iniciales representativas con estética limpia y profesional
 const DEFAULT_MUSIC_VIDEOS: MusicVideo[] = [
   {
+    id: 'mv-blackbox-music',
+    title: 'Blackbox Music (Showreel Oficial)',
+    artist: 'Black Box Music & Films',
+    genre: 'Urbano & Fusión',
+    format: '4K Cinema (16:9)',
+    year: '2026',
+    youtubeUrl: 'https://youtu.be/bhgJlSKKv50',
+    thumbnailUrl: 'https://i.ytimg.com/vi/bhgJlSKKv50/maxresdefault.jpg',
+    description: 'Producción cinematográfica y showreel musical oficial de Black Box. Rodaje profesional con óptica de cine, iluminación de atmósfera, dirección artística y postproducción de color.',
+    highlights: ['4K Cinema Widescreen', 'Iluminación Escénica & Atmósfera', 'Montaje al Ritmo & Color Grading']
+  },
+  {
     id: 'mv-1',
     title: 'Noche de Fuego',
     artist: 'Artista Urbano / Trap',
     genre: 'Urbano & Trap',
     format: '4K Cinema (16:9)',
-    year: '2024',
+    year: '2025',
     youtubeUrl: 'https://www.youtube.com/watch?v=Su_JcYkeyLw',
     thumbnailUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1200&auto=format&fit=crop&q=80',
     description: 'Producción urbana con iluminación estilizada de neón, locación industrial nocturna y planos en movimiento con estabilizador.',
@@ -136,8 +149,8 @@ export default function VideoclipsPage() {
   const displayLogo = config?.brandLogo || cachedLogo || '/logo.svg'
   const cleanWhatsappNumber = (config?.whatsapp || config?.phone || '51958297236').replace(/\D/g, '') || '51958297236'
   
-  // URL del Showreel Musical (puede ser el reel general o uno específico)
-  const musicReelUrl = config?.heroReelUrl || 'https://youtube.com/shorts/nzdbM36oEKQ'
+  // URL del Showreel Musical (por defecto el videoclip Blackbox Music 16:9 o configurado en admin)
+  const musicReelUrl = config?.musicVideoUrl || config?.heroReelUrl || 'https://youtu.be/bhgJlSKKv50'
 
   const getWhatsappUrl = (msg = 'Hola Black Box, tengo un proyecto musical y me gustaría cotizar la producción de un videoclip.') =>
     `https://wa.me/${cleanWhatsappNumber}?text=${encodeURIComponent(msg)}`
@@ -151,20 +164,12 @@ export default function VideoclipsPage() {
       {/* Header / Nav */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/80 shadow-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-22 lg:h-24 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 group py-1.5">
-            <img 
-              src={displayLogo} 
-              alt={config?.brandName || 'Black Box'} 
-              className="h-12 sm:h-14 lg:h-16 w-auto object-contain max-w-[240px] sm:max-w-[300px] transition-transform group-hover:scale-105" 
-              onError={(e) => {
-                const target = e.currentTarget
-                if (target.src !== '/logo.svg') target.src = '/logo.svg'
-              }}
-            />
+          <div className="flex items-center gap-3">
+            <BrandLogo href="/" className="h-12 sm:h-14 lg:h-16 w-auto object-contain max-w-[240px] sm:max-w-[300px] transition-transform group-hover:scale-105" />
             <span className="hidden sm:inline-block px-2.5 py-0.5 rounded-full bg-purple-50 border border-purple-200 text-[10px] font-black tracking-widest text-purple-900 uppercase shadow-xs">
               Films & Videoclips
             </span>
-          </Link>
+          </div>
 
           <div className="flex items-center gap-3 sm:gap-4">
             <Link 
@@ -189,120 +194,183 @@ export default function VideoclipsPage() {
         </div>
       </nav>
 
-      {/* Hero Section (Claro, Elegante y con Reel en Smartphone/Pantalla Central) */}
+      {/* Hero Section (Claro, Elegante y con Visor de Cine Horizontal 16:9) */}
       <header className="pt-28 sm:pt-32 lg:pt-36 pb-16 px-4 relative overflow-hidden bg-gradient-to-b from-purple-50/40 via-white to-[#fafafa] border-b border-gray-200/80">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
             
             {/* Left Column: Copy & Value Proposition */}
-            <div className="lg:col-span-7 text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 bg-purple-100/70 border border-purple-200 rounded-full shadow-xs">
+            <div className="lg:col-span-5 text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 mb-5 px-4 py-1.5 bg-purple-100/70 border border-purple-200 rounded-full shadow-xs">
                 <Clapperboard className="w-3.5 h-3.5 text-purple-700" />
                 <span className="text-purple-900 font-bold uppercase tracking-widest text-[11px]">
                   Producción Audiovisual para Artistas & Bandas
                 </span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 tracking-tight text-gray-950 uppercase leading-[1.08]">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-5 tracking-tight text-gray-950 uppercase leading-[1.1]">
                 Lleva tu música a la <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-indigo-600 to-purple-900">
                   Pantalla Grande
                 </span>
               </h1>
 
-              <p className="max-w-xl mx-auto lg:mx-0 text-gray-600 text-base sm:text-lg leading-relaxed font-medium mb-8">
-                Dirección cinematográfica, cámaras de cine 4K, iluminación profesional, color grading y teasers en 9:16 para cantantes, solistas, orquestas y sellos discográficos en Perú.
+              <p className="max-w-xl mx-auto lg:mx-0 text-gray-600 text-sm sm:text-base leading-relaxed font-medium mb-7">
+                Dirección cinematográfica en formato widescreen 16:9, cámaras de cine 4K, ópticas fijas y anamórficas, iluminación de atmósfera, color grading y teasers para artistas, orquestas y sellos en Perú.
               </p>
 
               {/* Action Buttons */}
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 mb-8">
                 <Button 
                   size="lg"
                   onClick={() => window.open(getWhatsappUrl('Hola Black Box, quiero agendar una llamada para cotizar la producción de mi videoclip musical.'), '_blank')}
-                  className="bg-black hover:bg-gray-800 text-white rounded-full px-8 py-6 text-sm font-bold uppercase tracking-wider shadow-xl shadow-black/10 hover:scale-105 transition-all cursor-pointer flex items-center gap-2"
+                  className="bg-black hover:bg-gray-800 text-white rounded-full px-7 py-5 text-xs sm:text-sm font-bold uppercase tracking-wider shadow-xl shadow-black/10 hover:scale-105 transition-all cursor-pointer flex items-center gap-2"
                 >
                   <Send className="w-4 h-4" /> Cotizar Mi Video Musical
                 </Button>
                 
                 <a 
                   href="#galeria"
-                  className="inline-flex items-center justify-center rounded-full border-2 border-gray-300 hover:border-gray-900 bg-white px-7 py-3.5 text-sm font-bold text-gray-800 hover:text-black transition-all shadow-xs"
+                  className="inline-flex items-center justify-center rounded-full border-2 border-gray-300 hover:border-gray-900 bg-white px-6 py-2.5 text-xs sm:text-sm font-bold text-gray-800 hover:text-black transition-all shadow-xs"
                 >
-                  <Play className="w-4 h-4 mr-2 fill-gray-800" /> Ver Muestras
+                  <Play className="w-3.5 h-3.5 mr-2 fill-gray-800" /> Ver Muestras
                 </a>
               </div>
 
               {/* Pillars */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-10 max-w-xl mx-auto lg:mx-0 text-left">
-                <div className="p-3.5 rounded-2xl bg-white border border-gray-200/80 shadow-xs">
-                  <Camera className="w-4 h-4 text-purple-700 mb-1.5" />
+              <div className="grid grid-cols-2 gap-2.5 max-w-xl mx-auto lg:mx-0 text-left">
+                <div className="p-3 rounded-2xl bg-white border border-gray-200/80 shadow-xs">
+                  <Camera className="w-4 h-4 text-purple-700 mb-1" />
                   <h4 className="text-xs font-bold uppercase text-gray-900">Cámaras 4K Cine</h4>
                   <p className="text-[11px] text-gray-500">Ópticas fijas y anamórficas.</p>
                 </div>
-                <div className="p-3.5 rounded-2xl bg-white border border-gray-200/80 shadow-xs">
-                  <Radio className="w-4 h-4 text-purple-700 mb-1.5" />
+                <div className="p-3 rounded-2xl bg-white border border-gray-200/80 shadow-xs">
+                  <Radio className="w-4 h-4 text-purple-700 mb-1" />
                   <h4 className="text-xs font-bold uppercase text-gray-900">Iluminación</h4>
-                  <p className="text-[11px] text-gray-500">Set, neón, atmósfera y humo.</p>
+                  <p className="text-[11px] text-gray-500">Set, atmósfera y efectos de humo.</p>
                 </div>
-                <div className="p-3.5 rounded-2xl bg-white border border-gray-200/80 shadow-xs">
-                  <Disc className="w-4 h-4 text-purple-700 mb-1.5" />
+                <div className="p-3 rounded-2xl bg-white border border-gray-200/80 shadow-xs">
+                  <Disc className="w-4 h-4 text-purple-700 mb-1" />
                   <h4 className="text-xs font-bold uppercase text-gray-900">Color Grading</h4>
                   <p className="text-[11px] text-gray-500">Postproducción cinematográfica.</p>
                 </div>
-                <div className="p-3.5 rounded-2xl bg-white border border-gray-200/80 shadow-xs">
-                  <Flame className="w-4 h-4 text-purple-700 mb-1.5" />
+                <div className="p-3 rounded-2xl bg-white border border-gray-200/80 shadow-xs">
+                  <Flame className="w-4 h-4 text-purple-700 mb-1" />
                   <h4 className="text-xs font-bold uppercase text-gray-900">Teasers 9:16</h4>
-                  <p className="text-[11px] text-gray-500">Reels & TikToks para estreno.</p>
+                  <p className="text-[11px] text-gray-500">Cortes dinámicos para redes.</p>
                 </div>
               </div>
             </div>
 
-            {/* Right Column: Interactive Reel Player en Smartphone 9:16 */}
-            <div className="lg:col-span-5 flex flex-col items-center justify-center relative">
-              <div className="text-center mb-3">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-100 text-purple-900 text-xs font-bold uppercase tracking-wider">
-                  <Play className="w-3 h-3 fill-purple-900" /> Showreel en Vertical 9:16
+            {/* Right Column: Visor de Cine en Formato Horizontal (16:9 Widescreen Master Display) */}
+            <div className="lg:col-span-7 flex flex-col items-center justify-center relative w-full">
+              
+              {/* Header Badges */}
+              <div className="flex items-center justify-between w-full mb-3 px-1">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100/90 border border-purple-200 text-purple-950 text-xs font-black uppercase tracking-wider shadow-xs">
+                  <span className="w-2 h-2 rounded-full bg-red-600 animate-pulse" />
+                  Visor de Cine 16:9 • Blackbox Music
+                </div>
+                <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-gray-500 uppercase tracking-wider">
+                  <Film className="w-3.5 h-3.5 text-purple-600" /> Master Cinema 4K
                 </span>
               </div>
 
-              {/* Smartphone Frame (9:16 ratio) */}
-              <div className="relative w-[280px] sm:w-[310px] rounded-[2.5rem] bg-gradient-to-b from-zinc-800 via-zinc-900 to-black p-3 shadow-2xl border-4 border-zinc-700/60 ring-1 ring-black/10">
-                {/* Notch */}
-                <div className="absolute top-4 left-1/2 -translate-x-1/2 w-28 h-5 bg-black rounded-full z-30 flex items-center justify-center gap-2">
-                  <div className="w-2.5 h-2.5 rounded-full bg-zinc-800 border border-zinc-700" />
-                  <div className="w-10 h-1 bg-zinc-800 rounded-full" />
+              {/* Master Display Frame (16:9 ratio) */}
+              <div className="relative w-full rounded-2xl sm:rounded-3xl bg-zinc-950 p-2.5 sm:p-3.5 shadow-2xl shadow-purple-950/20 border-2 border-zinc-800 ring-1 ring-white/10">
+                {/* HUD Header Bar */}
+                <div className="flex items-center justify-between px-3 py-1.5 mb-2 bg-zinc-900/90 rounded-xl border border-zinc-800 text-[11px] font-mono text-zinc-400">
+                  <div className="flex items-center gap-2">
+                    <span className="inline-flex items-center gap-1.5 font-bold text-red-500">
+                      <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" /> REC
+                    </span>
+                    <span className="text-zinc-600">|</span>
+                    <span className="font-bold text-white tracking-wider">4K UHD</span>
+                    <span className="text-zinc-600">|</span>
+                    <span className="text-purple-400 font-semibold">24.00 FPS</span>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <span className="hidden sm:inline text-zinc-400 font-sans text-[10px] uppercase font-bold tracking-wider">
+                      Master Cinema
+                    </span>
+                    <span className="px-2 py-0.5 rounded bg-zinc-800 text-zinc-200 font-bold text-[10px] border border-zinc-700">
+                      16:9 WIDESCREEN
+                    </span>
+                  </div>
                 </div>
 
-                {/* Video Container */}
-                <div className="relative aspect-[9/16] w-full rounded-[2rem] overflow-hidden bg-black shadow-inner">
+                {/* 16:9 Video Player Container */}
+                <div className="relative aspect-video w-full rounded-xl sm:rounded-2xl overflow-hidden bg-black shadow-inner border border-zinc-800/80 group/player">
                   <iframe
-                    key={isHeroAudioActive ? 'music-audio-on' : 'music-audio-off'}
+                    key={isHeroAudioActive ? 'hero-music-audio-on' : 'hero-music-audio-off'}
                     src={getEmbedUrl(musicReelUrl, true, !isHeroAudioActive) || ''}
                     className="w-full h-full object-cover border-0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
-                    title="Showreel Black Box"
+                    title="Blackbox Music - Showreel Oficial (16:9 Widescreen)"
                   />
 
+                  {/* Top Right Quick Theater Modal Button */}
+                  <div className="absolute top-3 right-3 z-20">
+                    <button
+                      onClick={() => setSelectedVideo({
+                        id: 'mv-blackbox-music',
+                        title: 'Blackbox Music (Showreel Oficial)',
+                        artist: 'Black Box Music & Films',
+                        genre: 'Urbano & Fusión',
+                        format: '4K Cinema (16:9)',
+                        year: '2026',
+                        youtubeUrl: musicReelUrl,
+                        thumbnailUrl: 'https://i.ytimg.com/vi/bhgJlSKKv50/maxresdefault.jpg',
+                        description: 'Producción cinematográfica y showreel musical oficial de Black Box.',
+                        highlights: ['4K Cinema Widescreen', 'Ópticas Anamórficas', 'Masterización de Audio']
+                      })}
+                      className="px-3 py-1.5 rounded-full bg-black/80 backdrop-blur-md text-white border border-white/20 hover:bg-purple-600 transition-all cursor-pointer text-[11px] font-bold flex items-center gap-1.5 shadow-lg hover:scale-105"
+                      title="Abrir en pantalla completa de cine"
+                    >
+                      <Play className="w-3 h-3 fill-white" />
+                      <span>Teatro Fullscreen</span>
+                    </button>
+                  </div>
+
                   {/* Audio Toggle Overlay */}
-                  <div className="absolute bottom-4 right-4 z-20">
+                  <div className="absolute bottom-3 right-3 z-20">
                     <button
                       onClick={() => setIsHeroAudioActive(!isHeroAudioActive)}
-                      className="p-2.5 rounded-full bg-black/80 backdrop-blur-md text-white border border-white/20 hover:bg-black transition-all cursor-pointer shadow-lg hover:scale-110"
+                      className="px-3.5 py-2 rounded-full bg-black/85 backdrop-blur-md text-white border border-white/20 hover:bg-black transition-all cursor-pointer shadow-lg hover:scale-105 flex items-center gap-2 text-xs font-bold"
                       title={isHeroAudioActive ? 'Silenciar audio' : 'Activar sonido del video'}
                     >
                       {isHeroAudioActive ? (
-                        <Volume2 className="w-4 h-4 text-purple-400" />
+                        <>
+                          <Volume2 className="w-4 h-4 text-purple-400 animate-pulse" />
+                          <span className="text-purple-300 text-[11px]">Sonido Activado</span>
+                        </>
                       ) : (
-                        <VolumeX className="w-4 h-4 text-white" />
+                        <>
+                          <VolumeX className="w-4 h-4 text-white" />
+                          <span className="text-white text-[11px]">Activar Audio</span>
+                        </>
                       )}
                     </button>
                   </div>
                 </div>
+
+                {/* Display Footer Bar */}
+                <div className="mt-2.5 flex flex-wrap items-center justify-between gap-2 px-1 text-xs text-zinc-400">
+                  <div className="flex items-center gap-2">
+                    <Music className="w-3.5 h-3.5 text-purple-400 shrink-0" />
+                    <span className="font-semibold text-zinc-200">
+                      Blackbox Music • Showreel & Videoclips
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2 text-[11px]">
+                    <span className={isHeroAudioActive ? 'text-purple-400 font-semibold' : 'text-zinc-400'}>
+                      {isHeroAudioActive ? '🔊 Reproduciendo con sonido' : '🔇 Clic en "Activar Audio" para escuchar la pista'}
+                    </span>
+                  </div>
+                </div>
               </div>
-              <p className="text-xs text-gray-500 mt-3 font-medium">
-                {isHeroAudioActive ? '🔊 Audio activado' : '🔇 Toca el altavoz para escuchar con música'}
-              </p>
             </div>
 
           </div>
