@@ -1,12 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
-  <!-- Isometric Hexagonal Cube with B -->
-  <g stroke="#000000" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none">
-    <polygon points="80,10 138,44 138,114 80,148 22,114 22,44" fill="#ffffff" />
-    <line x1="80" y1="80" x2="80" y2="148" />
-    <line x1="80" y1="80" x2="22" y2="44" />
-    <line x1="80" y1="80" x2="138" y2="44" />
-  </g>
+  <!-- 3D Isometric Black Box Icon -->
   <g fill="#000000">
-    <path d="M 70 44 L 83 44 C 88 44 91 46.5 91 50.5 C 91 53 89 55 86 56 C 90 57 92.5 59.5 92.5 64 C 92.5 69 88 72 82.5 72 L 70 72 Z M 75.5 49.5 L 75.5 55 L 81.5 55 C 84 55 85.5 53.8 85.5 52.2 C 85.5 50.8 84 49.5 81.5 49.5 Z M 75.5 61 L 75.5 67 L 82 67 C 85 67 87 65.5 87 64 C 87 62.5 85 61 82 61 Z" />
+    <polygon points="78,14 140,48 100,72 38,38" />
+    <polygon points="30,52 96,88 96,148 30,112" />
+    <polygon points="96,88 134,66 134,100 96,122" />
+    <polygon points="112,96 142,78 142,134 112,148" />
   </g>
 </svg>

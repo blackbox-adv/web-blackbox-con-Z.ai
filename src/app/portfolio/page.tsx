@@ -219,7 +219,12 @@ export default function PortfolioPage() {
     if (typeof window !== 'undefined') {
       try {
         const directLogo = localStorage.getItem('blackbox_cached_logo')
-        if (directLogo) return directLogo
+        if (directLogo && (directLogo.includes('120,8') || directLogo.includes('Letter B') || directLogo.includes('Agencia de marketing'))) {
+          localStorage.removeItem('blackbox_cached_logo')
+          localStorage.removeItem('blackbox_brand_logo')
+        } else if (directLogo) {
+          return directLogo
+        }
         const saved = localStorage.getItem('blackbox_site_data')
         if (saved) {
           const parsed = JSON.parse(saved)

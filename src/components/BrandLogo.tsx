@@ -13,12 +13,23 @@ interface BrandLogoProps {
 function getStoredLogo(): string | null {
   if (typeof window === 'undefined') return null
   try {
-    return (
+    const cached = (
       localStorage.getItem('blackbox_cached_logo') ||
       localStorage.getItem('blackbox_brand_logo') ||
       localStorage.getItem('blackbox_custom_logo') ||
       null
     )
+    if (!cached) return null
+    // Clear out any old cached versions that contained the faulty 'B' hexagon logo
+    if (cached.includes('120,8') || cached.includes('Letter B') || cached.includes('Agencia de marketing')) {
+      localStorage.removeItem('blackbox_cached_logo')
+      localStorage.removeItem('blackbox_brand_logo')
+      return null
+    }
+    if (cached.startsWith('data:') || cached.startsWith('/')) {
+      return cached
+    }
+    return null
   } catch {
     return null
   }
@@ -55,7 +66,11 @@ export function BrandLogo({
 
   useEffect(() => {
     const cached = getStoredLogo()
-    if (cached) setLogoSrc(cached)
+    if (cached) {
+      setLogoSrc(cached)
+    } else {
+      setLogoSrc('/logo.svg')
+    }
 
     syncLogoFromApi()
 

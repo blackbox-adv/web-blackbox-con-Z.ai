@@ -131,7 +131,12 @@ export default function VideoclipsPage() {
   useEffect(() => {
     try {
       const saved = localStorage.getItem('blackbox_brand_logo')
-      if (saved) setCachedLogo(saved)
+      if (saved && (saved.includes('120,8') || saved.includes('Letter B') || saved.includes('Agencia de marketing'))) {
+        localStorage.removeItem('blackbox_brand_logo')
+        localStorage.removeItem('blackbox_cached_logo')
+      } else if (saved) {
+        setCachedLogo(saved)
+      }
     } catch (e) {}
 
     fetch('/api/public/data')

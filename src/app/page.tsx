@@ -294,7 +294,12 @@ export default function Home() {
     // Instant synchronous hydration of cached logo and config to prevent ANY flash
     try {
       const savedLogo = localStorage.getItem('blackbox_cached_logo')
-      if (savedLogo) setCachedLogo(savedLogo)
+      if (savedLogo && (savedLogo.includes('120,8') || savedLogo.includes('Letter B') || savedLogo.includes('Agencia de marketing'))) {
+        localStorage.removeItem('blackbox_cached_logo')
+        localStorage.removeItem('blackbox_brand_logo')
+      } else if (savedLogo) {
+        setCachedLogo(savedLogo)
+      }
 
       const savedConfig = localStorage.getItem('blackbox_cached_config')
       if (savedConfig) {
