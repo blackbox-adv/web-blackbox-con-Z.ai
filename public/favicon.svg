@@ -1,20 +1,41 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
-  <!-- Clean dark backdrop with subtle border for universal visibility on light and dark browser tabs & Google search -->
-  <rect width="512" height="512" rx="112" fill="#09090b" />
-  <rect x="8" y="8" width="496" height="496" rx="104" stroke="#27272a" stroke-width="12" />
+  <!-- Background with subtle border for high visibility on light and dark browser tabs -->
+  <rect width="512" height="512" rx="112" fill="#ffffff" />
+  <rect x="8" y="8" width="496" height="496" rx="104" stroke="#e4e4e7" stroke-width="10" />
 
-  <!-- 3D Isometric Black Box Icon -->
-  <g transform="translate(256, 260) scale(2.05) translate(-118, -110)">
-    <!-- Top Floating Angled Lid -->
-    <polygon points="100,28 178,74 136,104 58,58" fill="#a855f7" />
-    
-    <!-- Left Main Outer Face -->
-    <polygon points="58,74 122,111 122,192 58,155" fill="#ffffff" />
-    
-    <!-- Right Wall Outer Face -->
-    <polygon points="125,116 172,90 172,168 125,193" fill="#c084fc" />
-    
-    <!-- Inner Dark Shadow Block inside the slit -->
-    <polygon points="122,111 170,83 170,118 122,146" fill="#e4e4e7" />
+  <!-- Outer Rounded Hexagon Border -->
+  <path d="M 275.05 109.00 L 373.78 166.00 Q 392.83 177.00 392.83 199.00 L 392.83 313.00 Q 392.83 335.00 373.78 346.00 L 275.05 403.00 Q 256.00 414.00 236.95 403.00 L 138.22 346.00 Q 119.17 335.00 119.17 313.00 L 119.17 199.00 Q 119.17 177.00 138.22 166.00 L 236.95 109.00 Q 256.00 98.00 275.05 109.00 Z" 
+        stroke="#000000" 
+        stroke-width="8.5" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        fill="#ffffff" />
+
+  <!-- Inner 3D Isometric Cube -->
+  <!-- Top Face (White) -->
+  <polygon points="256.00,138.00 358.19,197.00 256.00,256.00 153.81,197.00" 
+           fill="#ffffff" 
+           stroke="#000000" 
+           stroke-width="8.5" 
+           stroke-linejoin="round" />
+
+  <!-- Left Face (White) -->
+  <polygon points="256.00,256.00 153.81,197.00 153.81,315.00 256.00,374.00" 
+           fill="#ffffff" 
+           stroke="#000000" 
+           stroke-width="8.5" 
+           stroke-linejoin="round" />
+
+  <!-- Right Face (Solid Black) -->
+  <polygon points="256.00,256.00 358.19,197.00 358.19,315.00 256.00,374.00" 
+           fill="#000000" 
+           stroke="#000000" 
+           stroke-width="8.5" 
+           stroke-linejoin="round" />
+
+  <!-- White Letter 'B' in Isometric Perspective on the Black Right Face -->
+  <g transform="translate(280, 262) matrix(1, -0.57735, 0, 1, 0, 0)">
+    <path d="M 0 0 L 28 0 C 40 0 48 4 48 14 C 48 21 42 24.5 36 26.5 C 44 28.5 51 33.5 51 43 C 51 55 41 61 28 61 L 0 61 Z M 14 13 L 14 23.5 L 26 23.5 C 31 23.5 34 21.5 34 18 C 34 14.5 31 13 26 13 Z M 14 36.5 L 14 48 L 27 48 C 32.5 48 36.5 45.5 36.5 42 C 36.5 38 32.5 36.5 27 36.5 Z" 
+          fill="#ffffff" />
   </g>
 </svg>

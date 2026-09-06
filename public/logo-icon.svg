@@ -1,9 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
-  <!-- 3D Isometric Black Box Icon -->
-  <g fill="#000000">
-    <polygon points="78,14 140,48 100,72 38,38" />
-    <polygon points="30,52 96,88 96,148 30,112" />
-    <polygon points="96,88 134,66 134,100 96,122" />
-    <polygon points="112,96 142,78 142,134 112,148" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="140 30 320 320" fill="none">
+  <!-- Outer Rounded Hexagon Border -->
+  <path d="M 317.32 56.00 L 407.39 108.00 Q 424.71 118.00 424.71 138.00 L 424.71 242.00 Q 424.71 262.00 407.39 272.00 L 317.32 324.00 Q 300.00 334.00 282.68 324.00 L 192.61 272.00 Q 175.29 262.00 175.29 242.00 L 175.29 138.00 Q 175.29 118.00 192.61 108.00 L 282.68 56.00 Q 300.00 46.00 317.32 56.00 Z" 
+        stroke="#000000" 
+        stroke-width="7.5" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        fill="#ffffff" />
+
+  <!-- Top Face (White) -->
+  <polygon points="300.00,82.00 393.53,136.00 300.00,190.00 206.47,136.00" 
+           fill="#ffffff" 
+           stroke="#000000" 
+           stroke-width="7.5" 
+           stroke-linejoin="round" />
+
+  <!-- Left Face (White) -->
+  <polygon points="300.00,190.00 206.47,136.00 206.47,244.00 300.00,298.00" 
+           fill="#ffffff" 
+           stroke="#000000" 
+           stroke-width="7.5" 
+           stroke-linejoin="round" />
+
+  <!-- Right Face (Solid Black) -->
+  <polygon points="300.00,190.00 393.53,136.00 393.53,244.00 300.00,298.00" 
+           fill="#000000" 
+           stroke="#000000" 
+           stroke-width="7.5" 
+           stroke-linejoin="round" />
+
+  <!-- White Letter 'B' in Isometric Perspective on the Black Right Face -->
+  <g transform="translate(322, 196) matrix(1, -0.57735, 0, 1, 0, 0)">
+    <path d="M 0 0 L 26 0 C 37 0 44 3.5 44 13 C 44 19 39 22.5 33 24.5 C 41 26.5 47 31 47 40 C 47 51 38 56 26 56 L 0 56 Z M 13 12 L 13 21.5 L 24 21.5 C 28.5 21.5 31.5 19.5 31.5 16.5 C 31.5 13.5 28.5 12 24 12 Z M 13 33.5 L 13 44 L 25 44 C 30 44 33.5 42 33.5 38.5 C 33.5 35 30 33.5 25 33.5 Z" 
+          fill="#ffffff" />
   </g>
 </svg>
