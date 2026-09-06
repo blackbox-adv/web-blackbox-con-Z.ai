@@ -219,7 +219,7 @@ export default function PortfolioPage() {
     if (typeof window !== 'undefined') {
       try {
         const directLogo = localStorage.getItem('blackbox_cached_logo')
-        if (directLogo && directLogo.includes('120,8')) {
+        if (directLogo && (directLogo.includes('120,8') || directLogo.includes('322, 196'))) {
           localStorage.removeItem('blackbox_cached_logo')
           localStorage.removeItem('blackbox_brand_logo')
         } else if (directLogo) {

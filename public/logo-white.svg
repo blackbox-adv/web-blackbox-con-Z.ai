@@ -1,55 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 30 440 480" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="110 25 380 465" fill="none">
   <!-- Outer Rounded Hexagon Border -->
-  <path d="M 317.32 56.00 L 407.39 108.00 Q 424.71 118.00 424.71 138.00 L 424.71 242.00 Q 424.71 262.00 407.39 272.00 L 317.32 324.00 Q 300.00 334.00 282.68 324.00 L 192.61 272.00 Q 175.29 262.00 175.29 242.00 L 175.29 138.00 Q 175.29 118.00 192.61 108.00 L 282.68 56.00 Q 300.00 46.00 317.32 56.00 Z" 
+  <path d="M 319.05 51.00 L 410.85 104.00 Q 429.90 115.00 429.90 137.00 L 429.90 243.00 Q 429.90 265.00 410.85 276.00 L 319.05 329.00 Q 300.00 340.00 280.95 329.00 L 189.15 276.00 Q 170.10 265.00 170.10 243.00 L 170.10 137.00 Q 170.10 115.00 189.15 104.00 L 280.95 51.00 Q 300.00 40.00 319.05 51.00 Z" 
         stroke="#ffffff" 
-        stroke-width="7.5" 
+        stroke-width="8" 
         stroke-linecap="round" 
         stroke-linejoin="round" 
-        fill="transparent" />
+        fill="none" />
 
   <!-- Inner 3D Isometric Cube -->
   <!-- Top Face -->
-  <polygon points="300.00,82.00 393.53,136.00 300.00,190.00 206.47,136.00" 
-           fill="transparent" 
+  <polygon points="300.00,78.00 396.99,134.00 300.00,190.00 203.01,134.00" 
+           fill="none" 
            stroke="#ffffff" 
-           stroke-width="7.5" 
+           stroke-width="8" 
            stroke-linejoin="round" />
 
   <!-- Left Face -->
-  <polygon points="300.00,190.00 206.47,136.00 206.47,244.00 300.00,298.00" 
-           fill="transparent" 
+  <polygon points="300.00,190.00 203.01,134.00 203.01,246.00 300.00,302.00" 
+           fill="none" 
            stroke="#ffffff" 
-           stroke-width="7.5" 
+           stroke-width="8" 
            stroke-linejoin="round" />
 
-  <!-- Right Face (Solid White) -->
-  <polygon points="300.00,190.00 393.53,136.00 393.53,244.00 300.00,298.00" 
-           fill="#ffffff" 
+  <!-- Right Face (White/Transparent, NOT solid black!) -->
+  <polygon points="300.00,190.00 396.99,134.00 396.99,246.00 300.00,302.00" 
+           fill="none" 
            stroke="#ffffff" 
-           stroke-width="7.5" 
+           stroke-width="8" 
            stroke-linejoin="round" />
 
-  <!-- Black Letter 'B' in Isometric Perspective on the Solid White Right Face -->
-  <g transform="translate(322, 196) matrix(1, -0.57735, 0, 1, 0, 0)">
-    <path d="M 0 0 L 26 0 C 37 0 44 3.5 44 13 C 44 19 39 22.5 33 24.5 C 41 26.5 47 31 47 40 C 47 51 38 56 26 56 L 0 56 Z M 13 12 L 13 21.5 L 24 21.5 C 28.5 21.5 31.5 19.5 31.5 16.5 C 31.5 13.5 28.5 12 24 12 Z M 13 33.5 L 13 44 L 25 44 C 30 44 33.5 42 33.5 38.5 C 33.5 35 30 33.5 25 33.5 Z" 
-          fill="#09090b" />
+  <!-- Solid Black Letter 'B' on the Right Face in Isometric Angle -->
+  <g transform="translate(325, 202) matrix(1, -0.57735, 0, 1, 0, 0)">
+    <path d="M 0 0 L 28 0 C 40 0 49 4 49 14.5 C 49 21.5 42.5 25 36 27.5 C 45 30 52 35.5 52 46 C 52 57.5 42 63 28 63 L 0 63 Z M 14.5 14 L 14.5 24.5 L 27 24.5 C 31.5 24.5 34.5 22.5 34.5 19 C 34.5 16 31.5 14 27 14 Z M 14.5 38 L 14.5 49.5 L 28 49.5 C 33 49.5 37 47 37 43.5 C 37 40 33 38 28 38 Z" 
+          fill="#ffffff" />
   </g>
 
-  <!-- Typography: BLACK BOX (White) -->
-  <text x="300" y="440" 
-        font-family="'Montserrat', 'Inter', 'Helvetica Neue', Arial, sans-serif" 
-        font-size="58" 
+  <!-- Typography: BLACK BOX -->
+  <text x="300" y="412" 
+        font-family="'Montserrat', 'Inter', -apple-system, sans-serif" 
+        font-size="54" 
         font-weight="900" 
-        letter-spacing="0.06em" 
+        letter-spacing="0.05em" 
         text-anchor="middle" 
         fill="#ffffff">BLACK BOX</text>
 
-  <!-- Subtitle: Agencia de marketing (Light Gray) -->
-  <text x="300" y="490" 
-        font-family="'Montserrat', 'Inter', 'Helvetica Neue', Arial, sans-serif" 
-        font-size="31" 
+  <!-- Subtitle: Agencia de marketing -->
+  <text x="300" y="458" 
+        font-family="'Montserrat', 'Inter', -apple-system, sans-serif" 
+        font-size="28" 
         font-weight="400" 
         letter-spacing="0.02em" 
         text-anchor="middle" 
-        fill="#e4e4e7">Agencia de marketing</text>
+        fill="#ffffff">Agencia de marketing</text>
 </svg>

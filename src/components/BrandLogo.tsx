@@ -20,8 +20,8 @@ function getStoredLogo(): string | null {
       null
     )
     if (!cached) return null
-    // Clear out any old cached versions that contained the faulty '120,8' hexagon logo
-    if (cached.includes('120,8')) {
+    // Clear out any old cached versions
+    if (cached.includes('120,8') || cached.includes('322, 196') || cached.includes('matrix(1, -0.57735, 0, 1, 0, 0)') && cached.includes('fill="#000000" stroke=')) {
       localStorage.removeItem('blackbox_cached_logo')
       localStorage.removeItem('blackbox_brand_logo')
       return null
