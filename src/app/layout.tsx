@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { DynamicFavicon } from "@/components/DynamicFavicon";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -123,6 +124,7 @@ export default function RootLayout({
         <DynamicFavicon />
         {children}
         <Toaster />
+        <Analytics />
       </body>
     </html>
   );
