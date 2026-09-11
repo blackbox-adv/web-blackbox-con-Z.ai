@@ -192,6 +192,108 @@ const INITIAL_PROJECTS = [
       { id: 'v_p8', projectId: 'p8', title: 'Chalqui | Campaña Audiovisual', platform: 'youtube', url: 'https://youtube.com/shorts/eDVSSoWJwWg', embedUrl: 'https://www.youtube.com/embed/eDVSSoWJwWg', thumbnail: 'https://img.youtube.com/vi/eDVSSoWJwWg/hqdefault.jpg', order: 1, active: true }
     ] 
   },
+  { 
+    id: 'p9', 
+    title: 'Los Santos', 
+    description: "Producción audiovisual completa para la banda Los Santos con su videoclip cinematográfico oficial 'Encierro Mental'.", 
+    category: 'Videoclips & Música', 
+    imageUrl: 'https://i.ytimg.com/vi/r7g-P2atPiA/hqdefault.jpg', 
+    driveUrl: 'https://www.youtube.com/watch?v=r7g-P2atPiA', 
+    gradient: 'from-purple-900 to-zinc-950', 
+    result: 'Videoclip Oficial', 
+    order: 9, 
+    active: true, 
+    createdAt: new Date(), 
+    updatedAt: new Date(), 
+    videos: [
+      { id: 'v_p9', projectId: 'p9', title: "Los Santos | 'Encierro Mental' (Videoclip Oficial)", platform: 'youtube', url: 'https://www.youtube.com/watch?v=r7g-P2atPiA', embedUrl: 'https://www.youtube.com/embed/r7g-P2atPiA', thumbnail: 'https://i.ytimg.com/vi/r7g-P2atPiA/hqdefault.jpg', order: 1, active: true }
+    ] 
+  },
+  { 
+    id: 'p10', 
+    title: 'La Merka', 
+    description: "Videoclip oficial 'Artificial' producido para la banda La Merka con estética escénica contemporánea e iluminación de concierto.", 
+    category: 'Videoclips & Música', 
+    imageUrl: 'https://i.ytimg.com/vi/XxthrqT0qp0/hqdefault.jpg', 
+    driveUrl: 'https://www.youtube.com/watch?v=XxthrqT0qp0', 
+    gradient: 'from-fuchsia-900 to-black', 
+    result: 'Videoclip Oficial', 
+    order: 10, 
+    active: true, 
+    createdAt: new Date(), 
+    updatedAt: new Date(), 
+    videos: [
+      { id: 'v_p10', projectId: 'p10', title: "La Merka | 'Artificial' (Videoclip Oficial)", platform: 'youtube', url: 'https://www.youtube.com/watch?v=XxthrqT0qp0', embedUrl: 'https://www.youtube.com/embed/XxthrqT0qp0', thumbnail: 'https://i.ytimg.com/vi/XxthrqT0qp0/hqdefault.jpg', order: 1, active: true }
+    ] 
+  },
+  { 
+    id: 'p11', 
+    title: 'Terco 92', 
+    description: "Videoclip oficial 'Una Más' para Terco 92 con rodaje urbano nocturno, óptica anamórfica y color grading cinematográfico.", 
+    category: 'Videoclips & Música', 
+    imageUrl: 'https://i.ytimg.com/vi/vZANeQ4dhus/hqdefault.jpg', 
+    driveUrl: 'https://www.youtube.com/watch?v=vZANeQ4dhus', 
+    gradient: 'from-amber-900 to-zinc-950', 
+    result: 'Videoclip Oficial', 
+    order: 11, 
+    active: true, 
+    createdAt: new Date(), 
+    updatedAt: new Date(), 
+    videos: [
+      { id: 'v_p11', projectId: 'p11', title: "Terco 92 | 'Una Más' (Videoclip Oficial)", platform: 'youtube', url: 'https://www.youtube.com/watch?v=vZANeQ4dhus', embedUrl: 'https://www.youtube.com/embed/vZANeQ4dhus', thumbnail: 'https://i.ytimg.com/vi/vZANeQ4dhus/hqdefault.jpg', order: 1, active: true }
+    ] 
+  },
+  { 
+    id: 'p12', 
+    title: 'Miserable', 
+    description: "Videoclip oficial 'La Gran Voluntad' para la banda Miserable con iluminación teatral de alto contraste y montaje de alta energía.", 
+    category: 'Videoclips & Música', 
+    imageUrl: 'https://i.ytimg.com/vi/Rud7FJi_zfE/hqdefault.jpg', 
+    driveUrl: 'https://www.youtube.com/watch?v=Rud7FJi_zfE', 
+    gradient: 'from-red-950 to-black', 
+    result: 'Videoclip Oficial', 
+    order: 12, 
+    active: true, 
+    createdAt: new Date(), 
+    updatedAt: new Date(), 
+    videos: [
+      { id: 'v_p12', projectId: 'p12', title: "Miserable | 'La Gran Voluntad' (Videoclip Oficial)", platform: 'youtube', url: 'https://www.youtube.com/watch?v=Rud7FJi_zfE', embedUrl: 'https://www.youtube.com/embed/Rud7FJi_zfE', thumbnail: 'https://i.ytimg.com/vi/Rud7FJi_zfE/hqdefault.jpg', order: 1, active: true }
+    ] 
+  },
+  { 
+    id: 'p13', 
+    title: 'La Prinz', 
+    description: "Videoclip oficial 'El Vuelo' para La Prinz con fotografía estilizada, dirección de arte moderna y narrativa visual.", 
+    category: 'Videoclips & Música', 
+    imageUrl: 'https://i.ytimg.com/vi/n6yCR9bjG18/hqdefault.jpg', 
+    driveUrl: 'https://www.youtube.com/watch?v=n6yCR9bjG18', 
+    gradient: 'from-rose-950 to-zinc-950', 
+    result: 'Videoclip Oficial', 
+    order: 13, 
+    active: true, 
+    createdAt: new Date(), 
+    updatedAt: new Date(), 
+    videos: [
+      { id: 'v_p13', projectId: 'p13', title: "La Prinz | 'El Vuelo' (Videoclip Oficial)", platform: 'youtube', url: 'https://www.youtube.com/watch?v=n6yCR9bjG18', embedUrl: 'https://www.youtube.com/embed/n6yCR9bjG18', thumbnail: 'https://i.ytimg.com/vi/n6yCR9bjG18/hqdefault.jpg', order: 1, active: true }
+    ] 
+  },
+  { 
+    id: 'p14', 
+    title: 'El Paisa x Alain Almeida', 
+    description: "Videoclip oficial 'Un Dos Tres' para El Paisa x Alain Almeida con despliegue escénico de salsa y timba, cuerpo de baile y fotografía cinematográfica.", 
+    category: 'Videoclips & Música', 
+    imageUrl: 'https://i.ytimg.com/vi/4QNwMr0zW6w/hqdefault.jpg', 
+    driveUrl: 'https://www.youtube.com/watch?v=4QNwMr0zW6w', 
+    gradient: 'from-amber-700 to-zinc-950', 
+    result: 'Videoclip Oficial', 
+    order: 14, 
+    active: true, 
+    createdAt: new Date(), 
+    updatedAt: new Date(), 
+    videos: [
+      { id: 'v_p14', projectId: 'p14', title: "El Paisa x Alain Almeida | 'Un Dos Tres' (Video Oficial)", platform: 'youtube', url: 'https://www.youtube.com/watch?v=4QNwMr0zW6w', embedUrl: 'https://www.youtube.com/embed/4QNwMr0zW6w', thumbnail: 'https://i.ytimg.com/vi/4QNwMr0zW6w/hqdefault.jpg', order: 1, active: true }
+    ] 
+  },
 ]
 
 const INITIAL_SERVICES = [

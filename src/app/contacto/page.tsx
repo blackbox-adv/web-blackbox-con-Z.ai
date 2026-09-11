@@ -5,7 +5,7 @@ import { SubpageNavbar } from '@/components/SubpageNavbar'
 import { Phone, MapPin, Clock, MessageSquare, ChevronRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Contacto | Black Box Peru - Productora Audiovisual y Agencia de Marketing',
+  title: 'Contacto | Productora Audiovisual en Lima - BLACKBOX',
   description: 'Contáctanos para cotizar producción audiovisual, videos para e-commerce, gastronomía o campañas de marketing digital en Lima, Perú.',
   alternates: {
     canonical: 'https://blackboxperu.com/contacto',

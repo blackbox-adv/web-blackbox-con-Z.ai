@@ -99,13 +99,97 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const localBusinessJsonLd = {
+  const structuredData = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Black Box Peru S.A.C.",
-    "url": "https://blackboxperu.com",
-    "areaServed": "Lima, Perú",
-    "description": "Productora audiovisual y agencia de marketing digital en Lima"
+    "@graph": [
+      {
+        "@type": ["LocalBusiness", "ProfessionalService"],
+        "@id": "https://blackboxperu.com/#localbusiness",
+        "name": "Black Box Peru - Productora Audiovisual en Lima",
+        "alternateName": "BLACKBOX Films & Publicidad",
+        "url": "https://blackboxperu.com",
+        "logo": "https://blackboxperu.com/brand-logo-exact.png",
+        "image": "https://blackboxperu.com/og-image.png",
+        "telephone": "+51958297236",
+        "priceRange": "$$",
+        "areaServed": {
+          "@type": "City",
+          "name": "Lima",
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "Perú"
+          }
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Arequipa",
+          "addressLocality": "Lima",
+          "addressRegion": "Lima",
+          "postalCode": "15046",
+          "addressCountry": "PE"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -12.0464,
+          "longitude": -77.0428
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "08:00",
+            "closes": "20:00"
+          }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/blackboxperu",
+          "https://www.youtube.com/@blackboxadv",
+          "https://www.tiktok.com/@blackboxperu",
+          "https://www.facebook.com/blackboxperu"
+        ],
+        "description": "Productora audiovisual en Lima líder en creación de spots publicitarios, videos corporativos, reels de alto impacto y producción cinematográfica en 4K/6K."
+      },
+      {
+        "@type": "VideoObject",
+        "@id": "https://blackboxperu.com/#reel-oficial",
+        "name": "Reel Oficial | Productora Audiovisual en Lima - Black Box",
+        "description": "Reel recopilatorio de producciones comerciales y cinematográficas producidas por Black Box Peru en Lima.",
+        "thumbnailUrl": ["https://i.ytimg.com/vi/bhgJlSKKv50/hqdefault.jpg"],
+        "uploadDate": "2024-01-15T08:00:00-05:00",
+        "contentUrl": "https://www.youtube.com/watch?v=bhgJlSKKv50",
+        "embedUrl": "https://www.youtube.com/embed/bhgJlSKKv50"
+      },
+      {
+        "@type": "VideoObject",
+        "@id": "https://blackboxperu.com/#video-avendano",
+        "name": "Producción Audiovisual Clínica Avendaño en Lima",
+        "description": "Campaña de video vertical y testimoniales en Lima para Clínica Avendaño con más de 280 citas generadas.",
+        "thumbnailUrl": ["https://img.youtube.com/vi/Su_JcYkeyLw/hqdefault.jpg"],
+        "uploadDate": "2024-02-10T10:00:00-05:00",
+        "contentUrl": "https://youtube.com/shorts/Su_JcYkeyLw",
+        "embedUrl": "https://www.youtube.com/embed/Su_JcYkeyLw"
+      },
+      {
+        "@type": "VideoObject",
+        "@id": "https://blackboxperu.com/#video-makita",
+        "name": "Producción Audiovisual Makita Perú en Lima",
+        "description": "Reels de alto impacto B2B para herramientas profesionales de Makita Perú producidos en Lima.",
+        "thumbnailUrl": ["https://img.youtube.com/vi/BaKc_hx3NwM/hqdefault.jpg"],
+        "uploadDate": "2024-03-05T10:00:00-05:00",
+        "contentUrl": "https://youtube.com/shorts/BaKc_hx3NwM",
+        "embedUrl": "https://www.youtube.com/embed/BaKc_hx3NwM"
+      },
+      {
+        "@type": "VideoObject",
+        "@id": "https://blackboxperu.com/#video-terco92",
+        "name": "Videoclip Oficial Terco 92 - Una Más | Black Box Films",
+        "description": "Producción de videoclip cinematográfico 4K en Lima para el artista Terco 92.",
+        "thumbnailUrl": ["https://i.ytimg.com/vi/vZANeQ4dhus/hqdefault.jpg"],
+        "uploadDate": "2024-04-12T12:00:00-05:00",
+        "contentUrl": "https://www.youtube.com/watch?v=vZANeQ4dhus",
+        "embedUrl": "https://www.youtube.com/embed/vZANeQ4dhus"
+      }
+    ]
   };
 
   return (
@@ -114,7 +198,7 @@ export default function RootLayout({
         <link rel="canonical" href="https://blackboxperu.com" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
       <body

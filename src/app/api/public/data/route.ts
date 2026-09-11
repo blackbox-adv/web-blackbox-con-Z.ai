@@ -1,6 +1,8 @@
 import { db } from '@/lib/db'
 import { NextResponse } from 'next/server'
 
+export const revalidate = 3600;
+
 const CURATED_PROJECTS = [
   { 
     id: 'p1', 
@@ -240,6 +242,10 @@ export async function GET() {
       brands: brands || [],
       testimonials: testimonials || [],
       services: services || [],
+    }, {
+      headers: {
+        'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400',
+      },
     })
   } catch (error) {
     console.error('Error fetching public data:', error)
@@ -249,7 +255,12 @@ export async function GET() {
       brands: [],
       testimonials: [],
       services: [],
-    }, { status: 500 })
+    }, { 
+      status: 500,
+      headers: {
+        'Cache-Control': 'no-store',
+      },
+    })
   }
 }
 
