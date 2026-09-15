@@ -13,12 +13,12 @@ export const metadata: Metadata = {
 }
 
 export default function ContactoPage() {
-  const waUrl = 'https://wa.me/51958297236?text=¡Hola%20Black%20Box!%20Vengo%20de%20su%20web%20y%20me%20gustaría%20cotizar%20un%20proyecto%20para%20mi%20marca.'
+  const waUrl = 'https://wa.me/51958297236?text=Hola%20BLACKBOX%20quiero%20cotizar%20un%20proyecto&utm_source=web&utm_medium=cta&utm_campaign=contacto'
 
   return (
     <div className="min-h-screen bg-slate-50 text-gray-900 selection:bg-purple-500 selection:text-white">
       {/* Top Navbar Dinámico con Logo de Admin */}
-      <SubpageNavbar activePage="contacto" ctaText="WhatsApp Directo" defaultMessage="¡Hola Black Box! Vengo de su web y me gustaría cotizar un proyecto para mi marca." />
+      <SubpageNavbar activePage="contacto" ctaText="WhatsApp Directo" defaultMessage="Hola BLACKBOX quiero cotizar un proyecto" />
 
       {/* Breadcrumbs */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">

@@ -5,8 +5,12 @@ export interface ServiceDetail {
   seoTitle: string
   seoDescription: string
   heroBadge: string
+  heroPill?: string
   heroHeadline: string
+  heroH1Line1?: string
+  heroH1Line2?: string
   heroSubheadline: string
+  portfolioCategory?: string
   icon: string
   gradient: string
   accentColor: string
@@ -23,13 +27,17 @@ export interface ServiceDetail {
 export const SERVICES_DATA: Record<string, ServiceDetail> = {
   'produccion-audiovisual': {
     slug: 'produccion-audiovisual',
-    title: 'Productora Audiovisual en Lima, Perú',
+    title: 'Producción Audiovisual en Lima',
     shortTitle: 'Producción Audiovisual',
-    seoTitle: 'Productora Audiovisual en Lima, Perú | Videos Corporativos y Comerciales 4K',
-    seoDescription: 'Productora audiovisual en Lima especializada en videos corporativos, spots publicitarios, comerciales para TV y digital, y contenido 4K/6K que eleva la percepción de tu marca.',
-    heroBadge: 'Cine Digital & Video Comercial 4K/6K',
-    heroHeadline: 'Producción Audiovisual de Alto Impacto en Lima',
-    heroSubheadline: 'Creamos comerciales, videos corporativos y piezas cinematográficas que transmiten prestigio, aumentan la confianza de tus clientes y aceleran tus ventas.',
+    seoTitle: 'Producción Audiovisual en Lima 4K/6K | Comerciales y Corporativos | BLACKBOX',
+    seoDescription: 'Productora audiovisual en Lima experta en comerciales de TV, videos corporativos y contenido publicitario 4K/6K de alta conversión.',
+    heroBadge: 'Producción Audiovisual en Lima, Perú',
+    heroPill: 'Producción Audiovisual en Lima, Perú',
+    heroHeadline: 'PRODUCCIÓN AUDIOVISUAL DE ALTO IMPACTO',
+    heroH1Line1: 'PRODUCCIÓN AUDIOVISUAL',
+    heroH1Line2: 'DE ALTO IMPACTO',
+    heroSubheadline: 'Videos comerciales y corporativos 4K/6K en Lima que transmiten prestigio, elevan la confianza y aceleran tus ventas.',
+    portfolioCategory: 'Comercial & Publicidad',
     icon: 'Video',
     gradient: 'from-blue-600 via-indigo-600 to-purple-800',
     accentColor: 'text-blue-500',
@@ -91,20 +99,16 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ],
     faqs: [
       {
-        question: '¿Cuánto tiempo toma producir un video corporativo o comercial?',
-        answer: 'El tiempo de producción se coordina según el alcance, locaciones y requerimientos técnicos del proyecto. Establecemos un cronograma claro desde la aprobación del guion para alinearnos a tus fechas de lanzamiento.'
+        question: '¿Cuánto cuesta producir un video comercial o corporativo en Lima?',
+        answer: 'El costo de producir un video comercial o corporativo en Lima varía principalmente según la complejidad del guion, las jornadas de rodaje, el despliegue técnico y los requerimientos específicos de postproducción. En Black Box estructuramos cotizaciones transparentes y personalizadas adaptadas a los objetivos comerciales de cada empresa en Perú. Para producciones corporativas estándar o cápsulas testimoniales de alta calidad, la inversión suele iniciar desde presupuestos accesibles para medianas empresas, mientras que campañas comerciales para televisión o lanzamientos de marca en resolución 4K y 6K requieren esquemas de iluminación escénica, dirección de arte, actores profesionales, locaciones y motion graphics avanzados. Toda propuesta económica detalla cada rubro técnico sin costos ocultos, garantizando que cada sol invertido se traduzca en una pieza audiovisual con estética de cine que eleva la percepción de tu marca, genera confianza inmediata y acelera el cierre de ventas comerciales en el mercado peruano actual.'
       },
       {
-        question: '¿Incluyen el guion y la dirección de la producción?',
-        answer: 'Sí. Desarrollamos el servicio de manera integral: desde la conceptualización y redacción del guion publicitario hasta la dirección en set, locución profesional y postproducción.'
+        question: '¿Qué incluye el servicio integral de producción audiovisual de Black Box en Lima?',
+        answer: 'Nuestro servicio integral de producción audiovisual en Lima cubre absolutamente todas las etapas necesarias para entregar una pieza cinematográfica lista para su difusión comercial. Iniciamos con la fase de preproducción, donde investigamos a fondo tu modelo de negocio, desarrollamos el concepto creativo, redactamos el guion técnico con storytelling publicitario y coordinamos el casting de talentos, permisos y locaciones en Lima. Durante el día de rodaje, nuestro equipo técnico opera cámaras de cine digital en resolución 4K y 6K, ópticas de primer nivel, microfonía inalámbrica de alta fidelidad e iluminación profesional de estudio. Finalmente, en la postproducción realizamos el montaje narrativo dinámico, corrección de color cinematográfica en DaVinci Resolve, diseño sonoro envolvente, musicalización licenciada y gráficos animados. Entregamos tanto el master principal como versiones verticales en formato 9:16 optimizadas para captar clientes en plataformas como Reels, TikTok y YouTube Shorts.'
       },
       {
-        question: '¿Realizan grabaciones fuera de Lima?',
-        answer: 'Sí, contamos con equipamiento portátil para rodajes en cualquier región del Perú (plantas industriales, sucursales u oficinas), previa coordinación logística.'
-      },
-      {
-        question: '¿En qué formatos entregan el material final?',
-        answer: 'Entregamos en formato horizontal (16:9) en alta resolución para web y pantallas, además de versiones en formato vertical (9:16) adaptadas para redes sociales.'
+        question: '¿En cuánto tiempo entregan el video final y en qué formatos?',
+        answer: 'El tiempo habitual de entrega para un proyecto audiovisual en Lima se sitúa entre siete y quince días hábiles contados a partir del último día de grabación. En situaciones de campañas urgentes o lanzamientos programados con fechas límite estrictas, disponemos de flujos de trabajo acelerados para presentar el primer corte de edición en un plazo de tres a cinco días. Tras la presentación del primer premontaje, recopilamos tus comentarios para realizar los ajustes de edición y color solicitados antes de la exportación definitiva. Entregamos los archivos finales en resolución Ultra HD 4K y Full HD en formato MP4 o ProRes, perfectamente codificados para pantallas de televisión, presentaciones corporativas de alta resolución, sitios web empresariales y pauta publicitaria digital. Además, incluimos sin costo adicional adaptaciones verticales 9:16 y cuadradas 1:1, asegurando que tu material rinda al máximo en redes sociales y campañas comerciales de conversión.'
       }
     ],
     relatedProjects: ['Checor', 'Makita', 'Clínica Avendaño', 'LAP Custom']
@@ -112,13 +116,17 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
 
   'reels-y-tiktok': {
     slug: 'reels-y-tiktok',
-    title: 'Creación de Reels y Contenido para TikTok en Perú',
-    shortTitle: 'Reels y TikTok Ads',
-    seoTitle: 'Creación de Reels y TikTok para Marcas en Lima, Perú | Contenido Vertical 9:16',
-    seoDescription: 'Agencia especializada en creación de Reels y TikToks para empresas en Lima, Perú. Producción mensual de videos verticales con guiones estratégicos, edición dinámica y enfoque de ventas.',
-    heroBadge: 'Formato Vertical 9:16 de Alto Impacto',
-    heroHeadline: 'Reels y TikToks Diseñados para Conectar con tu Audiencia',
-    heroSubheadline: 'Impulsa el alcance de tu marca y genera consultas directas por WhatsApp con videos verticales de ritmo dinámico, subtítulos animados y narrativa persuasiva.',
+    title: 'Reels y TikTok Ads en Lima',
+    shortTitle: 'Reels y TikTok',
+    seoTitle: 'Reels y TikTok Ads en Lima | Videos Verticales que Convierten | BLACKBOX',
+    seoDescription: 'Producción de reels y TikTok ads en Lima para marcas y empresas. Contenido dinámico 9:16 pensado para retener y viralizar.',
+    heroBadge: 'Reels y TikTok Ads en Lima, Perú',
+    heroPill: 'Reels y TikTok Ads en Lima, Perú',
+    heroHeadline: 'REELS QUE CONECTAN',
+    heroH1Line1: 'REELS QUE',
+    heroH1Line2: 'CONECTAN',
+    heroSubheadline: 'Producción de video vertical 9:16 con ganchos psicológicos y edición ágil para multiplicar reproducciones y ventas en Lima.',
+    portfolioCategory: 'Comercial & Publicidad',
     icon: 'Smartphone',
     gradient: 'from-pink-600 via-rose-600 to-amber-600',
     accentColor: 'text-pink-500',
@@ -180,16 +188,16 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ],
     faqs: [
       {
-        question: '¿Qué pasa si no tengo experiencia previa frente a cámara?',
-        answer: 'Te acompañamos en todo momento. Contamos con teleprompter y dirección en set para que la comunicación resulte natural, segura y profesional.'
+        question: '¿Cuánto cuesta la producción de Reels y TikTok Ads en Lima?',
+        answer: 'El costo de producir paquetes mensuales de Reels y videos para TikTok Ads en Lima varía en función de la cantidad de piezas audiovisuales requeridas, los días de rodaje en estudio o locación y la complejidad de la edición dinámica. En Black Box estructuramos planes mensuales accesibles pensados para empresas, marcas personales y comercios en Perú que necesitan constancia sin disparar sus costos fijos. Un paquete habitual incluye la redacción de guiones con ganchos psicológicos, una jornada intensiva de grabación con iluminación profesional y teleprompter para facilitar la locución, y la postproducción completa con subtítulos animados de alta retención. Presentamos cotizaciones claras y transparentes que permiten a tu marca proyectar una imagen moderna, ganar relevancia orgánica y nutrir tus campañas de publicidad digital en Instagram y TikTok con material fresco y de alta conversión comercial.'
       },
       {
-        question: '¿Cómo se organiza la jornada de grabación?',
-        answer: 'Coordinamos una sesión estructurada donde se filman los guiones planificados previamente, optimizando el tiempo y facilitando la producción de todo el mes.'
+        question: '¿Qué incluye el servicio mensual de creación de Reels y TikTok en Lima?',
+        answer: 'Nuestro servicio mensual de creación de Reels y TikTok en Lima es una solución integral diseñada para que tú solo tengas que presentarte a grabar mientras nosotros nos encargamos de absolutamente toda la producción técnica y creativa. Iniciamos cada ciclo mensual con una reunión estratégica donde definimos los temas de tendencia y las prioridades de venta de tu catálogo comercial. Redactamos guiones con ganchos visuales en los primeros tres segundos y llamados a la acción claros hacia WhatsApp o tu tienda virtual. Durante la jornada de rodaje utilizamos cámaras de cine 4K, teleprompter profesional para que hables con total fluidez y micrófonos inalámbricos de alta fidelidad. En postproducción añadimos cortes ágiles, efectos de sonido, musicalización licenciada, subtítulos dinámicos con palabras clave resaltadas y portadas personalizadas para el feed, entregándote cada video listo para su publicación inmediata en tus perfiles.'
       },
       {
-        question: '¿Estos videos pueden utilizarse en campañas de publicidad digital?',
-        answer: 'Sí, el formato y la narrativa se adaptan perfectamente para potenciar campañas tanto orgánicas como de pauta digital en Meta y TikTok.'
+        question: '¿En cuánto tiempo se entregan los Reels listos para publicar en redes sociales?',
+        answer: 'El tiempo estándar de entrega para los paquetes mensuales de Reels y TikTok en Lima es de cinco a siete días hábiles posteriores a la jornada de rodaje en tus instalaciones o set. Durante este tiempo nuestro equipo de postproducción realiza la selección minuciosa de las mejores tomas, la sincronización de audio de alta fidelidad y el diseño de animaciones tipográficas que maximizan la tasa de retención del espectador en plataformas digitales. Te enviamos una vista previa privada para que revises los videos y apruebes los textos antes del lanzamiento oficial en redes. Una vez recibida tu conformidad, entregamos todo el lote organizado en carpetas digitales en resolución Full HD y 4K vertical 9:16, junto con textos persuasivos sugeridos, hashtags recomendados y orientaciones sobre el mejor horario de publicación para maximizar el alcance orgánico y la interacción con tus clientes potenciales en Perú.'
       }
     ],
     relatedProjects: ['Clínica Avendaño', 'Shaking', 'Burger & Eventos', 'Leomar Muebles']
@@ -197,13 +205,17 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
 
   'publicidad-digital-meta-ads': {
     slug: 'publicidad-digital-meta-ads',
-    title: 'Agencia de Publicidad Digital y Meta Ads en Lima',
-    shortTitle: 'Publicidad & Pauta Digital',
-    seoTitle: 'Agencia de Meta Ads y Publicidad Digital en Lima, Perú | TikTok y Facebook Ads',
-    seoDescription: 'Especialistas en campañas de publicidad digital en Facebook Ads, Instagram Ads y TikTok Ads en Lima, Perú. Estrategias enfocadas en generación de contactos calificados y retorno publicitario.',
-    heroBadge: 'Estrategias de Pauta Orientadas a Resultados',
-    heroHeadline: 'Publicidad Digital Diseñada para Atraer Clientes Potenciales',
-    heroSubheadline: 'Estructuramos campañas con segmentación estratégica, creativos audiovisuales persuasivos y medición constante para maximizar el rendimiento de tu inversión publicitaria.',
+    title: 'Agencia de Meta Ads en Lima',
+    shortTitle: 'Meta Ads',
+    seoTitle: 'Agencia de Meta Ads en Lima | Publicidad que Atrae Clientes | BLACKBOX',
+    seoDescription: 'Campañas de Meta Ads en Facebook e Instagram en Lima. Tráfico calificado, anuncios de alto ROI y captación constante de clientes.',
+    heroBadge: 'Agencia de Meta Ads en Lima, Perú',
+    heroPill: 'Agencia de Meta Ads en Lima, Perú',
+    heroHeadline: 'META ADS QUE TRAEN CLIENTES',
+    heroH1Line1: 'META ADS QUE',
+    heroH1Line2: 'TRAEN CLIENTES',
+    heroSubheadline: 'Campañas publicitarias en Meta y TikTok con creativos de video optimizados para maximizar el retorno de tu inversión.',
+    portfolioCategory: 'B2B & Corporativo',
     icon: 'TrendingUp',
     gradient: 'from-emerald-600 via-teal-600 to-cyan-800',
     accentColor: 'text-emerald-500',
@@ -265,16 +277,16 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ],
     faqs: [
       {
-        question: '¿Cómo se define el presupuesto para la pauta publicitaria?',
-        answer: 'El presupuesto de inversión en las plataformas se determina de forma personalizada según el tamaño de tu negocio, tu ticket de venta y tus objetivos comerciales. Durante la asesoría inicial analizamos el escenario más adecuado para tu empresa.'
+        question: '¿Cuánto cuesta gestionar campañas de publicidad en Meta Ads en Lima?',
+        answer: 'El costo de gestionar campañas de publicidad en Meta Ads en Lima se compone del honorario mensual de la agencia de marketing y el presupuesto asignado directamente a las plataformas de Meta (Facebook e Instagram) o TikTok. En Black Box establecemos esquemas de trabajo claros y transparentes adaptados al tamaño de tu negocio y al volumen de contactos comerciales que requieras mensualmente. Para empresas medianas, negocios locales o servicios profesionales en Lima, recomendamos una inversión publicitaria base que permita al algoritmo recopilar datos de conversión rápidamente y optimizar la entrega de anuncios. Nuestro fee de gestión incluye la configuración avanzada del Business Manager, el diseño continuo de piezas gráficas y de video, el monitoreo diario de la pauta y reportes ejecutivos periódicos. Esta estructura asegura que cada sol rinda al máximo y mantenga un costo por adquisición rentable.'
       },
       {
-        question: '¿En qué plataformas gestionan las campañas publicitarias?',
-        answer: 'Estructuramos y optimizamos campañas en las principales plataformas de mayor alcance en Perú: Meta Ads (Facebook e Instagram) y TikTok Ads, eligiendo el canal ideal según el perfil de tu cliente.'
+        question: '¿Qué incluye el servicio de agencia de Meta Ads y publicidad digital en Lima?',
+        answer: 'Nuestro servicio de agencia de Meta Ads y publicidad digital en Lima abarca una gestión integral técnica, creativa y estratégica diseñada para transformar visitantes en prospectos calificados. Iniciamos con una auditoría profunda de tus activos comerciales, instalando el Píxel de Meta, la API de Conversiones y eventos personalizados en tu sitio web para asegurar una atribución impecable. Posteriormente, nuestro equipo creativo produce anuncios audiovisuales persuasivos con ganchos de alta retención, formatos verticales 9:16 y copys orientados a ventas directas. Configuramos campañas segmentadas por ubicación geográfica precisa en Lima Metropolitana, intereses detallados y audiencias similares a tus clientes actuales. Supervisamos diariamente la puja publicitaria, realizamos pruebas continuas de creativos y enrutamos a los prospectos hacia WhatsApp con mensajes predeterminados para que tu equipo comercial cierre ventas con la máxima agilidad.'
       },
       {
-        question: '¿Cómo se realiza el seguimiento y reporte de los resultados?',
-        answer: 'Entregamos informes periódicos con los indicadores clave (volumen de contactos, costo por lead y rendimiento general) para mantener total claridad sobre el avance de las campañas.'
+        question: '¿En cuánto tiempo se ven los primeros resultados y retorno de inversión en Meta Ads?',
+        answer: 'Los primeros contactos comerciales y mensajes calificados a WhatsApp suelen registrarse dentro de las primeras 48 a 72 horas posteriores al encendido de las campañas en Meta Ads. No obstante, el sistema de aprendizaje de Meta requiere entre dos y tres semanas para estabilizar el costo por resultado, identificar con precisión a los usuarios con mayor probabilidad de compra y consolidar el retorno de inversión publicitaria. Durante este período inicial de prueba, evaluamos la tasa de clics, la retención del video y el costo por conversación, ajustando los ángulos de comunicación y las audiencias para escalar los anuncios con mejor rendimiento. Te proporcionamos métricas claras desde el primer día para que verifiques en tiempo real cuántas oportunidades de venta genera tu inversión publicitaria en Lima.'
       }
     ],
     relatedProjects: ['Clínica Avendaño', 'Leomar Muebles', 'Makita', 'Chalqui']
@@ -282,13 +294,17 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
 
   'marketing-para-clinicas-salud': {
     slug: 'marketing-para-clinicas-salud',
-    title: 'Marketing Médico para Clínicas y Doctores en Lima',
-    shortTitle: 'Marketing Médico & Salud',
-    seoTitle: 'Marketing Médico en Lima, Perú | Producción y Pauta para Clínicas y Doctores',
-    seoDescription: 'Agencia de marketing médico y producción audiovisual para clínicas, cirujanos y especialistas de la salud en Lima, Perú. Estrategias éticas enfocadas en generar confianza y consultas.',
-    heroBadge: 'Especialistas en Comunicación para el Sector Salud',
-    heroHeadline: 'Marketing Médico Ético, Confiable y de Alto Rendimiento',
-    heroSubheadline: 'Posicionamos tu especialidad médica con videos explicativos que transmiten seguridad, testimonios de pacientes y campañas éticas diseñadas para captar pacientes de valor.',
+    title: 'Marketing Médico para Clínicas en Lima',
+    shortTitle: 'Marketing Médico',
+    seoTitle: 'Marketing Médico para Clínicas en Lima | Videos Éticos que Generan Citas | BLACKBOX',
+    seoDescription: 'Estrategias de marketing médico y producción audiovisual para doctores y clínicas en Lima. Genera más citas de pacientes con contenido ético.',
+    heroBadge: 'Marketing Médico en Lima, Perú',
+    heroPill: 'Marketing Médico en Lima, Perú',
+    heroHeadline: 'MARKETING MÉDICO QUE TRAE PACIENTES',
+    heroH1Line1: 'MARKETING MÉDICO',
+    heroH1Line2: 'QUE TRAE PACIENTES',
+    heroSubheadline: 'Videos médicos testimoniales y campañas éticas en Lima para aumentar consultas privadas y posicionar especialistas de la salud.',
+    portfolioCategory: 'Salud & Bariátrica',
     icon: 'Stethoscope',
     gradient: 'from-cyan-600 via-blue-700 to-indigo-900',
     accentColor: 'text-cyan-400',
@@ -350,16 +366,16 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ],
     faqs: [
       {
-        question: '¿Cómo aseguran el cumplimiento de las políticas publicitarias médicas?',
-        answer: 'Aplicamos pautas estrictas en la redacción y edición para evitar promesas no verificables o formatos no permitidos, priorizando la educación del paciente, credenciales médicas y la calidad de atención.'
+        question: '¿Cuánto cuesta una estrategia de marketing médico para clínicas en Lima?',
+        answer: 'El costo de una estrategia de marketing médico en Lima depende del número de especialidades a promocionar, la frecuencia de producción audiovisual mensual y el alcance geográfico de las campañas publicitarias. En Black Box diseñamos planes a la medida de consultorios privados, cirujanos y policlínicos en Lima, estructurando propuestas transparentes que abarcan desde la creación de contenidos educativos y testimoniales hasta la gestión de pauta en Meta Ads. Dado que el sector salud exige altos estándares éticos y cumplimiento riguroso de las políticas de publicidad médica para evitar bloqueos, nuestra gestión profesional previene sanciones y maximiza el retorno de cada presupuesto asignado. Desarrollamos esquemas de trabajo con honorarios claros que se amortizan con la llegada de nuevos pacientes calificados para cirugías, tratamientos estéticos o consultas de especialidad.'
       },
       {
-        question: '¿Cuánto tiempo de dedicación requiere el médico para las grabaciones?',
-        answer: 'Optimizamos al máximo el tiempo del especialista preparando los guiones con anticipación y utilizando teleprompter en set para que la grabación sea rápida y no interrumpa sus horarios de consulta.'
+        question: '¿Qué incluye el servicio de marketing ético y producción audiovisual para salud?',
+        answer: 'Nuestro servicio especializado de marketing médico en Lima combina la producción cinematográfica en consultorio con estrategias de adquisición digital respetuosas de la deontología médica. Coordinamos sesiones de rodaje profesionales en tus instalaciones con cámaras de cine 4K, iluminación suave y teleprompter para que el médico transmita sus conocimientos con naturalidad y autoridad sin perder tiempo de consulta. Producimos videos educativos de procedimientos, cápsulas resolviendo dudas frecuentes de pacientes y testimonios conmovedores de casos de éxito grabados con dignidad y calidez humana. Adicionalmente, redactamos anuncios éticos sin promesas desmesuradas, configuramos la segmentación por distritos estratégicos de Lima y capacitamos a tu personal de recepción para responder rápidamente a los pacientes que escriben al WhatsApp buscando agendar su cita de valoración.'
       },
       {
-        question: '¿Qué tipo de contenidos se desarrollan para una clínica o consultorio?',
-        answer: 'Desarrollamos cápsulas donde el especialista explica tratamientos de forma sencilla, resuelve dudas frecuentes y comparte testimonios de pacientes que transmiten confianza.'
+        question: '¿En cuánto tiempo una clínica o consultorio médico comienza a recibir más pacientes?',
+        answer: 'La captación de pacientes a través de campañas de marketing médico en Lima suele generar las primeras solicitudes de información y citas de valoración durante las dos primeras semanas de activación de los anuncios. A diferencia de otros sectores comerciales, el paciente de salud requiere mayor grado de confianza y validación social antes de someterse a un procedimiento quirúrgico o tratamiento médico prolongado. Por ello, la combinación de videos educativos donde el doctor demuestra su conocimiento y testimoniales reales acelera notablemente la decisión de consulta. A partir del segundo mes, con la acumulación de reproducciones, posicionamiento de autoridad y optimización del algoritmo publicitario, la clínica experimenta un flujo predecible y constante de pacientes interesados que valoran la calidad profesional del servicio médico.'
       }
     ],
     relatedProjects: ['Clínica Avendaño']

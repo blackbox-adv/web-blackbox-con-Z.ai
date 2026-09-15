@@ -32,8 +32,18 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/produccion-audiovisual',
+        destination: '/servicios/produccion-audiovisual',
+        permanent: true,
+      },
+      {
+        source: '/reels-y-tiktok',
+        destination: '/servicios/reels-y-tiktok',
+        permanent: true,
+      },
+      {
         source: '/servicios/audiovisual',
-        destination: '/servicios/productora-audiovisual-lima',
+        destination: '/servicios/produccion-audiovisual',
         permanent: true,
       },
       {

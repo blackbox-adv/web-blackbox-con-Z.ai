@@ -8,7 +8,7 @@ import { Badge } from '@/components/ui/badge'
 import { FloatingWhatsApp } from '@/components/FloatingWhatsApp'
 import { BrandLogo } from '@/components/BrandLogo'
 import { 
-  ArrowLeft, Play, X, ExternalLink, Video, TrendingUp, Target, Film, Send
+  ArrowLeft, Play, X, ExternalLink, Video, TrendingUp, Target, Film, Send, Phone
 } from 'lucide-react'
 
 function getVideoThumbnail(project: any): string {
@@ -114,7 +114,7 @@ export default function PortfolioClient() {
     : allProjects.filter((p: any) => p.category === selectedCategory)
 
   const cleanWhatsappNumber = (config?.whatsapp || config?.phone || '51958297236').replace(/\D/g, '') || '51958297236'
-  const whatsappUrl = `https://wa.me/${cleanWhatsappNumber}?text=${encodeURIComponent('Hola Black Box, quiero cotizar un proyecto audiovisual para mi marca')}`
+  const whatsappUrl = `https://wa.me/${cleanWhatsappNumber}?text=${encodeURIComponent('Hola BLACKBOX quiero cotizar proyecto audiovisual')}&utm_source=web&utm_medium=cta&utm_campaign=portfolio`
 
   return (
     <main className="min-h-screen bg-slate-50 text-gray-900 selection:bg-purple-500 selection:text-white">
@@ -155,16 +155,29 @@ export default function PortfolioClient() {
 
       {/* Hero Header */}
       <section className="pt-12 pb-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-100/70 border border-purple-200 text-xs font-extrabold text-purple-800 uppercase tracking-widest mb-4">
-          <Target className="w-3.5 h-3.5 text-purple-600" />
-          Portafolio Oficial Lima
+        <div className="flex justify-center mb-6">
+          <span className="inline-flex px-4 py-1.5 rounded-full bg-purple-50 text-purple-700 text-xs font-bold tracking-wide border border-purple-200/60 shadow-xs">
+            Portafolio Audiovisual en Lima, Perú
+          </span>
         </div>
-        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-gray-950 uppercase mb-4 leading-tight">
-          Portafolio de Producción Audiovisual en Lima
+        <h1 className="font-black tracking-tighter leading-[0.9] text-4xl sm:text-6xl lg:text-7xl uppercase mb-6 text-gray-950">
+          CASOS QUE<br />
+          <span className="text-[#8B5CF6]">GENERAN VENTAS</span>
         </h1>
-        <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-          Campañas de alto impacto, videos verticales 9:16 para redes sociales, spots comerciales y videoclips de artistas que generan resultados comerciales medibles.
+        <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed font-normal">
+          Explora producciones comerciales, spots de marca, reels 9:16 y videoclips desarrollados para líderes del mercado en Lima.
         </p>
+        <div className="flex justify-center mb-8">
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 bg-black hover:bg-zinc-800 text-white font-extrabold text-base px-8 py-4 rounded-full shadow-lg shadow-black/10 transition-all hover:scale-105"
+          >
+            <Phone className="w-5 h-5 text-emerald-400" />
+            Solicitar Cotización por WhatsApp
+          </a>
+        </div>
       </section>
 
       {/* Category Pills Filter */}

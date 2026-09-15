@@ -8,7 +8,8 @@ import { FloatingWhatsApp } from '@/components/FloatingWhatsApp'
 import { BrandLogo } from '@/components/BrandLogo'
 import { 
   ArrowLeft, Play, X, Video, Film, Send, Clapperboard,
-  Music, CheckCircle2, Flame, Camera, Radio, Disc, Volume2, VolumeX
+  Music, CheckCircle2, Flame, Camera, Radio, Disc, Volume2, VolumeX,
+  Phone, HelpCircle
 } from 'lucide-react'
 
 export interface MusicVideo {
@@ -178,8 +179,8 @@ export default function VideoclipsClient() {
   // URL del Showreel Musical (por defecto el videoclip Blackbox Music 16:9 con el guitarrista de la imagen o configurado en admin)
   const musicReelUrl = config?.musicVideoUrl || config?.heroReelUrl || 'https://youtu.be/bhgJlSKKv50'
 
-  const getWhatsappUrl = (msg = 'Hola Black Box, tengo un proyecto musical y me gustaría cotizar la producción de un videoclip.') =>
-    `https://wa.me/${cleanWhatsappNumber}?text=${encodeURIComponent(msg)}`
+  const getWhatsappUrl = (msg = 'Hola BLACKBOX quiero cotizar videoclip') =>
+    `https://wa.me/${cleanWhatsappNumber}?text=${encodeURIComponent(msg)}&utm_source=web&utm_medium=cta&utm_campaign=videoclips`
 
   const filteredVideos = activeGenre === 'Todos'
     ? DEFAULT_MUSIC_VIDEOS
@@ -212,7 +213,7 @@ export default function VideoclipsClient() {
               Portfolio Comercial
             </Link>
             <Button 
-              onClick={() => window.open(getWhatsappUrl('Hola Black Box, quiero cotizar la producción de un videoclip musical para mi proyecto.'), '_blank')}
+              onClick={() => window.open(getWhatsappUrl('Hola BLACKBOX quiero cotizar videoclip'), '_blank')}
               className="bg-black hover:bg-gray-800 text-white rounded-full px-4 sm:px-6 py-2.5 text-xs font-bold gap-1.5 shadow-md hover:scale-105 transition-all cursor-pointer"
             >
               <Send className="w-3.5 h-3.5" /> Cotizar Videoclip
@@ -228,40 +229,38 @@ export default function VideoclipsClient() {
             
             {/* Left Column: Titular y Propuesta de Valor */}
             <div className="lg:col-span-5 text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 mb-5 px-4 py-1.5 bg-purple-100/70 border border-purple-200 rounded-full shadow-xs">
-                <Clapperboard className="w-3.5 h-3.5 text-purple-700" />
-                <span className="text-purple-900 font-bold uppercase tracking-widest text-[11px]">
-                  Producción Audiovisual para Artistas & Bandas
+              <div className="flex justify-center lg:justify-start mb-5">
+                <span className="inline-flex px-4 py-1 rounded-full bg-purple-50 text-purple-700 text-xs font-bold tracking-wide">
+                  Productora de Videoclips en Lima, Perú
                 </span>
               </div>
 
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-5 tracking-tight text-gray-950 uppercase leading-[1.1]">
-                Videoclips en Lima <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-indigo-600 to-purple-900">
-                  Cine en Pantalla Grande
-                </span>
+              <h1 className="font-black tracking-tighter leading-[0.9] text-4xl sm:text-5xl lg:text-6xl uppercase mb-6 text-gray-950">
+                VIDEOCLIPS QUE<br />
+                <span className="text-[#8B5CF6]">DESPEGAN CARRERAS</span>
               </h1>
 
-              <p className="max-w-xl mx-auto lg:mx-0 text-gray-600 text-sm sm:text-base leading-relaxed font-medium mb-7">
-                Dirección cinematográfica en formato widescreen 16:9, cámaras de cine 4K, ópticas fijas y anamórficas, iluminación de atmósfera, color grading y teasers para artistas, orquestas y sellos en Perú.
+              <p className="max-w-xl mx-auto lg:mx-0 text-gray-600 text-sm sm:text-base leading-relaxed font-normal mb-8">
+                Producción cinematográfica 4K de videos musicales en Lima para artistas y bandas que buscan trascender en plataformas digitales.
               </p>
 
               {/* Botones de acción */}
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 mb-8">
                 <Button 
                   size="lg"
-                  onClick={() => window.open(getWhatsappUrl('Hola Black Box, quiero agendar una llamada para cotizar la producción de mi videoclip musical.'), '_blank')}
-                  className="bg-black hover:bg-gray-800 text-white rounded-full px-7 py-5 text-xs sm:text-sm font-bold uppercase tracking-wider shadow-xl shadow-black/10 hover:scale-105 transition-all cursor-pointer flex items-center gap-2"
+                  onClick={() => window.open(getWhatsappUrl('Hola BLACKBOX quiero cotizar videoclip'), '_blank')}
+                  className="bg-black hover:bg-gray-800 text-white rounded-full px-7 py-5 text-sm sm:text-base font-bold shadow-xl shadow-black/10 hover:scale-105 transition-all cursor-pointer flex items-center gap-2"
                 >
-                  <Send className="w-4 h-4" /> Cotizar Mi Video Musical
+                  <Phone className="w-5 h-5 text-emerald-400" />
+                  Solicitar Cotización por WhatsApp
                 </Button>
                 
-                <a 
-                  href="#galeria"
-                  className="inline-flex items-center justify-center rounded-full border-2 border-gray-300 hover:border-gray-900 bg-white px-6 py-2.5 text-xs sm:text-sm font-bold text-gray-800 hover:text-black transition-all shadow-xs"
+                <Link 
+                  href="/portfolio?categoria=Videoclips"
+                  className="inline-flex items-center justify-center rounded-full border-2 border-black text-black hover:bg-black hover:text-white px-6 py-3.5 text-sm sm:text-base font-bold transition-all shadow-xs"
                 >
-                  <Play className="w-3.5 h-3.5 mr-2 fill-gray-800" /> Ver Muestras
-                </a>
+                  Ver Casos en Portafolio
+                </Link>
               </div>
 
               {/* Pilares técnicos (2x2) */}
@@ -717,6 +716,55 @@ export default function VideoclipsClient() {
           </div>
         </div>
       )}
+
+      {/* FAQ Section */}
+      <section className="py-20 px-4 bg-gray-50 border-t border-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="inline-flex px-4 py-1 rounded-full bg-purple-50 text-purple-700 text-xs font-bold tracking-wide mb-3">
+              Preguntas Frecuentes
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-black text-gray-950 uppercase tracking-tight">
+              Producción de Videoclips en Lima
+            </h2>
+            <p className="text-gray-600 text-sm sm:text-base mt-2">
+              Respuestas claras sobre costos, rodaje, equipamiento y plazos de entrega.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <div className="bg-white border border-gray-200 p-6 rounded-2xl shadow-xs space-y-2">
+              <h3 className="text-base sm:text-lg font-bold text-gray-950 flex items-start gap-2.5">
+                <HelpCircle className="w-5 h-5 text-purple-600 shrink-0 mt-0.5" />
+                <span>¿Cuánto cuesta producir un videoclip musical profesional en Lima?</span>
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed pl-7">
+                El costo de producir un videoclip musical profesional en Lima depende del concepto creativo, la cantidad de locaciones, el tipo de cámaras ópticas utilizadas y la complejidad de la postproducción visual. En Black Box estructuramos proyectos a la medida tanto para artistas emergentes como para bandas consolidadas y sellos discográficos en Perú. Disponemos desde formatos ágiles como live sessions acústicas multicámara en set controlado, hasta superproducciones cinematográficas con esquemas de iluminación escénica, efectos de humo, bailarines, actores y color grading de cine en DaVinci Resolve. Elaboramos un presupuesto transparente y desglosado desde el inicio para que conozcas con exactitud cada aspecto técnico y artístico de tu inversión, garantizando un resultado visual impactante que cumpla con los estándares de calidad de cadenas de televisión musical y plataformas como YouTube y Vevo.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 p-6 rounded-2xl shadow-xs space-y-2">
+              <h3 className="text-base sm:text-lg font-bold text-gray-950 flex items-start gap-2.5">
+                <HelpCircle className="w-5 h-5 text-purple-600 shrink-0 mt-0.5" />
+                <span>¿Qué incluye el servicio de producción de videoclips de Black Box en Lima?</span>
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed pl-7">
+                Nuestro servicio de producción de videoclips en Lima brinda un acompañamiento integral de principio a fin para convertir tu canción en una experiencia cinematográfica memorable. En la etapa de preproducción colaboramos contigo para conceptualizar la historia, redactar el guion técnico, diseñar el storyboard, coordinar el styling y gestionar locaciones públicas o privadas en Lima. Durante la jornada de rodaje desplegamos cámaras de cine digital 4K con ópticas fijas y anamórficas de alta gama, iluminación profesional y monitoreo en set para cuidar cada encuadre. En la postproducción realizamos el montaje rítmico sincronizado al beat del máster musical, corrección de color profesional, efectos visuales y exportación en formato panorámico 16:9 para YouTube, además de teasers y adaptaciones verticales en 9:16 especialmente diseñadas para promocionar el lanzamiento en Reels y TikTok.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 p-6 rounded-2xl shadow-xs space-y-2">
+              <h3 className="text-base sm:text-lg font-bold text-gray-950 flex items-start gap-2.5">
+                <HelpCircle className="w-5 h-5 text-purple-600 shrink-0 mt-0.5" />
+                <span>¿En cuánto tiempo se entrega el videoclip final y cómo coordinamos el rodaje?</span>
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed pl-7">
+                El proceso completo de producción de un videoclip musical en Lima toma en promedio entre dos y cuatro semanas, distribuidas entre la preproducción, el día del rodaje y la postproducción digital. Una vez aprobado el guion y aseguradas las locaciones requeridas, ejecutamos la filmación en jornadas de uno o dos días según la magnitud del proyecto. El primer corte de edición se presenta al artista habitualmente entre siete y diez días hábiles tras el rodaje para revisar el ritmo narrativo y la sincronización labial. Tras incorporar tus comentarios y aplicar el color grading cinematográfico final, entregamos el master definitivo en máxima resolución 4K y Full HD, acompañado de cápsulas promocionales para redes sociales que facilitan una campaña de estreno exitosa en todas tus plataformas digitales.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Final CTA Banner */}
       <section className="py-20 lg:py-24 px-4 bg-white border-t border-gray-200">

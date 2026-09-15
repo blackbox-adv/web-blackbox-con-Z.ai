@@ -6,23 +6,24 @@ import { SubpageNavbar } from '@/components/SubpageNavbar'
 import { 
   ArrowRight, 
   ChevronRight, 
-  Sparkles, 
+  Phone,
   Video, 
   Smartphone, 
   TrendingUp, 
   Stethoscope, 
-  CheckCircle2
+  CheckCircle2,
+  Film
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Servicios de Producción Audiovisual y Marketing en Lima | BLACKBOX',
-  description: 'Productora audiovisual en Lima especializada en contenido vertical, spots comerciales y marketing digital para e-commerce y gastronomia.',
+  title: 'Servicios de Marketing y Producción Audiovisual en Lima | BLACKBOX',
+  description: 'Servicios audiovisuales en Lima: producción de comerciales, reels 9:16, videoclips y campañas de Meta Ads para hacer crecer tu marca.',
   alternates: {
     canonical: 'https://blackboxperu.com/servicios',
   },
   openGraph: {
-    title: 'Servicios de Producción Audiovisual y Marketing en Lima | BLACKBOX',
-    description: 'Productora audiovisual en Lima especializada en contenido vertical, spots comerciales y marketing digital para e-commerce y gastronomia.',
+    title: 'Servicios de Marketing y Producción Audiovisual en Lima | BLACKBOX',
+    description: 'Servicios audiovisuales en Lima: producción de comerciales, reels 9:16, videoclips y campañas de Meta Ads para hacer crecer tu marca.',
     url: 'https://blackboxperu.com/servicios',
   }
 }
@@ -35,6 +36,14 @@ export default function ServicesIndexPage() {
     Smartphone: Smartphone,
     TrendingUp: TrendingUp,
     Stethoscope: Stethoscope,
+  }
+
+  // Mapeo exacto de anchor texts según requerimientos de SEO
+  const exactAnchorMap: Record<string, string> = {
+    'produccion-audiovisual': 'Producción audiovisual en Lima',
+    'publicidad-digital-meta-ads': 'Agencia de Meta Ads en Lima',
+    'marketing-para-clinicas-salud': 'Marketing médico en Lima',
+    'reels-y-tiktok': 'Reels y TikTok Ads en Lima',
   }
 
   return (
@@ -51,25 +60,46 @@ export default function ServicesIndexPage() {
         </div>
       </div>
 
-      {/* Hero Section Claro */}
+      {/* Hero Section Unificado */}
       <section className="pt-6 pb-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-50 border border-purple-200/80 text-xs font-bold text-purple-700 mb-6 shadow-xs">
-          <Sparkles className="w-3.5 h-3.5 text-purple-600" />
-          Soluciones Audiovisuales & Marketing
+        <div className="flex justify-center mb-6">
+          <span className="inline-flex px-4 py-1 rounded-full bg-purple-50 text-purple-700 text-xs font-bold tracking-wide">
+            Servicios Audiovisuales en Lima, Perú
+          </span>
         </div>
-        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-gray-950 uppercase mb-6 leading-tight">
-          Servicios de Producción Audiovisual y Marketing en Lima
+        <h1 className="font-black tracking-tighter leading-[0.9] text-5xl md:text-6xl lg:text-7xl uppercase mb-6 text-black">
+          SOLUCIONES QUE<br />
+          <span className="text-[#8B5CF6]">HACEN CRECER</span>
         </h1>
-        <p className="text-base sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-normal">
-          Desde producción de cine publicitario en 4K hasta estrategias continuas de contenido vertical 9:16 y pauta en Meta Ads para empresas en Lima, Perú.
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed font-normal mb-8">
+          Soluciones audiovisuales y de marketing digital diseñadas para posicionar marcas y aumentar ventas en Lima, Perú.
         </p>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="https://wa.me/51958297236?text=Hola%20BLACKBOX%20quiero%20cotizar%20servicios%20audiovisuales&utm_source=web&utm_medium=cta&utm_campaign=servicios"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-black hover:bg-gray-800 text-white font-extrabold text-base px-8 py-5 rounded-full shadow-lg transition-all hover:scale-105"
+          >
+            <Phone className="w-5 h-5 text-emerald-400" />
+            Solicitar Cotización por WhatsApp
+          </a>
+          <Link
+            href="/portfolio"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border-2 border-black text-black hover:bg-black hover:text-white text-base px-8 py-4 rounded-full font-bold transition-all"
+          >
+            Ver Casos en Portafolio
+            <ArrowRight className="w-5 h-5" />
+          </Link>
+        </div>
       </section>
 
-      {/* Services Grid Claro */}
+      {/* Services Grid Claro con Anchor Exacto */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {Object.values(SERVICES_DATA).map((service) => {
             const IconComponent = iconMap[service.icon] || Video
+            const exactAnchor = exactAnchorMap[service.slug] || service.title
             return (
               <div 
                 key={service.slug}
@@ -87,7 +117,9 @@ export default function ServicesIndexPage() {
 
                   <div>
                     <h2 className="text-2xl font-black text-gray-950 uppercase tracking-tight mb-3 group-hover:text-purple-700 transition-colors">
-                      {service.title}
+                      <Link href={`/servicios/${service.slug}`} title={exactAnchor} className="hover:underline">
+                        {service.title}
+                      </Link>
                     </h2>
                     <p className="text-sm sm:text-base text-gray-600 leading-relaxed line-clamp-3">
                       {service.heroSubheadline}
@@ -104,27 +136,82 @@ export default function ServicesIndexPage() {
                   </div>
                 </div>
 
-                <div className="pt-8 mt-6 border-t border-gray-100 flex items-center justify-between">
+                <div className="pt-8 mt-6 border-t border-gray-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                   <Link
                     href={`/servicios/${service.slug}`}
                     className="inline-flex items-center gap-2 font-extrabold text-sm text-gray-900 group-hover:text-purple-700 transition-colors"
                   >
-                    Ver detalles del servicio
+                    <span>{exactAnchor}</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
 
                   <a
-                    href={`https://wa.me/${cleanPhone}?text=${encodeURIComponent(`Hola Black Box, me interesa cotizar el servicio de ${service.title}`)}`}
+                    href={`https://wa.me/${cleanPhone}?text=${encodeURIComponent(`Hola BLACKBOX quiero cotizar ${service.shortTitle}`)}&utm_source=web&utm_medium=cta&utm_campaign=${service.slug}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-gray-600 hover:text-black bg-gray-100 hover:bg-gray-200 px-3.5 py-2 rounded-full transition-colors"
+                    className="inline-flex items-center justify-center gap-1.5 text-xs font-bold text-gray-600 hover:text-black bg-gray-100 hover:bg-gray-200 px-3.5 py-2 rounded-full transition-colors"
                   >
-                    Cotizar
+                    Cotizar {service.shortTitle}
                   </a>
                 </div>
               </div>
             )
           })}
+
+          {/* Tarjeta destacada adicional para Videoclips Oficiales */}
+          <div className="bg-gradient-to-br from-purple-950 via-gray-900 to-black text-white rounded-3xl p-8 flex flex-col justify-between group shadow-xl">
+            <div className="space-y-6">
+              <div className="flex items-center justify-between">
+                <div className="w-14 h-14 rounded-2xl bg-purple-900/60 border border-purple-700/60 flex items-center justify-center text-purple-400 group-hover:scale-110 transition-transform">
+                  <Film className="w-7 h-7" />
+                </div>
+                <span className="text-xs font-bold uppercase tracking-wider text-purple-300 bg-purple-900/50 border border-purple-700/40 px-3 py-1 rounded-full">
+                  Música & Cine
+                </span>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-black text-white uppercase tracking-tight mb-3 group-hover:text-purple-300 transition-colors">
+                  <Link href="/videoclips" title="Videoclips oficiales en Lima" className="hover:underline">
+                    Videoclips Oficiales en Lima
+                  </Link>
+                </h2>
+                <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
+                  Dirección cinematográfica en 4K, ópticas de cine, iluminación de atmósfera y color grading para artistas y sellos en Perú.
+                </p>
+              </div>
+
+              <div className="space-y-2.5 pt-2 text-xs sm:text-sm text-gray-300">
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>Cámaras 4K Cinema con ópticas anamórficas</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>Color grading en DaVinci Resolve para look cinematográfico</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-8 mt-6 border-t border-gray-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <Link
+                href="/videoclips"
+                className="inline-flex items-center gap-2 font-extrabold text-sm text-purple-300 hover:text-white transition-colors"
+              >
+                <span>Videoclips oficiales en Lima</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+
+              <a
+                href="https://wa.me/51958297236?text=Hola%20BLACKBOX%20quiero%20cotizar%20videoclip&utm_source=web&utm_medium=cta&utm_campaign=videoclips"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-1.5 text-xs font-bold text-gray-200 hover:text-white bg-white/10 hover:bg-white/20 px-3.5 py-2 rounded-full transition-colors"
+              >
+                Cotizar Videoclip
+              </a>
+            </div>
+          </div>
         </div>
       </main>
 

@@ -339,10 +339,10 @@ export default function HomeClient() {
   // Sanitizar número de WhatsApp a solo dígitos sin espacios ni signos
   const cleanWhatsappNumber = (config?.whatsapp || config?.phone || '51958297236').replace(/\D/g, '') || '51958297236'
   
-  const getWhatsappUrl = (text = 'Hola, quiero iniciar un proyecto con Blackbox') => 
-    `https://wa.me/${cleanWhatsappNumber}?text=${encodeURIComponent(text)}`
+  const getWhatsappUrl = (text = 'Hola BLACKBOX quiero cotizar marketing digital', campaign = 'home') => 
+    `https://wa.me/${cleanWhatsappNumber}?text=${encodeURIComponent(text)}&utm_source=web&utm_medium=cta&utm_campaign=${campaign}`
 
-  const whatsappUrl = getWhatsappUrl('Hola, quiero iniciar un proyecto con Blackbox')
+  const whatsappUrl = getWhatsappUrl('Hola BLACKBOX quiero cotizar marketing digital', 'home')
 
   const navLinks = [
     { name: 'Inicio', href: '#inicio' },
@@ -519,36 +519,38 @@ export default function HomeClient() {
             {/* Left Column: Copy & Actions */}
             <div className="lg:col-span-7 text-center lg:text-left">
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 mb-6">
-                <Badge className="px-3.5 py-1.5 text-xs bg-black text-white rounded-full font-bold shadow-md border-0">
-                  <MapPin className="w-3.5 h-3.5 mr-1.5" />
-                  {config?.address || 'Lima, Perú'}
-                </Badge>
-                <Badge className="px-3.5 py-1.5 text-xs bg-purple-50 text-purple-900 rounded-full font-bold shadow-sm border border-purple-200/60">
-                  <Video className="w-3.5 h-3.5 mr-1.5 text-purple-600" />
-                  Agencia de Marketing & Productora
-                </Badge>
+                <span className="inline-flex px-4 py-1 rounded-full bg-purple-50 text-purple-700 text-xs font-bold tracking-wide">
+                  Agencia de Marketing Digital en Lima, Perú
+                </span>
               </div>
 
-              <h1 className="text-5xl md:text-7xl font-black leading-[0.9] tracking-tighter">
-                AGENCIA DE MARKETING &<br/>
-                PRODUCTORA AUDIOVISUAL<br/>
-                <span className="text-[#7C3AED]">EN LIMA - VIDEOS QUE VENDEN</span>
+              <h1 className="font-black tracking-tighter leading-[0.9] text-5xl md:text-6xl lg:text-7xl mb-6">
+                PRODUCTORA DE<br/>
+                <span className="text-[#8B5CF6]">MARKETING AUDIOVISUAL</span>
               </h1>
               
-              <p className="text-lg sm:text-xl text-gray-600 max-w-xl mx-auto lg:mx-0 mb-8 font-normal leading-relaxed">
-                {config?.siteDescription || 'Estrategias de marketing digital y producción audiovisual que generan resultados reales y multiplican tus ventas.'}
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0 mb-8 font-normal leading-relaxed">
+                Estrategias de marketing digital y producción audiovisual en Lima que multiplican tus ventas y posicionan tu marca.
               </p>
 
               {/* Main Actions */}
               <div className="flex flex-col sm:flex-row gap-3.5 justify-center lg:justify-start mb-10">
                 <Button 
                   size="lg" 
-                  onClick={() => window.open(whatsappUrl, '_blank')} 
-                  className="bg-black text-white hover:bg-[#BFFF00] hover:text-black gap-2 text-base px-8 py-6 rounded-full shadow-xl shadow-black/15 font-bold cursor-pointer transition-all hover:scale-105"
+                  onClick={() => window.open(getWhatsappUrl('Hola BLACKBOX quiero cotizar marketing digital', 'home'), '_blank')} 
+                  className="bg-black text-white hover:bg-gray-800 gap-2 text-base px-8 py-6 rounded-full shadow-xl shadow-black/15 font-bold cursor-pointer transition-all hover:scale-105"
                 >
-                  Solicitar Consultoría Gratis
-                  <ArrowRight className="w-5 h-5" />
+                  <Phone className="w-5 h-5 text-emerald-400" />
+                  Solicitar Cotización por WhatsApp
                 </Button>
+
+                <Link 
+                  href="/portfolio"
+                  className="inline-flex items-center justify-center gap-2 border-2 border-black text-black hover:bg-black hover:text-white text-base px-8 py-4 rounded-full font-bold transition-all"
+                >
+                  Ver Casos en Portafolio
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
 
                 <Button 
                   size="lg" 
@@ -558,19 +560,11 @@ export default function HomeClient() {
                     url: config?.heroReelUrl || 'https://youtube.com/shorts/nzdbM36oEKQ',
                     platform: 'youtube'
                   })}
-                  className="gap-2 text-base px-6 py-6 border-2 border-purple-600 text-purple-700 bg-purple-50/50 hover:bg-purple-100/80 rounded-full font-bold group cursor-pointer shadow-md shadow-purple-500/10"
+                  className="gap-2 text-base px-6 py-6 border border-gray-200 text-gray-700 hover:text-black hover:bg-gray-100 rounded-full font-semibold group cursor-pointer"
                 >
                   <Play className="w-4 h-4 text-purple-600 fill-purple-600 transition-transform group-hover:scale-110" />
-                  Ver Showreel en Vertical
+                  Ver Reel
                 </Button>
-
-                <Link 
-                  href="/portfolio"
-                  className="inline-flex items-center justify-center gap-1.5 text-base px-5 py-3.5 text-zinc-700 hover:text-black hover:bg-zinc-100 rounded-full font-semibold transition-colors"
-                >
-                  Portafolio
-                  <ArrowUpRight className="w-4 h-4" />
-                </Link>
               </div>
 
               {/* Quick Trust Metrics */}

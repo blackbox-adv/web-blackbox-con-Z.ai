@@ -75,13 +75,78 @@ export default async function ServicePage({ params }: ServicePageProps) {
   }
 
   const cleanPhone = '51958297236'
-  const waMessage = encodeURIComponent(`Hola Black Box, me interesa cotizar el servicio de ${service.title} para mi marca.`)
-  const waUrl = `https://wa.me/${cleanPhone}?text=${waMessage}`
+  const waMessage = encodeURIComponent(`Hola BLACKBOX quiero cotizar ${service.shortTitle}`)
+  const waUrl = `https://wa.me/${cleanPhone}?text=${waMessage}&utm_source=web&utm_medium=cta&utm_campaign=${service.slug}`
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'ProfessionalService',
+        '@id': `https://blackboxperu.com/servicios/${service.slug}#service`,
+        name: `BLACKBOX - ${service.title}`,
+        description: service.seoDescription,
+        url: `https://blackboxperu.com/servicios/${service.slug}`,
+        telephone: '+51958297236',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Lima',
+          addressRegion: 'Lima',
+          addressCountry: 'PE'
+        },
+        areaServed: {
+          '@type': 'City',
+          name: 'Lima'
+        }
+      },
+      ...(service.faqs && service.faqs.length > 0 ? [{
+        '@type': 'FAQPage',
+        '@id': `https://blackboxperu.com/servicios/${service.slug}#faq`,
+        mainEntity: service.faqs.map(faq => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer
+          }
+        }))
+      }] : []),
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Inicio',
+            item: 'https://blackboxperu.com'
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Servicios',
+            item: 'https://blackboxperu.com/servicios'
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: service.title,
+            item: `https://blackboxperu.com/servicios/${service.slug}`
+          }
+        ]
+      }
+    ]
+  }
 
   return (
     <div className="min-h-screen bg-slate-50 text-gray-900 selection:bg-purple-500 selection:text-white">
+      {/* Schema JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* Top Navbar Dinámico con Logo de Admin */}
-      <SubpageNavbar activePage="servicios" ctaText="Cotizar Servicio" defaultMessage={`Hola Black Box, me interesa cotizar el servicio de ${service.title} para mi marca.`} />
+      <SubpageNavbar activePage="servicios" ctaText="Cotizar Servicio" defaultMessage={`Hola BLACKBOX quiero cotizar ${service.shortTitle}`} />
 
       {/* Breadcrumb Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
@@ -97,16 +162,18 @@ export default async function ServicePage({ params }: ServicePageProps) {
       {/* Hero Section Claro */}
       <section className="relative pt-6 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white border-b border-gray-200/80">
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-50 border border-purple-200/80 text-xs font-bold text-purple-700 mb-6 shadow-xs">
-            <Sparkles className="w-3.5 h-3.5 text-purple-600" />
-            {service.heroBadge || 'Servicio Especializado en Lima'}
+          <div className="flex justify-center mb-6">
+            <span className="inline-flex px-4 py-1.5 rounded-full bg-purple-50 text-purple-700 text-xs font-bold tracking-wide border border-purple-200/60 shadow-xs">
+              {service.heroPill || service.heroBadge || `${service.title} en Lima, Perú`}
+            </span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-gray-950 uppercase leading-[1.15] mb-6">
-            {service.heroHeadline}
+          <h1 className="font-black tracking-tighter leading-[0.9] text-4xl sm:text-6xl lg:text-7xl uppercase mb-6 text-gray-950">
+            {service.heroH1Line1 || service.heroHeadline}<br />
+            <span className="text-[#8B5CF6]">{service.heroH1Line2 || ''}</span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto mb-10 leading-relaxed font-normal">
+          <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto mb-10 leading-relaxed font-normal">
             {service.heroSubheadline}
           </p>
 
@@ -121,7 +188,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
               Solicitar Cotización por WhatsApp
             </a>
             <Link
-              href="/portfolio"
+              href={`/portfolio?categoria=${encodeURIComponent(service.portfolioCategory || service.shortTitle)}`}
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold text-base px-6 py-4 rounded-full border border-gray-200 transition-colors"
             >
               Ver Casos en Portafolio
@@ -245,6 +312,55 @@ export default async function ServicePage({ params }: ServicePageProps) {
           </div>
         </section>
       )}
+
+      {/* Interlinking Entre Servicios */}
+      <section className="py-12 bg-white border-t border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-6">
+            <h3 className="text-xs uppercase font-bold tracking-widest text-gray-400">
+              Explora Más Soluciones en Lima
+            </h3>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <Link 
+              href="/servicios/produccion-audiovisual" 
+              className={`px-4 py-2 rounded-full text-xs font-bold border transition-colors ${service.slug === 'produccion-audiovisual' ? 'bg-purple-100 text-purple-900 border-purple-300' : 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100 hover:text-black'}`}
+            >
+              Productora Audiovisual en Lima
+            </Link>
+            <Link 
+              href="/servicios/reels-y-tiktok" 
+              className={`px-4 py-2 rounded-full text-xs font-bold border transition-colors ${service.slug === 'reels-y-tiktok' ? 'bg-purple-100 text-purple-900 border-purple-300' : 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100 hover:text-black'}`}
+            >
+              Reels y TikTok Ads en Lima
+            </Link>
+            <Link 
+              href="/servicios/publicidad-digital-meta-ads" 
+              className={`px-4 py-2 rounded-full text-xs font-bold border transition-colors ${service.slug === 'publicidad-digital-meta-ads' ? 'bg-purple-100 text-purple-900 border-purple-300' : 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100 hover:text-black'}`}
+            >
+              Agencia de Meta Ads en Lima
+            </Link>
+            <Link 
+              href="/servicios/marketing-para-clinicas-salud" 
+              className={`px-4 py-2 rounded-full text-xs font-bold border transition-colors ${service.slug === 'marketing-para-clinicas-salud' ? 'bg-purple-100 text-purple-900 border-purple-300' : 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100 hover:text-black'}`}
+            >
+              Marketing Médico para Clínicas en Lima
+            </Link>
+            <Link 
+              href="/videoclips" 
+              className="px-4 py-2 rounded-full text-xs font-bold border bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100 hover:text-black transition-colors"
+            >
+              Videoclips Oficiales en Lima 4K
+            </Link>
+            <Link 
+              href="/portfolio" 
+              className="px-4 py-2 rounded-full text-xs font-bold border bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100 hover:text-black transition-colors"
+            >
+              Portafolio de Videos Comerciales
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* Bottom CTA Banner */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
