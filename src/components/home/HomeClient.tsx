@@ -532,7 +532,7 @@ export default function HomeClient() {
               <h1 className="text-5xl md:text-7xl font-black leading-[0.9] tracking-tighter">
                 AGENCIA DE MARKETING &<br/>
                 PRODUCTORA AUDIOVISUAL<br/>
-                <span className="text-[#BFFF00]">EN LIMA - VIDEOS QUE VENDEN</span>
+                <span className="text-[#7C3AED]">EN LIMA - VIDEOS QUE VENDEN</span>
               </h1>
               
               <p className="text-lg sm:text-xl text-gray-600 max-w-xl mx-auto lg:mx-0 mb-8 font-normal leading-relaxed">
@@ -544,7 +544,7 @@ export default function HomeClient() {
                 <Button 
                   size="lg" 
                   onClick={() => window.open(whatsappUrl, '_blank')} 
-                  className="bg-black text-white hover:bg-gray-800 gap-2 text-base px-8 py-6 rounded-full shadow-xl shadow-black/15 font-bold cursor-pointer transition-all hover:scale-105"
+                  className="bg-black text-white hover:bg-[#BFFF00] hover:text-black gap-2 text-base px-8 py-6 rounded-full shadow-xl shadow-black/15 font-bold cursor-pointer transition-all hover:scale-105"
                 >
                   Solicitar Consultoría Gratis
                   <ArrowRight className="w-5 h-5" />
@@ -676,8 +676,8 @@ export default function HomeClient() {
                     <TrendingUp className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-xs font-bold text-gray-900">+500% ROI</p>
-                    <p className="text-[10px] text-gray-500 font-medium">Formato Vertical</p>
+                    <span className="inline-block px-1.5 py-0.5 rounded bg-[#BFFF00] text-black text-[11px] font-black tracking-tight">+500% ROI</span>
+                    <p className="text-[10px] text-gray-500 font-medium mt-0.5">Formato Vertical</p>
                   </div>
                 </div>
 
