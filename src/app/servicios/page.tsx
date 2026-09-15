@@ -15,13 +15,13 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Servicios de Producción Audiovisual y Marketing Digital en Lima | Black Box Peru',
+  title: 'Servicios de Producción Audiovisual y Marketing en Lima | BLACKBOX',
   description: 'Productora audiovisual en Lima especializada en contenido vertical, spots comerciales y marketing digital para e-commerce y gastronomia.',
   alternates: {
     canonical: 'https://blackboxperu.com/servicios',
   },
   openGraph: {
-    title: 'Servicios de Producción Audiovisual & Marketing Digital | Black Box Peru',
+    title: 'Servicios de Producción Audiovisual y Marketing en Lima | BLACKBOX',
     description: 'Productora audiovisual en Lima especializada en contenido vertical, spots comerciales y marketing digital para e-commerce y gastronomia.',
     url: 'https://blackboxperu.com/servicios',
   }
@@ -58,7 +58,7 @@ export default function ServicesIndexPage() {
           Soluciones Audiovisuales & Marketing
         </div>
         <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-gray-950 uppercase mb-6 leading-tight">
-          Servicios Especializados para Hacer Crecer tu Marca
+          Servicios de Producción Audiovisual y Marketing en Lima
         </h1>
         <p className="text-base sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-normal">
           Desde producción de cine publicitario en 4K hasta estrategias continuas de contenido vertical 9:16 y pauta en Meta Ads para empresas en Lima, Perú.

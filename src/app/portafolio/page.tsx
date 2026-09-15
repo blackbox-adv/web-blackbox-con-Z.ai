@@ -1,12 +1,5 @@
-import PortfolioPage from '../portfolio/page'
-import type { Metadata } from 'next'
+import { permanentRedirect } from 'next/navigation'
 
-export const metadata: Metadata = {
-  title: 'Portafolio de Videos y Proyectos | Black Box Peru',
-  description: 'Explora nuestro portafolio de spots comerciales, videos corporativos, contenido para e-commerce, gastronomía y campañas en Lima, Perú.',
-  alternates: {
-    canonical: 'https://blackboxperu.com/portafolio',
-  },
+export default function PortafolioRedirect() {
+  permanentRedirect('/portfolio')
 }
-
-export default PortfolioPage

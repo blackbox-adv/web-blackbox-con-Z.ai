@@ -68,7 +68,7 @@ export default function ProductoraAudiovisualLimaPage() {
               Solicitar Cotización por WhatsApp
             </a>
             <Link
-              href="/portafolio"
+              href="/portfolio"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold text-base px-6 py-4 rounded-full border border-gray-200 transition-colors"
             >
               Ver Portafolio de Videos

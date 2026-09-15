@@ -529,10 +529,9 @@ export default function HomeClient() {
                 </Badge>
               </div>
 
-              <h1 className="sr-only">Productora Audiovisual en Lima | Videos Comerciales que Venden | BLACKBOX</h1>
-              <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mb-6 leading-tight tracking-tight text-gray-950 uppercase">
-                Elevamos tu marca con contenido <span className="underline decoration-black decoration-4 underline-offset-8">de alto impacto</span>
-              </h2>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-6 leading-tight tracking-tight text-gray-950 uppercase">
+                Productora Audiovisual en Lima <span className="block underline decoration-black decoration-4 underline-offset-8 mt-2">Videos que Venden</span>
+              </h1>
               
               <p className="text-lg sm:text-xl text-gray-600 max-w-xl mx-auto lg:mx-0 mb-8 font-normal leading-relaxed">
                 {config?.siteDescription || 'Estrategias de marketing digital y producción audiovisual que generan resultados reales y multiplican tus ventas.'}

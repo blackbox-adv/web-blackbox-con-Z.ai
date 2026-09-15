@@ -22,8 +22,28 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: '/portafolio',
+        destination: '/portfolio',
+        permanent: true,
+      },
+      {
         source: '/porfolio',
         destination: '/portfolio',
+        permanent: true,
+      },
+      {
+        source: '/servicios/audiovisual',
+        destination: '/servicios/productora-audiovisual-lima',
+        permanent: true,
+      },
+      {
+        source: '/politica-de-privacidad',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/terminos',
+        destination: '/',
         permanent: true,
       },
     ];
@@ -52,15 +72,6 @@ const nextConfig: NextConfig = {
           {
             key: 'Permissions-Policy',
             value: 'camera=(), microphone=(), geolocation=()',
-          },
-        ],
-      },
-      {
-        source: '/_next/static/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
           },
         ],
       },

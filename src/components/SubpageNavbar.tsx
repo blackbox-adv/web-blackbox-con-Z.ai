@@ -6,7 +6,7 @@ import { BrandLogo } from './BrandLogo'
 import { Phone, Menu, X } from 'lucide-react'
 
 interface SubpageNavbarProps {
-  activePage?: 'inicio' | 'servicios' | 'portafolio' | 'contacto' | 'videoclips'
+  activePage?: 'inicio' | 'servicios' | 'portafolio' | 'portfolio' | 'contacto' | 'videoclips'
   ctaText?: string
   defaultMessage?: string
 }
@@ -61,8 +61,8 @@ export function SubpageNavbar({
             Servicios
           </Link>
           <Link 
-            href="/portafolio" 
-            className={`${activePage === 'portafolio' ? 'text-purple-700 font-bold' : 'text-gray-600 hover:text-black'} transition-colors`}
+            href="/portfolio" 
+            className={`${activePage === 'portafolio' || activePage === 'portfolio' ? 'text-purple-700 font-bold' : 'text-gray-600 hover:text-black'} transition-colors`}
           >
             Portafolio
           </Link>
@@ -119,7 +119,7 @@ export function SubpageNavbar({
             Servicios
           </Link>
           <Link 
-            href="/portafolio" 
+            href="/portfolio" 
             className="block py-2 text-sm font-semibold text-gray-800 hover:text-black"
             onClick={() => setIsMobileMenuOpen(false)}
           >

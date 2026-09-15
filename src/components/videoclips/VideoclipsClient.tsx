@@ -223,11 +223,6 @@ export default function VideoclipsClient() {
 
       {/* Hero Section: Diseño a 2 columnas con el Visor de Cine Horizontal 16:9 */}
       <header className="pt-28 sm:pt-32 lg:pt-36 pb-16 px-4 relative overflow-hidden bg-gradient-to-b from-purple-50/40 via-white to-[#fafafa] border-b border-gray-200/80">
-        {/* H1 SEO invisible para robots de Google sin romper la estética visual */}
-        <h1 className="sr-only">
-          Productora de Videoclips en Lima | Producción de Videos Musicales en 4K Cinema | BLACKBOX
-        </h1>
-
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
             
@@ -240,12 +235,12 @@ export default function VideoclipsClient() {
                 </span>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-5 tracking-tight text-gray-950 uppercase leading-[1.1]">
-                Lleva tu música a la <br />
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-5 tracking-tight text-gray-950 uppercase leading-[1.1]">
+                Videoclips en Lima <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-indigo-600 to-purple-900">
-                  Pantalla Grande
+                  Cine en Pantalla Grande
                 </span>
-              </h2>
+              </h1>
 
               <p className="max-w-xl mx-auto lg:mx-0 text-gray-600 text-sm sm:text-base leading-relaxed font-medium mb-7">
                 Dirección cinematográfica en formato widescreen 16:9, cámaras de cine 4K, ópticas fijas y anamórficas, iluminación de atmósfera, color grading y teasers para artistas, orquestas y sellos en Perú.
