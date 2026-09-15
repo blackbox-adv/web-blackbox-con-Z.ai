@@ -529,8 +529,10 @@ export default function HomeClient() {
                 </Badge>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-6 leading-tight tracking-tight text-gray-950 uppercase">
-                Productora Audiovisual en Lima <span className="block underline decoration-black decoration-4 underline-offset-8 mt-2">Videos que Venden</span>
+              <h1 className="text-5xl md:text-7xl font-black leading-[0.9] tracking-tighter">
+                AGENCIA DE MARKETING &<br/>
+                PRODUCTORA AUDIOVISUAL<br/>
+                <span className="text-[#BFFF00]">EN LIMA - VIDEOS QUE VENDEN</span>
               </h1>
               
               <p className="text-lg sm:text-xl text-gray-600 max-w-xl mx-auto lg:mx-0 mb-8 font-normal leading-relaxed">

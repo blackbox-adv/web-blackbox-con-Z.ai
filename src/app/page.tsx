@@ -4,14 +4,14 @@ import HomeClient from '@/components/home/HomeClient'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Productora Audiovisual en Lima | Videos Comerciales que Venden | BLACKBOX',
-  description: 'Productora audiovisual en Lima especializada en spots publicitarios, videos corporativos y contenido vertical 9:16 en 4K/6K diseñados para vender más.',
+  title: 'Agencia de Marketing Digital y Productora Audiovisual en Lima | Videos que Venden | BLACKBOX',
+  description: 'Agencia de marketing digital y productora audiovisual en Lima. Videos para redes, reels, TikTok, ads y catálogos digitales con Yape/Plin que generan ventas.',
   alternates: {
     canonical: 'https://blackboxperu.com',
   },
   openGraph: {
-    title: 'Productora Audiovisual en Lima | Videos Comerciales que Venden | BLACKBOX',
-    description: 'Productora audiovisual en Lima especializada en spots publicitarios, videos corporativos y contenido vertical 9:16 en 4K/6K diseñados para vender más.',
+    title: 'Agencia de Marketing Digital y Productora Audiovisual en Lima | Videos que Venden | BLACKBOX',
+    description: 'Agencia de marketing digital y productora audiovisual en Lima. Videos para redes, reels, TikTok, ads y catálogos digitales con Yape/Plin que generan ventas.',
     url: 'https://blackboxperu.com',
     type: 'website',
   },
