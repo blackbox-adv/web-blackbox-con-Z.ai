@@ -520,13 +520,13 @@ export default function HomeClient() {
             <div className="lg:col-span-7 text-center lg:text-left">
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 mb-6">
                 <span className="inline-flex px-4 py-1 rounded-full bg-purple-50 text-purple-700 text-xs font-bold tracking-wide">
-                  Agencia de Marketing Digital en Lima, Perú
+                  Productora Audiovisual 4K/6K en Lima, Perú
                 </span>
               </div>
 
               <h1 className="font-black tracking-tighter leading-[0.9] text-5xl md:text-6xl lg:text-7xl mb-6">
-                PRODUCTORA DE<br/>
-                <span className="text-[#8B5CF6]">MARKETING AUDIOVISUAL</span>
+                AGENCIA DE MARKETING<br/>
+                <span className="text-[#8B5CF6]">EN LIMA</span>
               </h1>
               
               <p className="text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0 mb-8 font-normal leading-relaxed">
