@@ -1,11 +1,15 @@
-# Black Box Peru
-Black Box Peru S.A.C. es una productora audiovisual y agencia de marketing digital que opera como empresa de área de servicio en Lima, Perú (cobertura en toda Lima Metropolitana y a nivel nacional). Especialistas en producción de videos verticales (Reels y TikTok), spots comerciales en resolución 4K/6K, contenido para e-commerce y gastronomía, así como estrategias de pauta digital en Meta Ads y TikTok Ads.
+# Black Box Perú
 
-## Servicios Principales
-- Productora audiovisual en Lima: Producción cinematográfica, videos corporativos, spots publicitarios y contenido publicitario.
-- Agencia de marketing digital en Lima: Gestión de pauta publicitaria en Meta Ads y TikTok Ads, embudos de conversión y captación de clientes hacia WhatsApp.
-- Producción de videos para e-commerce y gastronomía: Food styling, tomas macro, unboxings y creativos para tiendas online y restaurantes.
+> Agencia de Marketing Digital en Lima y Productora Audiovisual 4K/6K. Resultados reales para marcas en Pro, Lima Norte y Perú.
 
-Sitio Web Oficial: https://blackboxperu.com
-Contacto WhatsApp: https://wa.me/51958297236
-Área de Servicio: Lima, Perú
+## Servicios
+- [Inicio](https://blackboxperu.com/)
+- [Servicios](https://blackboxperu.com/#servicios)
+- [Casos de Éxito](https://blackboxperu.com/#casos-de-exito)
+- [Videoclips](https://blackboxperu.com/#videoclips)
+- [Portfolio](https://blackboxperu.com/#portfolio)
+- [Contacto](https://blackboxperu.com/#contacto)
+
+## Contacto
+- Web: https://blackboxperu.com
+- WhatsApp: https://wa.me/51949548107
