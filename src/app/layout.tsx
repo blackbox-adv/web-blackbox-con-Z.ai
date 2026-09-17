@@ -7,11 +7,13 @@ import { DynamicFavicon } from "@/components/DynamicFavicon";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -196,6 +198,22 @@ export default function RootLayout({
     <html lang="es-PE" className="scroll-smooth" suppressHydrationWarning>
       <head>
         <link rel="canonical" href="https://blackboxperu.com" />
+        <link
+          rel="preload"
+          as="image"
+          href="/hero-poster.webp"
+          type="image/webp"
+          // @ts-expect-error fetchpriority attribute
+          fetchpriority="high"
+        />
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            :root { color-scheme: light; }
+            html, body { background-color: #ffffff; color: #111827; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+            .hero-poster-preload { aspect-ratio: 9/16; background-color: #09090b; }
+            .contain-content { content-visibility: auto; contain-intrinsic-size: 1px 700px; }
+          `
+        }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

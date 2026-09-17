@@ -2,7 +2,7 @@
 
 import { MessageCircle } from 'lucide-react'
 
-interface FloatingWhatsAppProps {
+export interface FloatingWhatsAppProps {
   phone?: string
   whatsapp?: string
   brandName?: string
@@ -27,7 +27,7 @@ export function FloatingWhatsApp({
         id="floating-whatsapp-btn"
         onClick={handleOpenChat}
         className="relative group flex items-center gap-2.5 bg-[#25D366] hover:bg-[#20ba59] text-white p-3.5 sm:p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer"
-        aria-label="Contactar por WhatsApp"
+        aria-label="Contactar por WhatsApp BlackBox Peru"
       >
         {/* Pulse beacon ring */}
         <span className="absolute -inset-1 bg-emerald-400 rounded-full blur-sm opacity-40 group-hover:opacity-75 animate-ping duration-1000" />
@@ -50,4 +50,6 @@ export function FloatingWhatsApp({
     </div>
   )
 }
+
+export default FloatingWhatsApp
 
