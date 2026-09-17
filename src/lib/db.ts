@@ -597,7 +597,7 @@ function createSafeDbProxy() {
             try {
               return await rawPrisma.$transaction(cb)
             } catch (err) {
-              console.warn('[AI Studio] DB transaction failed, using in-memory fallback:', err)
+
               return inMemory.$transaction(cb)
             }
           }
@@ -618,7 +618,7 @@ function createSafeDbProxy() {
               try {
                 return await prismaModel[methodProp](...args)
               } catch (err: any) {
-                console.warn(`[AI Studio] ${modelProp}.${methodProp} DB query failed, using in-memory fallback:`, err?.message || err)
+
                 if (inMemModel && typeof inMemModel[methodProp] === 'function') {
                   return inMemModel[methodProp](...args)
                 }

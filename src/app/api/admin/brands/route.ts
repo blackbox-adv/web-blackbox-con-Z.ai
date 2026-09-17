@@ -9,7 +9,7 @@ export async function GET() {
     })
     return NextResponse.json(brands || [])
   } catch (error) {
-    console.error('Error fetching admin brands:', error)
+
     return NextResponse.json({ error: 'Error fetching brands' }, { status: 500 })
   }
 }
@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
     revalidatePath('/')
     return NextResponse.json(newBrand)
   } catch (error) {
-    console.error('Error creating brand:', error)
+
     return NextResponse.json({ error: 'Error creating brand' }, { status: 500 })
   }
 }

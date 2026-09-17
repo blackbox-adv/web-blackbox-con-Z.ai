@@ -26,7 +26,7 @@ export default function HomeFooter({
             <Link href="/" aria-label="Ir al inicio de Black Box Peru" className="inline-block mb-4">
               <Image
                 src={brandLogo || '/brand-logo-exact.webp'}
-                alt="Black Box Peru Logo"
+                alt="Black Box Perú - Productora Audiovisual y Agencia de Marketing en Lima"
                 width={150}
                 height={42}
                 loading="lazy"
@@ -99,7 +99,15 @@ export default function HomeFooter({
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-black shrink-0" />
-                <span>{phone}</span>
+                <a 
+                  href={`https://wa.me/${(phone || '51958297236').replace(/\D/g, '')}?text=${encodeURIComponent('Hola Black Box, deseo cotizar servicios audiovisuales.')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Contactar por WhatsApp al teléfono ${phone}`}
+                  className="hover:text-[#7A1BB5] transition-colors"
+                >
+                  {phone}
+                </a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-black shrink-0" />

@@ -12,7 +12,7 @@ export async function GET(
     if (!testimonial) return NextResponse.json({ error: 'Testimonial not found' }, { status: 404 })
     return NextResponse.json(testimonial)
   } catch (error) {
-    console.error('Error fetching testimonial:', error)
+
     return NextResponse.json({ error: 'Error fetching testimonial' }, { status: 500 })
   }
 }
@@ -39,7 +39,7 @@ export async function PUT(
     revalidatePath('/')
     return NextResponse.json(updatedTestimonial)
   } catch (error) {
-    console.error('Error updating testimonial:', error)
+
     return NextResponse.json({ error: 'Error updating testimonial' }, { status: 500 })
   }
 }
@@ -54,7 +54,7 @@ export async function DELETE(
     revalidatePath('/')
     return NextResponse.json({ success: true })
   } catch (error) {
-    console.error('Error deleting testimonial:', error)
+
     return NextResponse.json({ error: 'Error deleting testimonial' }, { status: 500 })
   }
 }

@@ -29,7 +29,7 @@ export async function GET(request: Request) {
       user: { username: session.admin.username }
     })
   } catch (error) {
-    console.error('Error verificando autenticación:', error)
+
     return NextResponse.json({ authenticated: false }, { status: 401 })
   }
 }

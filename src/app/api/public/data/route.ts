@@ -230,8 +230,7 @@ export async function GET() {
           }
         }
         projects = CURATED_PROJECTS
-      } catch (migrationErr) {
-        console.warn('Auto-migration notice (falling back to curated list):', migrationErr)
+      } catch {
         projects = CURATED_PROJECTS
       }
     }
@@ -248,7 +247,7 @@ export async function GET() {
       },
     })
   } catch (error) {
-    console.error('Error fetching public data:', error)
+
     return NextResponse.json({
       config: null,
       projects: CURATED_PROJECTS,

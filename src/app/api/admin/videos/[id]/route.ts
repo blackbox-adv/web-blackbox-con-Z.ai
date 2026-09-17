@@ -24,7 +24,7 @@ export async function PUT(
     revalidatePath('/portfolio')
     return NextResponse.json(updatedVideo)
   } catch (error) {
-    console.error('Error updating video:', error)
+
     return NextResponse.json({ error: 'Error updating video' }, { status: 500 })
   }
 }
@@ -40,7 +40,7 @@ export async function DELETE(
     revalidatePath('/portfolio')
     return NextResponse.json({ success: true })
   } catch (error) {
-    console.error('Error deleting video:', error)
+
     return NextResponse.json({ error: 'Error deleting video' }, { status: 500 })
   }
 }

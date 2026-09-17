@@ -6,7 +6,7 @@ export async function GET() {
     const config = await db.siteConfig.findFirst()
     return NextResponse.json(config || {})
   } catch (error) {
-    console.error('Error fetching admin config:', error)
+
     return NextResponse.json({ error: 'Error fetching config' }, { status: 500 })
   }
 }
@@ -32,7 +32,7 @@ export async function PUT(request: NextRequest) {
 
     return NextResponse.json(updatedConfig)
   } catch (error) {
-    console.error('Error saving admin config:', error)
+
     return NextResponse.json({ error: 'Error saving config' }, { status: 500 })
   }
 }

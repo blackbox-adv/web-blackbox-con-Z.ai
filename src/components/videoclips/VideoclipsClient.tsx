@@ -170,7 +170,7 @@ export default function VideoclipsClient() {
       .then(d => {
         setData(d)
       })
-      .catch(console.error)
+      .catch(() => {})
   }, [])
 
   const config = data?.config
@@ -351,6 +351,7 @@ export default function VideoclipsClient() {
                         description: 'Producción cinematográfica y showreel musical oficial de Black Box.',
                         highlights: ['4K Cinema Widescreen', 'Ópticas Anamórficas', 'Masterización de Audio']
                       })}
+                      aria-label="Abrir showreel musical en pantalla completa de cine"
                       className="px-3 py-1.5 rounded-full bg-black/80 backdrop-blur-md text-white border border-white/20 hover:bg-purple-600 transition-all cursor-pointer text-[11px] font-bold flex items-center gap-1.5 shadow-lg hover:scale-105"
                       title="Abrir en pantalla completa de cine"
                     >
@@ -363,6 +364,7 @@ export default function VideoclipsClient() {
                   <div className="absolute bottom-3 right-3 z-20">
                     <button
                       onClick={() => setIsHeroAudioActive(!isHeroAudioActive)}
+                      aria-label={isHeroAudioActive ? 'Silenciar audio del showreel' : 'Activar sonido del video'}
                       className="px-3.5 py-2 rounded-full bg-black/85 backdrop-blur-md text-white border border-white/20 hover:bg-black transition-all cursor-pointer shadow-lg hover:scale-105 flex items-center gap-2 text-xs font-bold"
                       title={isHeroAudioActive ? 'Silenciar audio' : 'Activar sonido del video'}
                     >

@@ -43,7 +43,7 @@ export async function POST(request: Request): Promise<NextResponse> {
           mimeType = 'image/png';
         }
       } catch (sharpErr) {
-        console.warn('Auto-trim skipped:', sharpErr);
+
       }
     }
 
@@ -56,7 +56,7 @@ export async function POST(request: Request): Promise<NextResponse> {
         });
         return NextResponse.json(blobResult);
       } catch (blobErr) {
-        console.warn('Vercel blob failed, falling back to base64 data URL:', blobErr);
+
       }
     }
 
@@ -70,7 +70,7 @@ export async function POST(request: Request): Promise<NextResponse> {
       size: fileBuffer.length,
     });
   } catch (error: any) {
-    console.error('Upload error:', error);
+
     return NextResponse.json({ 
       message: 'Error al subir archivo', 
       error: error.message 

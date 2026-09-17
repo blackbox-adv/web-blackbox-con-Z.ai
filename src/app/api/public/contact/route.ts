@@ -28,7 +28,7 @@ export async function POST(request: Request) {
       message: 'Mensaje procesado correctamente'
     })
   } catch (error) {
-    console.error('Error procesando contacto:', error)
+
     return NextResponse.json({ error: 'Error al procesar el mensaje' }, { status: 500 })
   }
 }

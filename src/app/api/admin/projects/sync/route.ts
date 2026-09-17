@@ -143,7 +143,7 @@ export async function POST() {
     }
     return NextResponse.json({ success: true, count: CURATED_PROJECTS.length })
   } catch (error: any) {
-    console.error('Error syncing projects:', error)
+
     return NextResponse.json({ error: error.message }, { status: 500 })
   }
 }

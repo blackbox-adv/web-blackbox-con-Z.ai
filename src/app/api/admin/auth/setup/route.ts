@@ -12,7 +12,7 @@ export async function GET() {
     const adminCount = await db.admin.count()
     return NextResponse.json({ setupRequired: adminCount === 0 })
   } catch (error) {
-    console.error('Error verificando setup:', error)
+
     return NextResponse.json({ error: 'Error verificando setup' }, { status: 500 })
   }
 }
@@ -49,7 +49,7 @@ export async function POST(request: Request) {
       username: admin.username 
     })
   } catch (error) {
-    console.error('Error en setup:', error)
+
     return NextResponse.json({ error: 'Error creando administrador' }, { status: 500 })
   }
 }

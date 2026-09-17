@@ -9,7 +9,7 @@ export async function GET() {
     })
     return NextResponse.json(projects || [])
   } catch (error) {
-    console.error('Error fetching admin projects:', error)
+
     return NextResponse.json({ error: 'Error fetching projects' }, { status: 500 })
   }
 }
@@ -29,7 +29,7 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json(newProject)
   } catch (error) {
-    console.error('Error creating project:', error)
+
     return NextResponse.json({ error: 'Error creating project' }, { status: 500 })
   }
 }

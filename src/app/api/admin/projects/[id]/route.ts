@@ -20,7 +20,7 @@ export async function GET(
     
     return NextResponse.json(project)
   } catch (error) {
-    console.error('Error fetching project:', error)
+
     return NextResponse.json({ error: 'Error fetching project' }, { status: 500 })
   }
 }
@@ -71,7 +71,7 @@ export async function PUT(
     revalidatePath('/portfolio')
     return NextResponse.json(updatedProject)
   } catch (error) {
-    console.error('Error updating project:', error)
+
     return NextResponse.json({ error: 'Error updating project' }, { status: 500 })
   }
 }
@@ -93,7 +93,7 @@ export async function DELETE(
     revalidatePath('/portfolio')
     return NextResponse.json({ success: true })
   } catch (error) {
-    console.error('Error deleting project:', error)
+
     return NextResponse.json({ error: 'Error deleting project' }, { status: 500 })
   }
 }

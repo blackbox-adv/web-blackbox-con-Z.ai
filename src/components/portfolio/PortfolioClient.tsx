@@ -90,7 +90,7 @@ export default function PortfolioClient() {
     fetch('/api/public/data')
       .then(r => r.json())
       .then(setData)
-      .catch(console.error)
+      .catch(() => {})
   }, [])
 
   const config = data?.config
@@ -354,6 +354,7 @@ export default function PortfolioClient() {
                   </a>
                   <button 
                     onClick={() => setSelectedVideo(null)}
+                    aria-label="Cerrar reproductor de video"
                     className="w-8 h-8 rounded-xl bg-zinc-800 hover:bg-zinc-700 flex items-center justify-center text-white transition-colors cursor-pointer"
                   >
                     <X className="w-4 h-4" />

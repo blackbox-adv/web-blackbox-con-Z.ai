@@ -85,6 +85,7 @@ export function SubpageNavbar({
             href={waUrl}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={`${ctaText} por WhatsApp`}
             className="hidden sm:inline-flex items-center gap-2 bg-black hover:bg-zinc-800 text-white text-xs sm:text-sm font-bold px-5 py-2.5 rounded-full transition-all hover:scale-105 shadow-sm"
           >
             <Phone className="w-3.5 h-3.5 text-emerald-400" />
@@ -94,7 +95,7 @@ export function SubpageNavbar({
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden p-2 rounded-xl text-gray-700 hover:bg-gray-100"
-            aria-label="Abrir menú"
+            aria-label={isMobileMenuOpen ? "Cerrar menú de navegación" : "Abrir menú de navegación"}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -144,6 +145,7 @@ export function SubpageNavbar({
               href={waUrl}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`${ctaText} por WhatsApp`}
               className="w-full flex items-center justify-center gap-2 bg-black text-white text-sm font-bold py-3 rounded-full"
             >
               <Phone className="w-4 h-4 text-emerald-400" />

@@ -203,8 +203,7 @@ export default function RootLayout({
           as="image"
           href="/hero-poster.webp"
           type="image/webp"
-          // @ts-expect-error fetchpriority attribute
-          fetchpriority="high"
+          fetchPriority="high"
         />
         <style dangerouslySetInnerHTML={{
           __html: `

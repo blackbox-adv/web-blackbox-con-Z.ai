@@ -18,7 +18,7 @@ export async function POST(request: Request) {
 
     return response
   } catch (error) {
-    console.error('Error en logout:', error)
+
     const response = NextResponse.json({ success: true })
     response.cookies.delete('admin_token')
     return response

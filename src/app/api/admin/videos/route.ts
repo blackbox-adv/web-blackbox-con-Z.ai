@@ -9,7 +9,7 @@ export async function GET() {
     })
     return NextResponse.json(videos || [])
   } catch (error) {
-    console.error('Error fetching admin videos:', error)
+
     return NextResponse.json({ error: 'Error fetching videos' }, { status: 500 })
   }
 }
@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
     revalidatePath('/portfolio')
     return NextResponse.json(newVideo)
   } catch (error) {
-    console.error('Error creating video:', error)
+
     return NextResponse.json({ error: 'Error creating video' }, { status: 500 })
   }
 }

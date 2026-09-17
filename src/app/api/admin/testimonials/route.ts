@@ -9,7 +9,7 @@ export async function GET() {
     })
     return NextResponse.json(testimonials || [])
   } catch (error) {
-    console.error('Error fetching admin testimonials:', error)
+
     return NextResponse.json({ error: 'Error fetching testimonials' }, { status: 500 })
   }
 }
@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
     revalidatePath('/')
     return NextResponse.json(newTestimonial)
   } catch (error) {
-    console.error('Error creating testimonial:', error)
+
     return NextResponse.json({ error: 'Error creating testimonial' }, { status: 500 })
   }
 }

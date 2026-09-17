@@ -232,7 +232,7 @@ export default function AdminDashboard() {
         reader.readAsDataURL(fileToUpload)
       })
     } catch (err: any) {
-      console.warn('Fallback a FileReader local:', err)
+
       return new Promise<string>((resolve) => {
         const reader = new FileReader()
         reader.onload = () => resolve(reader.result as string)

@@ -12,7 +12,7 @@ export async function GET(
     if (!brand) return NextResponse.json({ error: 'Brand not found' }, { status: 404 })
     return NextResponse.json(brand)
   } catch (error) {
-    console.error('Error fetching brand:', error)
+
     return NextResponse.json({ error: 'Error fetching brand' }, { status: 500 })
   }
 }
@@ -38,7 +38,7 @@ export async function PUT(
     revalidatePath('/')
     return NextResponse.json(updatedBrand)
   } catch (error) {
-    console.error('Error updating brand:', error)
+
     return NextResponse.json({ error: 'Error updating brand' }, { status: 500 })
   }
 }
@@ -53,7 +53,7 @@ export async function DELETE(
     revalidatePath('/')
     return NextResponse.json({ success: true })
   } catch (error) {
-    console.error('Error deleting brand:', error)
+
     return NextResponse.json({ error: 'Error deleting brand' }, { status: 500 })
   }
 }
