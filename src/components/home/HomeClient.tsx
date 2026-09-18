@@ -13,6 +13,7 @@ const HomeAbout = dynamic(() => import('./HomeAbout'), { ssr: false })
 const HomeReels = dynamic(() => import('./HomeReels'), { ssr: false })
 const HomePortfolio = dynamic(() => import('./HomePortfolio'), { ssr: false })
 const HomeTestimonials = dynamic(() => import('./HomeTestimonials'), { ssr: false })
+const HomeFaq = dynamic(() => import('./HomeFaq'), { ssr: false })
 const HomeCta = dynamic(() => import('./HomeCta'), { ssr: false })
 const HomeContact = dynamic(() => import('./HomeContact'), { ssr: false })
 const HomeFooter = dynamic(() => import('./HomeFooter'), { ssr: false })
@@ -94,6 +95,10 @@ export default function HomeClient() {
         onOpenVideo={(vid) => setSelectedVideo(vid)}
       />
       <HomeTestimonials />
+      <HomeFaq
+        phone={config?.phone || '+51 958 297 236'}
+        whatsapp={cleanWhatsappNumber}
+      />
       <HomeCta
         whatsapp={cleanWhatsappNumber}
         phone={config?.phone || '+51 958 297 236'}

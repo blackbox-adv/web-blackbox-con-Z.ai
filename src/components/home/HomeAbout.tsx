@@ -63,10 +63,10 @@ export default function HomeAbout() {
               Somos tu socio <span className="text-[#7A1BB5]">estratégico</span>
             </h2>
             <p className="text-gray-600 mb-6 text-base sm:text-lg leading-relaxed">
-              En Black Box creemos que cada marca tiene un potencial único. Nuestra misión es descubrirlo y potenciarlo a través de producción audiovisual cinematográfica y estrategias digitales innovadoras.
+              En Black Box creemos que cada marca tiene un potencial único. Nuestra misión es descubrirlo y potenciarlo a través de producción audiovisual cinematográfica en 4K/6K y estrategias de contenido y pauta publicitaria en Lima, Perú.
             </p>
             <p className="text-gray-600 mb-8 text-sm sm:text-base leading-relaxed">
-              Con más de 8 años en el mercado, hemos ayudado a más de 150 empresas a alcanzar sus objetivos digitales. Nuestro equipo combina creatividad, datos y tecnología para resultados comerciales excepcionales.
+              Con más de 8 años en el mercado peruano, hemos impulsado a más de 150 marcas y empresas a alcanzar sus objetivos comerciales combinando dirección de fotografía de cine, retención psicológica en video vertical y tecnología digital.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {values.map((val, index) => (

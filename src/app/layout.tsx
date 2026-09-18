@@ -114,6 +114,29 @@ export default function RootLayout({
         "image": "https://blackboxperu.com/og-image.png",
         "telephone": "+51958297236",
         "priceRange": "$$",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+51958297236",
+          "contactType": "sales",
+          "availableLanguage": ["es", "Spanish"],
+          "areaServed": "PE"
+        },
+        "knowsAbout": [
+          "Producción Audiovisual",
+          "Reels y TikTok para Empresas",
+          "Spots Publicitarios",
+          "Videoclips Musicales 4K",
+          "Videos Corporativos e Institucionales",
+          "Campañas de Publicidad Digital Meta Ads",
+          "Marketing Digital en Lima Perú"
+        ],
+        "brand": [
+          { "@type": "Brand", "name": "New Athletic" },
+          { "@type": "Brand", "name": "Renzo Costa" },
+          { "@type": "Brand", "name": "Hugo Boss" },
+          { "@type": "Brand", "name": "Makita Perú" },
+          { "@type": "Brand", "name": "Vizzano" }
+        ],
         "areaServed": {
           "@type": "City",
           "name": "Lima",
@@ -190,6 +213,52 @@ export default function RootLayout({
         "uploadDate": "2024-04-12T12:00:00-05:00",
         "contentUrl": "https://www.youtube.com/watch?v=vZANeQ4dhus",
         "embedUrl": "https://www.youtube.com/embed/vZANeQ4dhus"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://blackboxperu.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Por qué elegir a Black Box Perú como tu productora audiovisual en Lima?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "En Black Box combinamos dirección cinematográfica en 4K/6K con una visión publicitaria centrada en conversión y ventas. No solo hacemos tomas estéticas: estructuramos narrativas con ganchos de retención psicológica (hook-story-offer) para que cada video conecte con tu cliente ideal y posicione a tu marca por encima de la competencia en el mercado peruano."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo funciona la producción de contenido vertical para TikTok e Instagram Reels?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Desarrollamos paquetes mensuales de contenido diseñados para empresas y marcas que necesitan presencia constante y relevante. Nuestro equipo se encarga de la investigación de tendencias en tu rubro, redacción de guiones comerciales, jornada de rodaje en estudio o locación con iluminación profesional, edición dinámica con subtítulos optimizados para retención y formatos listos para pauta en Meta Ads y TikTok Ads."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué equipamiento y estándares de calidad técnica utilizan en los rodajes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Filmamos con cámaras de cine digital de alta gama con resolución nativa 4K y 6K, ópticas cinematográficas de apertura luminosa, sistemas de iluminación LED continua y RGB escénica, microfonía inalámbrica de solapa y cañón de estudio, y estaciones de corrección de color en DaVinci Resolve para garantizar acabados de nivel televisión y cine."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo puedo cotizar un proyecto audiovisual o paquete de videos en Lima?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Puedes solicitar una cotización personalizada de forma inmediata a través de nuestro WhatsApp oficial (+51 958 297 236) o enviándonos un mensaje en el formulario web. Analizamos tu requerimiento en menos de 24 horas, coordinamos una llamada o reunión presencial en Lima y te presentamos un cronograma de producción a la medida de tu presupuesto."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Con qué marcas y sectores han trabajado en Perú?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A lo largo de más de 8 años en Lima, hemos producido piezas audiovisuales y campañas de pauta para marcas nacionales e internacionales como New Athletic, Renzo Costa, Hugo Boss, Vizzano, Makita Perú, y centros de salud como Clínica Avendaño (con más de 280 citas generadas en una sola campaña), además de destacados artistas de la escena musical nacional."
+            }
+          }
+        ]
       }
     ]
   };
@@ -198,6 +267,7 @@ export default function RootLayout({
     <html lang="es-PE" className="scroll-smooth" suppressHydrationWarning>
       <head>
         <link rel="canonical" href="https://blackboxperu.com" />
+        <link rel="alternate" type="text/plain" href="https://blackboxperu.com/llms.txt" title="LLMs Context" />
         <link
           rel="preload"
           as="image"
